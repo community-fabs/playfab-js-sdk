@@ -1,4 +1,4 @@
-import { getBuildIdentifier } from "./utils.js";
+import { getBuildIdentifier, lowerFirst } from "./utils.js";
 
 const {
   DOCS_LOCATION = "https://raw.githubusercontent.com/PlayFab/API_Specs/master",
@@ -33,7 +33,13 @@ async function getPlayFabData() {
   const finalDocs = docs.filter(doc =>
     !Array.isArray(doc.AnyInclusiveFlags) ||
     !doc.AnyInclusiveFlags.some(flag => SKIP_DOC_TAGS.includes(flag))
-  ).sort((a, b) => a.name > b.name ? 1 : -1);
+  )
+  .sort((a, b) => a.name > b.name ? 1 : -1)
+  .map(doc => ({
+    ...doc,
+    exportName: lowerFirst(doc.name),
+    className: `PlayFab${doc.name}Api`
+  }));
 
   return {
     sdkVersion: sdkVersion.javascript || 'unknown',
@@ -47,7 +53,7 @@ export const generateSdkGlobals = async () => {
   return {
     ...playfabData,
     publishVersion: PUBLISH_VERSION_SUFFIX ? `${playfabData.sdkVersion}-${PUBLISH_VERSION_SUFFIX}` : playfabData.sdkVersion,
-    buildIdentifier: getBuildIdentifier("community-playfab-web-sdk"),
+    buildIdentifier: getBuildIdentifier("community-playfab-js-sdk"),
     verticalName: process.env.VERTICAL_NAME || ''
   }
 }

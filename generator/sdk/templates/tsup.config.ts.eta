@@ -5,7 +5,7 @@ export default defineConfig({
   entry: {
     index: "src/index.ts",
 <% for (const doc of it.docs) {%>
-    <%= doc.name %>: "src/apis/PlayFab<%= doc.name %>Api.ts",
+    <%= doc.exportName %>: "src/apis/<%= doc.className %>.ts",
 <% } %>
   },
   tsconfig: "tsconfig.json",
@@ -13,5 +13,5 @@ export default defineConfig({
   clean: true,
   dts: true,
   format: "esm",
-  platform: "browser",
+  platform: "neutral",
 });

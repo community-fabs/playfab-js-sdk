@@ -33,7 +33,7 @@ jobs:
         run: npm install
 
       - name: Generate SDK
-        run: npm run generate:sdk
+        run: npm run generate
 
       - name: Check for changes
         id: check_changes
@@ -46,7 +46,7 @@ jobs:
         if: steps.check_changes.outputs.changes == 'true'
         run: |
           npm install
-          npm run build:sdk
+          npm run build
           npm run test
 
       - name: Commit and push SDK changes
