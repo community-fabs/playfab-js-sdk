@@ -1,18 +1,26 @@
-import { PlayFabClientApi } from "../src";
-import { clearMockFetch, mockFetch, mockFetchResponse } from "./fetchUtils";
+import { describe, it, expect, beforeEach } from "@jest/globals";
+import createClientClient from "../src/apis/client";
+import {
+  clearMockFetch,
+  mockFetch,
+  mockFetchResponse
+} from "./fetchUtils";
 import { generatePlayFabResponse } from "./utils";
+import { initializePlayFab, type PlayfabClient } from "@/common";
 
 mockFetch();
 
-let clientApi: PlayFabClientApi;
+let playfab: PlayfabClient;
+let clientApi: ReturnType<typeof createClientClient>;
 
-describe("PlayFabClientApi", () => {
+describe("ClientApi", () => {
   beforeEach(() => {
     clearMockFetch();
-    clientApi = new PlayFabClientApi({
-      titleId: "test-title-id",
-      developerSecretKey: "developer-secret-key",
+    playfab = initializePlayFab({
+      titleId: "test_title_id",
+      developerSecretKey: "test_secret_key",
     });
+    clientApi = createClientClient(playfab);
   });
 
   it("should store auth context on login", async () => {
@@ -42,13 +50,13 @@ describe("PlayFabClientApi", () => {
       })
     );
 
-    await clientApi.LoginWithCustomID({
+    await clientApi.loginWithCustomID({
       CustomId: "test-custom-id",
     });
 
     expect(fetch).toHaveBeenCalled();
 
-    expect(clientApi.entityToken).toEqual("mock_entity_token");
-    expect(clientApi.sessionTicket).toEqual("mock_session_ticket");
+    expect(playfab.entityToken).toEqual("mock_entity_token");
+    expect(playfab.sessionTicket).toEqual("mock_session_ticket");
   });
 });
