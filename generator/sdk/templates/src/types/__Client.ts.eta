@@ -2,7 +2,7 @@
 import type {
   IPlayFabRequestCommon,
   IPlayFabResultCommon
-} from "./PlayFab";
+} from "./base";
 
 <% for (const datatype in it.doc.datatypes) { %>
 <%~ it.generateDatatype(it.doc.datatypes[datatype]) %>

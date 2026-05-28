@@ -38,7 +38,7 @@ function generateApiSummaryLines(apiElement, summaryParam, linkToDocs, docName =
 
   if (!apiElement.deprecation && apiElement.requestExample && apiName) {
     const exampleLines = apiElement.requestExample.replaceAll('*/', '*\\/').split('\n');
-    const examplePrefix = `await ${lowerFirst(docName)}Client.${apiElement.name}(`;
+    const examplePrefix = `await ${lowerFirst(docName)}Client.${lowerFirst(apiElement.name)}(`;
     const exampleSuffix = ');';
 
     lines.push('@example');
@@ -124,29 +124,32 @@ export function getPropertyType(property, datatype) {
 }
 
 export function getAuthParams(apiCall) {
-  // Returns the authKey to PlayFab._internalSettings.ExecuteRequestWrapper()
   if (apiCall.url === "/Authentication/GetEntityToken")
-    return "authKey";
-  if (apiCall.auth === "EntityToken")
-    return "\"X-EntityToken\"";
-  if (apiCall.auth === "SecretKey")
-    return "\"X-SecretKey\"";
-  if (apiCall.auth === "SessionTicket")
-    return "\"X-Authorization\"";
+    return "\"AuthKey\"";
+  if (["EntityToken", "SessionTicket", "SecretKey"].includes(apiCall.auth))
+    return `"${apiCall.auth}"`;
 
-  return "null";
+  return null;
 }
 
 export function getRequestActions(tabbing, apiCall) {
   if (apiCall.url === "/Authentication/GetEntityToken")
-    return tabbing + "var authKey: string | null = null; var authValue: string | null = null;\n"
-      + tabbing + "if (!authKey && this.sessionTicket) { var authInfo = this.GetAuthInfo(request, authKey=\"X-Authorization\"); authKey = authInfo.authKey, authValue = authInfo.authValue; }\n"
-      + tabbing + "if (!authKey && this.settings.developerSecretKey) { var authInfo = this.GetAuthInfo(request, authKey=\"X-SecretKey\"); authKey = authInfo.authKey, authValue = authInfo.authValue; }\n";
+    return tabbing + "let authKey: string | undefined = undefined;\n"
+      + tabbing + "let authValue: string | undefined = undefined;\n"
+      + tabbing + "if (!authKey && playfab.sessionTicket) {\n"
+      + tabbing + "  let authInfo = playfab.getAuthInfo(request, \"SessionTicket\");\n"
+      + tabbing + "  authKey = authInfo.header, authValue = authInfo.authValue;\n"
+      + tabbing + "}\n"
+      + tabbing + "if (!authKey && playfab.config.developerSecretKey) {\n"
+      + tabbing + "  let authInfo = playfab.getAuthInfo(request, \"SecretKey\");\n"
+      + tabbing + "  authKey = authInfo.header, authValue = authInfo.authValue;\n"
+      + tabbing + "}\n";
   if (apiCall.result === "LoginResult" || apiCall.request === "RegisterPlayFabUserRequest")
-    return tabbing + "request.TitleId = this.settings.titleId ? this.settings.titleId : request.TitleId; if (!request.TitleId) throw this.errorTitleId;\n"
+    return tabbing + "request.TitleId = playfab.config.titleId ? playfab.config.titleId : request.TitleId;\n"
+      + tabbing + "if (!request.TitleId) throw ErrorMessages.titleId;\n"
       + tabbing + "// this.authenticationContext can be modified by other asynchronous login attempts\n"
       + tabbing + "// Deep-copy the authenticationContext here to safely update it\n"
-      + tabbing + "var authenticationContext = JSON.parse(JSON.stringify(this.authenticationContext));\n";
+      + tabbing + "let authenticationContext = JSON.parse(JSON.stringify(playfab.authContext));\n";
   return "";
 }
 
@@ -154,20 +157,20 @@ export function getResultActions(tabbing, apiCall) {
   if (apiCall.result === "LoginResult" || apiCall.result === "RegisterPlayFabUserResult")
     return tabbing + "if (result) {\n"
       + tabbing + "  if(result?.SessionTicket) {\n"
-      + tabbing + "    this.sessionTicket = result.SessionTicket;\n"
+      + tabbing + "    playfab.sessionTicket = result.SessionTicket;\n"
       + tabbing + "  }\n"
       + tabbing + "  if (result?.EntityToken?.EntityToken) {\n"
-      + tabbing + "    this.entityToken = result.EntityToken.EntityToken;\n"
+      + tabbing + "    playfab.entityToken = result.EntityToken.EntityToken;\n"
       + tabbing + "  }\n"
       + tabbing + "  // Apply the updates for the AuthenticationContext returned to the client\n"
-      + tabbing + "  authenticationContext = this.UpdateAuthenticationContext(authenticationContext, result);\n"
+      + tabbing + "  authenticationContext = playfab.updateAuthContext(authenticationContext, result);\n"
       + tabbing + "}";
   if (apiCall.url === "/Authentication/GetEntityToken")
     return tabbing + "if (result?.EntityToken)\n"
-      + tabbing + "  this.entityToken = result.EntityToken;";
+      + tabbing + "  playfab.entityToken = result.EntityToken;";
   if (apiCall.url === "/GameServerIdentity/AuthenticateGameServerWithCustomId")
     return tabbing + "if (result?.EntityToken?.EntityToken)\n"
-      + tabbing + "  this.entityToken = result.EntityToken.EntityToken;";
+      + tabbing + "  playfab.entityToken = result.EntityToken.EntityToken;";
   return "";
 }
 

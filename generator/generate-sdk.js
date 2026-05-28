@@ -4,6 +4,7 @@ import path from "path";
 import { fileURLToPath } from "url";
 import { generateSdkGlobals } from "./sdk-globals.js";
 import { generateApiSummary, getBaseType, getPropertyType, getAuthParams, getRequestActions, getResultActions } from "./sdk-utils.js";
+import { lowerFirst } from "./utils.js";
 
 console.time("SDK generated")
 
@@ -80,18 +81,18 @@ function generateDatatype(datatype) {
 function renderCustomTemplates(renderData) {
   const { docs, ...globals } = renderData;
 
-  const apiClientPath = path.relative(templatesDir, path.join(templatesDir, 'src', 'apis', '__PlayFab_Api.ts.eta'));
-  const apiTypesPath = path.relative(templatesDir, path.join(templatesDir, 'src', 'types', '__PlayFab_Api.ts.eta'));
+  const apiClientPath = path.relative(templatesDir, path.join(templatesDir, 'src', 'apis', '__Client.ts.eta'));
+  const apiTypesPath = path.relative(templatesDir, path.join(templatesDir, 'src', 'types', '__Client.ts.eta'));
 
   for (const doc of docs) {
     // main source file
-    const destClientPath = path.join(sdkDir, "src", "apis", `PlayFab${doc.name}Api.ts`);
+    const destClientPath = path.join(sdkDir, "src", "apis", `${doc.exportName}.ts`);
     const usesSessionToken = doc.calls.some(call => call.auth === "SessionTicket");
     const renderedClient = eta.render(apiClientPath, { doc, ...globals, usesSessionToken })
     fs.writeFileSync(destClientPath, renderedClient);
 
     // generated types
-    const destTypesPath = path.join(sdkDir, "src", "types", `PlayFab${doc.name}Api.ts`);
+    const destTypesPath = path.join(sdkDir, "src", "types", `${doc.exportName}.ts`);
     const renderedTypes = eta.render(apiTypesPath, { doc, ...globals })
     fs.writeFileSync(destTypesPath, renderedTypes);
   }
@@ -105,7 +106,8 @@ async function getRenderData() {
     generateApiSummary,
     getAuthParams,
     getRequestActions,
-    getResultActions
+    getResultActions,
+    lowerFirst
   };
 }
 

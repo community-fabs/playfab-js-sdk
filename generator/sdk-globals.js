@@ -38,7 +38,7 @@ async function getPlayFabData() {
   .map(doc => ({
     ...doc,
     exportName: lowerFirst(doc.name),
-    className: `PlayFab${doc.name}Api`
+    functionName: `create${doc.name}Client`
   }));
 
   return {
