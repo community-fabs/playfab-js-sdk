@@ -4,6 +4,7 @@ import { defineConfig } from "tsup";
 export default defineConfig({
   entry: {
     index: "src/index.ts",
+    core: "src/core.ts",
 <% for (const doc of it.docs) {%>
     <%= doc.exportName %>: "src/apis/<%= doc.exportName %>.ts",
 <% } %>

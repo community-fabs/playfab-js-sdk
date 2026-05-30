@@ -4,6 +4,7 @@ import { defineConfig } from "tsup";
 export default defineConfig({
   entry: {
     index: "src/index.ts",
+    core: "src/core.ts",
     addon: "src/apis/addon.ts",
     admin: "src/apis/admin.ts",
     authentication: "src/apis/authentication.ts",
