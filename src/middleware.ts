@@ -11,12 +11,12 @@ export type ResponseContext<T = any> = {
   data?: T;
 };
 
-export type Middleware = (
+export type RequestMiddleware = (
   ctx: RequestContext,
   next: (ctx: RequestContext) => Promise<ResponseContext>
 ) => Promise<ResponseContext>;
 
-export function compose(middleware: Middleware[]) {
+export function compose(middleware: RequestMiddleware[]) {
   return async function run(ctx: RequestContext): Promise<ResponseContext> {
     let index = -1;
 

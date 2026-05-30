@@ -1,22 +1,15 @@
 import constants, {
+  AuthContext,
   AuthInfoMap, 
   type AuthType,
   type PlayfabConfig,
-  type PlayfabState,
 } from "./constants";
 import {
   compose,
-  type Middleware,
+  type RequestMiddleware,
   type RequestContext
 } from "./middleware";
-
-export type AuthContext = {
-  PlayFabId?: string;
-  EntityId?: string;
-  EntityType?: string;
-  SessionTicket?: string;
-  EntityToken?: string;
-};
+export type { RequestMiddleware };
 
 interface RequestOptions {
   method?: string;
@@ -34,7 +27,7 @@ export interface PlayfabClient {
 
   request<T = any>(path: string, options?: RequestOptions): Promise<T>;
 
-  with(mw: Middleware): PlayfabClient;
+  with(mw: RequestMiddleware): PlayfabClient;
 
   getAuthInfo(request: any, authKey: AuthType): {
     header: string;
@@ -46,7 +39,7 @@ export interface PlayfabClient {
 }
 
 export function initializePlayFab(config: PlayfabConfig): PlayfabClient {
-  const middleware: Middleware[] = [];
+  const middleware: RequestMiddleware[] = [];
 
   const baseUrl =
     `https://${config.titleId}.playfabapi.com`;
@@ -112,7 +105,7 @@ export function initializePlayFab(config: PlayfabConfig): PlayfabClient {
       return result.data.data as T;
     },
 
-    with(mw: Middleware) {
+    with(mw: RequestMiddleware) {
       middleware.push(mw);
       return client;
     },

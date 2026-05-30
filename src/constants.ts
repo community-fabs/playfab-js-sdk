@@ -6,10 +6,13 @@ export interface PlayfabConfig {
   developerSecretKey: string;
 }
 
-export interface PlayfabState {
-  sessionTicket?: string;
-  entityToken?: string;
-}
+export type AuthContext = {
+  PlayFabId?: string;
+  EntityId?: string;
+  EntityType?: string;
+  SessionTicket?: string;
+  EntityToken?: string;
+};
 
 export type AuthType = "AuthKey" | "EntityToken" | "SessionTicket" | "SecretKey";
 
