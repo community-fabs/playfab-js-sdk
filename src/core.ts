@@ -38,6 +38,19 @@ export interface PlayfabClient {
   updateAuthContext(currentAuthContext: AuthContext, result: any): AuthContext;
 }
 
+/**
+ * Initializes a PlayFab client with the provided configuration.
+ * @param config - The configuration object containing the titleId and developerSecretKey.
+ * @returns An instance of the PlayFab client.
+ * @example
+ * import getClientApi from '@community-fabs/playfab-sdk/client';
+ * 
+ * const playfab = initializePlayFab({
+ *   titleId: 'YOUR_TITLE_ID',
+ *   developerSecretKey: 'YOUR_DEV_SECRET_KEY',
+ * });
+ * const clientApi = getClientApi(playfab);
+ */
 export function initializePlayFab(config: PlayfabConfig): PlayfabClient {
   const middleware: RequestMiddleware[] = [];
 
@@ -107,6 +120,26 @@ export function initializePlayFab(config: PlayfabConfig): PlayfabClient {
       return result.data.data as T;
     },
 
+    /**
+     * Adds a middleware function to the request pipeline. Middleware is executed
+     * in the order they are added, allowing you to modify requests and responses as needed.
+     * @param mw 
+     * @returns the PlayFab client instance, allowing for chaining multiple middleware calls.
+     * @example
+     * function loggerMiddleware(): RequestMiddleware {
+     *   return async (req, next) => {
+     *     console.log('Request:', req);
+     *     const res = await next(req)
+     *     console.log('Response:', res)
+     *     return res
+     *   };
+     * }
+     *
+     * const playfab = initializePlayFab({
+     *   titleId: 'YOUR_TITLE_ID',
+     *   developerSecretKey: 'YOUR_DEV_SECRET_KEY'
+     * }).with(loggerMiddleware());
+     */
     with(mw: RequestMiddleware) {
       middleware.push(mw);
       return client;
