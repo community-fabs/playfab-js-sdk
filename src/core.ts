@@ -51,8 +51,6 @@ export function initializePlayFab(config: PlayfabConfig): PlayfabClient {
   const baseUrl =
     `https://${config.titleId}.playfabapi.com`;
 
-  // const state: PlayfabState = {};
-
   let authContext: AuthContext = {};
 
   const client = {
