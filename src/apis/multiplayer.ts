@@ -207,7 +207,7 @@ export default function getMultiplayerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/match/matchmaking/cancelallmatchmakingticketsforplayer Microsoft Documentation}
      * @example
-     * await multiplayerClient.cancelAllMatchmakingTicketsForPlayer({
+     * await multiplayerApi.cancelAllMatchmakingTicketsForPlayer({
      *   "QueueName": "custom123",
      *   "Entity": {
      *     "Id": "123123123",
@@ -228,7 +228,7 @@ export default function getMultiplayerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/match/matchmaking/cancelallserverbackfillticketsforplayer Microsoft Documentation}
      * @example
-     * await multiplayerClient.cancelAllServerBackfillTicketsForPlayer({
+     * await multiplayerApi.cancelAllServerBackfillTicketsForPlayer({
      *   "QueueName": "custom123",
      *   "Entity": {
      *     "Id": "123123123",
@@ -249,7 +249,7 @@ export default function getMultiplayerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/match/matchmaking/cancelmatchmakingticket Microsoft Documentation}
      * @example
-     * await multiplayerClient.cancelMatchmakingTicket({
+     * await multiplayerApi.cancelMatchmakingTicket({
      *   "TicketId": "1c4b0daa-150e-47ae-9923-d770c0f9b07c",
      *   "QueueName": "custom123"
      * });
@@ -266,7 +266,7 @@ export default function getMultiplayerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/trueskill/trueskill-admin/cancelmodel Microsoft Documentation}
      * @example
-     * await multiplayerClient.cancelModel({
+     * await multiplayerApi.cancelModel({
      *   "ScenarioId": "f9f0331e-0149-42ba-a994-29b18cac4e4d",
      *   "ModelId": "73a2506e-9fd3-4d84-8dd7-570c8e9e02cf"
      * });
@@ -283,7 +283,7 @@ export default function getMultiplayerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/match/matchmaking/cancelserverbackfillticket Microsoft Documentation}
      * @example
-     * await multiplayerClient.cancelServerBackfillTicket({
+     * await multiplayerApi.cancelServerBackfillTicket({
      *   "TicketId": "1c4b0daa-150e-47ae-9923-d770c0f9b07c",
      *   "QueueName": "custom123"
      * });
@@ -300,7 +300,7 @@ export default function getMultiplayerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/trueskill/trueskill-admin/createbasemodel Microsoft Documentation}
      * @example
-     * await multiplayerClient.createBaseModel({
+     * await multiplayerApi.createBaseModel({
      *   "ScenarioId": "f9f0331e-0149-42ba-a994-29b18cac4e4d",
      *   "ModelName": "Test Batch Model",
      *   "Conditions": [
@@ -327,7 +327,7 @@ export default function getMultiplayerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/trueskill/trueskill-admin/createbatchmodel Microsoft Documentation}
      * @example
-     * await multiplayerClient.createBatchModel({
+     * await multiplayerApi.createBatchModel({
      *   "ScenarioId": "f9f0331e-0149-42ba-a994-29b18cac4e4d",
      *   "ModelName": "Test Batch Model",
      *   "Conditions": [
@@ -363,7 +363,7 @@ export default function getMultiplayerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/multiplayerserver/multiplayerserver/createbuildalias Microsoft Documentation}
      * @example
-     * await multiplayerClient.createBuildAlias({
+     * await multiplayerApi.createBuildAlias({
      *   "AliasName": "AliasName",
      *   "BuildSelectionCriteria": [
      *     {
@@ -386,7 +386,7 @@ export default function getMultiplayerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/multiplayerserver/multiplayerserver/createbuildwithcustomcontainer Microsoft Documentation}
      * @example
-     * await multiplayerClient.createBuildWithCustomContainer({
+     * await multiplayerApi.createBuildWithCustomContainer({
      *   "ContainerRunCommand": "/data/Assets -startserver",
      *   "GameAssetReferences": [
      *     {
@@ -505,7 +505,7 @@ export default function getMultiplayerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/multiplayerserver/multiplayerserver/createbuildwithmanagedcontainer Microsoft Documentation}
      * @example
-     * await multiplayerClient.createBuildWithManagedContainer({
+     * await multiplayerApi.createBuildWithManagedContainer({
      *   "StartMultiplayerServerCommand": "gameserver.exe -startserver",
      *   "GameAssetReferences": [
      *     {
@@ -614,7 +614,7 @@ export default function getMultiplayerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/multiplayerserver/multiplayerserver/createbuildwithprocessbasedserver Microsoft Documentation}
      * @example
-     * await multiplayerClient.createBuildWithProcessBasedServer({
+     * await multiplayerApi.createBuildWithProcessBasedServer({
      *   "OsPlatform": "Windows",
      *   "GameAssetReferences": [
      *     {
@@ -681,7 +681,7 @@ export default function getMultiplayerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/lobby/lobby/createlobby Microsoft Documentation}
      * @example
-     * await multiplayerClient.createLobby({
+     * await multiplayerApi.createLobby({
      *   "MaxPlayers": 50,
      *   "Owner": {
      *     "Id": "1234",
@@ -721,7 +721,7 @@ export default function getMultiplayerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/match/matchmaking/creatematchmakingticket Microsoft Documentation}
      * @example
-     * await multiplayerClient.createMatchmakingTicket({
+     * await multiplayerApi.createMatchmakingTicket({
      *   "Creator": {},
      *   "MembersToMatchWith": [],
      *   "GiveUpAfterSeconds": 100,
@@ -740,7 +740,7 @@ export default function getMultiplayerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/multiplayerserver/multiplayerserver/createremoteuser Microsoft Documentation}
      * @example
-     * await multiplayerClient.createRemoteUser({
+     * await multiplayerApi.createRemoteUser({
      *   "BuildId": "21781fa8-096d-4d9c-b699-75433d579285",
      *   "Region": "SouthCentralUs",
      *   "VmId": "VmID1",
@@ -761,7 +761,7 @@ export default function getMultiplayerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/trueskill/trueskill-admin/createscenario Microsoft Documentation}
      * @example
-     * await multiplayerClient.createScenario({
+     * await multiplayerApi.createScenario({
      *   "Name": "Test Scenario",
      *   "Conditions": [
      *     {
@@ -799,7 +799,7 @@ export default function getMultiplayerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/match/matchmaking/createserverbackfillticket Microsoft Documentation}
      * @example
-     * await multiplayerClient.createServerBackfillTicket({
+     * await multiplayerApi.createServerBackfillTicket({
      *   "Members": [],
      *   "GiveUpAfterSeconds": 100,
      *   "ServerDetails": {
@@ -831,7 +831,7 @@ export default function getMultiplayerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/match/matchmaking/createservermatchmakingticket Microsoft Documentation}
      * @example
-     * await multiplayerClient.createServerMatchmakingTicket({
+     * await multiplayerApi.createServerMatchmakingTicket({
      *   "Members": [
      *     null
      *   ],
@@ -851,7 +851,7 @@ export default function getMultiplayerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/multiplayerserver/multiplayerserver/createtitlemultiplayerserversquotachange Microsoft Documentation}
      * @example
-     * await multiplayerClient.createTitleMultiplayerServersQuotaChange({
+     * await multiplayerApi.createTitleMultiplayerServersQuotaChange({
      *   "ContactEmail": "john@mygamestudio.com",
      *   "StartDate": "2020-01-23T00:00:00Z",
      *   "ChangeDescription": "Season 3 Launch",
@@ -882,7 +882,7 @@ export default function getMultiplayerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/trueskill/trueskill-admin/deactivatemodel Microsoft Documentation}
      * @example
-     * await multiplayerClient.deactivateModel({
+     * await multiplayerApi.deactivateModel({
      *   "ScenarioId": "f9f0331e-0149-42ba-a994-29b18cac4e4d",
      *   "ModelId": "73a2506e-9fd3-4d84-8dd7-570c8e9e02cf"
      * });
@@ -899,7 +899,7 @@ export default function getMultiplayerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/multiplayerserver/multiplayerserver/deleteasset Microsoft Documentation}
      * @example
-     * await multiplayerClient.deleteAsset({
+     * await multiplayerApi.deleteAsset({
      *   "FileName": "gameserver.zip"
      * });
      */
@@ -915,7 +915,7 @@ export default function getMultiplayerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/multiplayerserver/multiplayerserver/deletebuild Microsoft Documentation}
      * @example
-     * await multiplayerClient.deleteBuild({
+     * await multiplayerApi.deleteBuild({
      *   "BuildId": "21781fa8-096d-4d9c-b699-75433d579285"
      * });
      */
@@ -931,7 +931,7 @@ export default function getMultiplayerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/multiplayerserver/multiplayerserver/deletebuildalias Microsoft Documentation}
      * @example
-     * await multiplayerClient.deleteBuildAlias({
+     * await multiplayerApi.deleteBuildAlias({
      *   "AliasId": "21781fa8-096d-4d9c-b699-75433d579285"
      * });
      */
@@ -947,7 +947,7 @@ export default function getMultiplayerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/multiplayerserver/multiplayerserver/deletebuildregion Microsoft Documentation}
      * @example
-     * await multiplayerClient.deleteBuildRegion({
+     * await multiplayerApi.deleteBuildRegion({
      *   "BuildId": "21781fa8-096d-4d9c-b699-75433d579285",
      *   "Region": "JapanEast"
      * });
@@ -964,7 +964,7 @@ export default function getMultiplayerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/multiplayerserver/multiplayerserver/deletecertificate Microsoft Documentation}
      * @example
-     * await multiplayerClient.deleteCertificate({
+     * await multiplayerApi.deleteCertificate({
      *   "Name": "GameCertificate1"
      * });
      */
@@ -980,7 +980,7 @@ export default function getMultiplayerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/multiplayerserver/multiplayerserver/deletecontainerimagerepository Microsoft Documentation}
      * @example
-     * await multiplayerClient.deleteContainerImageRepository({
+     * await multiplayerApi.deleteContainerImageRepository({
      *   "ImageName": "imageName1"
      * });
      */
@@ -996,7 +996,7 @@ export default function getMultiplayerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/lobby/lobby/deletelobby Microsoft Documentation}
      * @example
-     * await multiplayerClient.deleteLobby({
+     * await multiplayerApi.deleteLobby({
      *   "LobbyId": "12345678-1234-1234-1234-123456789ABC"
      * });
      */
@@ -1012,7 +1012,7 @@ export default function getMultiplayerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/trueskill/trueskill-admin/deletemodel Microsoft Documentation}
      * @example
-     * await multiplayerClient.deleteModel({
+     * await multiplayerApi.deleteModel({
      *   "ScenarioId": "f9f0331e-0149-42ba-a994-29b18cac4e4d",
      *   "ModelId": "73a2506e-9fd3-4d84-8dd7-570c8e9e02cf"
      * });
@@ -1029,7 +1029,7 @@ export default function getMultiplayerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/multiplayerserver/multiplayerserver/deleteremoteuser Microsoft Documentation}
      * @example
-     * await multiplayerClient.deleteRemoteUser({
+     * await multiplayerApi.deleteRemoteUser({
      *   "BuildId": "21781fa8-096d-4d9c-b699-75433d579285",
      *   "Region": "SouthCentralUs",
      *   "VmId": "VmID1",
@@ -1048,7 +1048,7 @@ export default function getMultiplayerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/trueskill/trueskill-admin/deletescenario Microsoft Documentation}
      * @example
-     * await multiplayerClient.deleteScenario({
+     * await multiplayerApi.deleteScenario({
      *   "ScenarioId": "f9f0331e-0149-42ba-a994-29b18cac4e4d",
      *   "ForceDelete": true
      * });
@@ -1065,7 +1065,7 @@ export default function getMultiplayerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/multiplayerserver/multiplayerserver/deletesecret Microsoft Documentation}
      * @example
-     * await multiplayerClient.deleteSecret({
+     * await multiplayerApi.deleteSecret({
      *   "Name": "GameSecret1"
      * });
      */
@@ -1081,7 +1081,7 @@ export default function getMultiplayerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/multiplayerserver/multiplayerserver/enablemultiplayerserversfortitle Microsoft Documentation}
      * @example
-     * await multiplayerClient.enableMultiplayerServersForTitle({});
+     * await multiplayerApi.enableMultiplayerServersForTitle({});
      */
     enableMultiplayerServersForTitle (request: EnableMultiplayerServersForTitleRequest) {
       return playfab.request<EnableMultiplayerServersForTitleResponse>("/MultiplayerServer/EnableMultiplayerServersForTitle", {
@@ -1095,7 +1095,7 @@ export default function getMultiplayerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/party/multiplayerserver/enablepartiesfortitle Microsoft Documentation}
      * @example
-     * await multiplayerClient.enablePartiesForTitle({});
+     * await multiplayerApi.enablePartiesForTitle({});
      */
     enablePartiesForTitle (request: EnablePartiesForTitleRequest) {
       return playfab.request<EmptyResponse>("/Party/EnablePartiesForTitle", {
@@ -1109,7 +1109,7 @@ export default function getMultiplayerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/lobby/lobby/findfriendlobbies Microsoft Documentation}
      * @example
-     * await multiplayerClient.findFriendLobbies({
+     * await multiplayerApi.findFriendLobbies({
      *   "Filter": "string_key1 eq 'Wizard' and number_key5 gt 5",
      *   "OrderBy": "number_key5 desc",
      *   "ExternalPlatformFriends": "Xbox",
@@ -1132,7 +1132,7 @@ export default function getMultiplayerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/lobby/lobby/findlobbies Microsoft Documentation}
      * @example
-     * await multiplayerClient.findLobbies({
+     * await multiplayerApi.findLobbies({
      *   "Filter": "string_key1 eq 'Wizard' and number_key5 gt 5",
      *   "OrderBy": "number_key5 desc",
      *   "Pagination": {
@@ -1154,7 +1154,7 @@ export default function getMultiplayerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/multiplayerserver/multiplayerserver/getassetdownloadurl Microsoft Documentation}
      * @example
-     * await multiplayerClient.getAssetDownloadUrl({
+     * await multiplayerApi.getAssetDownloadUrl({
      *   "FileName": "gameserver.zip"
      * });
      */
@@ -1171,7 +1171,7 @@ export default function getMultiplayerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/multiplayerserver/multiplayerserver/getassetuploadurl Microsoft Documentation}
      * @example
-     * await multiplayerClient.getAssetUploadUrl({
+     * await multiplayerApi.getAssetUploadUrl({
      *   "FileName": "gameserver.zip"
      * });
      */
@@ -1187,7 +1187,7 @@ export default function getMultiplayerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/multiplayerserver/multiplayerserver/getbuild Microsoft Documentation}
      * @example
-     * await multiplayerClient.getBuild({
+     * await multiplayerApi.getBuild({
      *   "BuildId": "53781fa8-006d-4e9c-b733-57433d579285"
      * });
      */
@@ -1203,7 +1203,7 @@ export default function getMultiplayerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/multiplayerserver/multiplayerserver/getbuildalias Microsoft Documentation}
      * @example
-     * await multiplayerClient.getBuildAlias({
+     * await multiplayerApi.getBuildAlias({
      *   "AliasId": "21781fa8-096d-4d9c-b699-75433d579285"
      * });
      */
@@ -1219,7 +1219,7 @@ export default function getMultiplayerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/multiplayerserver/multiplayerserver/getcognitiveserviceslocales Microsoft Documentation}
      * @example
-     * await multiplayerClient.getCognitiveServicesLocales({
+     * await multiplayerApi.getCognitiveServicesLocales({
      *   "CognitiveServicesType": "SpeechToText",
      *   "Region": "WestUs"
      * });
@@ -1236,7 +1236,7 @@ export default function getMultiplayerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/multiplayerserver/multiplayerserver/getcognitiveservicestoken Microsoft Documentation}
      * @example
-     * await multiplayerClient.getCognitiveServicesToken({
+     * await multiplayerApi.getCognitiveServicesToken({
      *   "CognitiveServicesType": "SpeechToText",
      *   "Region": "AustraliaEast"
      * });
@@ -1253,7 +1253,7 @@ export default function getMultiplayerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/multiplayerserver/multiplayerserver/getcontainerregistrycredentials Microsoft Documentation}
      * @example
-     * await multiplayerClient.getContainerRegistryCredentials({});
+     * await multiplayerApi.getContainerRegistryCredentials({});
      */
     getContainerRegistryCredentials (request: GetContainerRegistryCredentialsRequest) {
       return playfab.request<GetContainerRegistryCredentialsResponse>("/MultiplayerServer/GetContainerRegistryCredentials", {
@@ -1267,7 +1267,7 @@ export default function getMultiplayerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/lobby/lobby/getlobby Microsoft Documentation}
      * @example
-     * await multiplayerClient.getLobby({
+     * await multiplayerApi.getLobby({
      *   "LobbyId": "12345678-1234-1234-1234-123456789ABC"
      * });
      */
@@ -1283,7 +1283,7 @@ export default function getMultiplayerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/match/matchmaking/getmatch Microsoft Documentation}
      * @example
-     * await multiplayerClient.getMatch({
+     * await multiplayerApi.getMatch({
      *   "MatchId": "4e0c5fd7-80e9-4744-b0ce-061a7f067ff5",
      *   "QueueName": "custom123",
      *   "EscapeObject": false,
@@ -1302,7 +1302,7 @@ export default function getMultiplayerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/match/matchmaking-admin/getmatchmakingqueue Microsoft Documentation}
      * @example
-     * await multiplayerClient.getMatchmakingQueue({
+     * await multiplayerApi.getMatchmakingQueue({
      *   "QueueName": "custom123"
      * });
      */
@@ -1318,7 +1318,7 @@ export default function getMultiplayerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/match/matchmaking/getmatchmakingticket Microsoft Documentation}
      * @example
-     * await multiplayerClient.getMatchmakingTicket({
+     * await multiplayerApi.getMatchmakingTicket({
      *   "TicketId": "1c4b0daa-150e-47ae-9923-d770c0f9b07c",
      *   "QueueName": "custom123",
      *   "EscapeObject": false
@@ -1336,7 +1336,7 @@ export default function getMultiplayerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/trueskill/trueskill-admin/getmodeldetails Microsoft Documentation}
      * @example
-     * await multiplayerClient.getModelDetails({
+     * await multiplayerApi.getModelDetails({
      *   "ScenarioId": "f9f0331e-0149-42ba-a994-29b18cac4e4d",
      *   "ModelId": "73a2506e-9fd3-4d84-8dd7-570c8e9e02cf"
      * });
@@ -1353,7 +1353,7 @@ export default function getMultiplayerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/trueskill/trueskill-admin/getmodelsbyscenario Microsoft Documentation}
      * @example
-     * await multiplayerClient.getModelsByScenario({
+     * await multiplayerApi.getModelsByScenario({
      *   "ScenarioId": "f9f0331e-0149-42ba-a994-29b18cac4e4d"
      * });
      */
@@ -1369,7 +1369,7 @@ export default function getMultiplayerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/multiplayerserver/multiplayerserver/getmultiplayerserverandtoken Microsoft Documentation}
      * @example
-     * await multiplayerClient.getMultiplayerServerAndToken({
+     * await multiplayerApi.getMultiplayerServerAndToken({
      *   "TokenPlayerIds": [
      *     "User1",
      *     "User2"
@@ -1389,7 +1389,7 @@ export default function getMultiplayerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/multiplayerserver/multiplayerserver/getmultiplayerserverdetails Microsoft Documentation}
      * @example
-     * await multiplayerClient.getMultiplayerServerDetails({
+     * await multiplayerApi.getMultiplayerServerDetails({
      *   "SessionId": "02bdef0e-e01e-4b29-8efe-ff9f47a06d8c"
      * });
      */
@@ -1405,7 +1405,7 @@ export default function getMultiplayerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/multiplayerserver/multiplayerserver/getmultiplayerserverlogs Microsoft Documentation}
      * @example
-     * await multiplayerClient.getMultiplayerServerLogs({
+     * await multiplayerApi.getMultiplayerServerLogs({
      *   "Region": "AustraliaEast",
      *   "ServerId": "SomeServerId"
      * });
@@ -1422,7 +1422,7 @@ export default function getMultiplayerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/multiplayerserver/multiplayerserver/getmultiplayersessionlogsbysessionid Microsoft Documentation}
      * @example
-     * await multiplayerClient.getMultiplayerSessionLogsBySessionId({
+     * await multiplayerApi.getMultiplayerSessionLogsBySessionId({
      *   "SessionId": "92e29db9-4004-4349-9a1f-b70ac01bdc08"
      * });
      */
@@ -1438,7 +1438,7 @@ export default function getMultiplayerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/trueskill/trueskill/getplayerskill Microsoft Documentation}
      * @example
-     * await multiplayerClient.getPlayerSkill({
+     * await multiplayerApi.getPlayerSkill({
      *   "Conditions": {
      *     "Platform": "Xbox",
      *     "Mode": "Deathmatch"
@@ -1476,7 +1476,7 @@ export default function getMultiplayerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/trueskill/trueskill/getplayerskillforconditions Microsoft Documentation}
      * @example
-     * await multiplayerClient.getPlayerSkillForConditions({
+     * await multiplayerApi.getPlayerSkillForConditions({
      *   "Conditions": [
      *     {
      *       "Conditions": {
@@ -1524,7 +1524,7 @@ export default function getMultiplayerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/trueskill/trueskill/getplayerskillforconditionsfrommodel Microsoft Documentation}
      * @example
-     * await multiplayerClient.getPlayerSkillForConditionsFromModel({
+     * await multiplayerApi.getPlayerSkillForConditionsFromModel({
      *   "ModelId": "73a2506e-9fd3-4d84-8dd7-570c8e9e02cf",
      *   "Conditions": [
      *     {
@@ -1573,7 +1573,7 @@ export default function getMultiplayerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/trueskill/trueskill/getplayerskillfrommodel Microsoft Documentation}
      * @example
-     * await multiplayerClient.getPlayerSkillFromModel({
+     * await multiplayerApi.getPlayerSkillFromModel({
      *   "ModelId": "73a2506e-9fd3-4d84-8dd7-570c8e9e02cf",
      *   "Conditions": {
      *     "Platform": "Xbox",
@@ -1612,7 +1612,7 @@ export default function getMultiplayerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/match/matchmaking/getqueuestatistics Microsoft Documentation}
      * @example
-     * await multiplayerClient.getQueueStatistics({
+     * await multiplayerApi.getQueueStatistics({
      *   "QueueName": "custom123"
      * });
      */
@@ -1628,7 +1628,7 @@ export default function getMultiplayerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/multiplayerserver/multiplayerserver/getremoteloginendpoint Microsoft Documentation}
      * @example
-     * await multiplayerClient.getRemoteLoginEndpoint({
+     * await multiplayerApi.getRemoteLoginEndpoint({
      *   "BuildId": "21781fa8-096d-4d9c-b699-75433d579285",
      *   "Region": "SouthCentralUs",
      *   "VmId": "VmID1"
@@ -1646,7 +1646,7 @@ export default function getMultiplayerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/trueskill/trueskill-admin/getscenarioconfiguration Microsoft Documentation}
      * @example
-     * await multiplayerClient.getScenarioConfiguration({
+     * await multiplayerApi.getScenarioConfiguration({
      *   "ScenarioId": "f9f0331e-0149-42ba-a994-29b18cac4e4d"
      * });
      */
@@ -1674,7 +1674,7 @@ export default function getMultiplayerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/match/matchmaking/getserverbackfillticket Microsoft Documentation}
      * @example
-     * await multiplayerClient.getServerBackfillTicket({
+     * await multiplayerApi.getServerBackfillTicket({
      *   "TicketId": "1c4b0daa-150e-47ae-9923-d770c0f9b07c",
      *   "QueueName": "custom123",
      *   "EscapeObject": false
@@ -1692,7 +1692,7 @@ export default function getMultiplayerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/multiplayerserver/multiplayerserver/gettitleenabledformultiplayerserversstatus Microsoft Documentation}
      * @example
-     * await multiplayerClient.getTitleEnabledForMultiplayerServersStatus({});
+     * await multiplayerApi.getTitleEnabledForMultiplayerServersStatus({});
      */
     getTitleEnabledForMultiplayerServersStatus (request: GetTitleEnabledForMultiplayerServersStatusRequest) {
       return playfab.request<GetTitleEnabledForMultiplayerServersStatusResponse>("/MultiplayerServer/GetTitleEnabledForMultiplayerServersStatus", {
@@ -1706,7 +1706,7 @@ export default function getMultiplayerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/multiplayerserver/multiplayerserver/gettitlemultiplayerserversquotachange Microsoft Documentation}
      * @example
-     * await multiplayerClient.getTitleMultiplayerServersQuotaChange({
+     * await multiplayerApi.getTitleMultiplayerServersQuotaChange({
      *   "RequestId": "1234"
      * });
      */
@@ -1722,7 +1722,7 @@ export default function getMultiplayerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/multiplayerserver/multiplayerserver/gettitlemultiplayerserversquotas Microsoft Documentation}
      * @example
-     * await multiplayerClient.getTitleMultiplayerServersQuotas({});
+     * await multiplayerApi.getTitleMultiplayerServersQuotas({});
      */
     getTitleMultiplayerServersQuotas (request: GetTitleMultiplayerServersQuotasRequest) {
       return playfab.request<GetTitleMultiplayerServersQuotasResponse>("/MultiplayerServer/GetTitleMultiplayerServersQuotas", {
@@ -1736,7 +1736,7 @@ export default function getMultiplayerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/lobby/lobby/invitetolobby Microsoft Documentation}
      * @example
-     * await multiplayerClient.inviteToLobby({
+     * await multiplayerApi.inviteToLobby({
      *   "LobbyId": "12345678-1234-1234-1234-123456789ABC",
      *   "MemberEntity": {
      *     "Id": "1234",
@@ -1762,7 +1762,7 @@ export default function getMultiplayerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/lobby/lobby/joinarrangedlobby Microsoft Documentation}
      * @example
-     * await multiplayerClient.joinArrangedLobby({
+     * await multiplayerApi.joinArrangedLobby({
      *   "MaxPlayers": 50,
      *   "OwnerMigrationPolicy": "Automatic",
      *   "UseConnections": true,
@@ -1791,7 +1791,7 @@ export default function getMultiplayerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/lobby/lobby/joinlobby Microsoft Documentation}
      * @example
-     * await multiplayerClient.joinLobby({
+     * await multiplayerApi.joinLobby({
      *   "MemberEntity": {
      *     "Id": "1234",
      *     "Type": "title_player_account",
@@ -1815,7 +1815,7 @@ export default function getMultiplayerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/lobby/lobby/joinlobbyasserver Microsoft Documentation}
      * @example
-     * await multiplayerClient.joinLobbyAsServer({
+     * await multiplayerApi.joinLobbyAsServer({
      *   "ServerEntity": {
      *     "Id": "1234",
      *     "Type": "game_server",
@@ -1839,7 +1839,7 @@ export default function getMultiplayerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/match/matchmaking/joinmatchmakingticket Microsoft Documentation}
      * @example
-     * await multiplayerClient.joinMatchmakingTicket({
+     * await multiplayerApi.joinMatchmakingTicket({
      *   "TicketId": "1c4b0daa-150e-47ae-9923-d770c0f9b07c",
      *   "QueueName": "custom123",
      *   "Member": {}
@@ -1857,7 +1857,7 @@ export default function getMultiplayerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/lobby/lobby/leavelobby Microsoft Documentation}
      * @example
-     * await multiplayerClient.leaveLobby({
+     * await multiplayerApi.leaveLobby({
      *   "LobbyId": "12345678-1234-1234-1234-123456789ABC",
      *   "MemberEntity": {
      *     "Id": "1234",
@@ -1878,7 +1878,7 @@ export default function getMultiplayerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/lobby/lobby/leavelobbyasserver Microsoft Documentation}
      * @example
-     * await multiplayerClient.leaveLobbyAsServer({
+     * await multiplayerApi.leaveLobbyAsServer({
      *   "ServerEntity": {
      *     "Id": "1234",
      *     "Type": "game_server",
@@ -1899,7 +1899,7 @@ export default function getMultiplayerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/multiplayerserver/multiplayerserver/listarchivedmultiplayerservers Microsoft Documentation}
      * @example
-     * await multiplayerClient.listArchivedMultiplayerServers({
+     * await multiplayerApi.listArchivedMultiplayerServers({
      *   "BuildId": "21781fa8-096d-4d9c-b699-75433d579285",
      *   "Region": "SouthCentralUs"
      * });
@@ -1916,7 +1916,7 @@ export default function getMultiplayerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/multiplayerserver/multiplayerserver/listassetsummaries Microsoft Documentation}
      * @example
-     * await multiplayerClient.listAssetSummaries({
+     * await multiplayerApi.listAssetSummaries({
      *   "PageSize": 10
      * });
      */
@@ -1933,7 +1933,7 @@ export default function getMultiplayerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/multiplayerserver/multiplayerserver/listbuildaliases Microsoft Documentation}
      * @example
-     * await multiplayerClient.listBuildAliases({
+     * await multiplayerApi.listBuildAliases({
      *   "PageSize": 10
      * });
      */
@@ -1964,7 +1964,7 @@ export default function getMultiplayerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/multiplayerserver/multiplayerserver/listbuildsummariesv2 Microsoft Documentation}
      * @example
-     * await multiplayerClient.listBuildSummariesV2({
+     * await multiplayerApi.listBuildSummariesV2({
      *   "PageSize": 10
      * });
      */
@@ -1980,7 +1980,7 @@ export default function getMultiplayerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/multiplayerserver/multiplayerserver/listcertificatesummaries Microsoft Documentation}
      * @example
-     * await multiplayerClient.listCertificateSummaries({
+     * await multiplayerApi.listCertificateSummaries({
      *   "PageSize": 10
      * });
      */
@@ -1996,7 +1996,7 @@ export default function getMultiplayerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/multiplayerserver/multiplayerserver/listcontainerimages Microsoft Documentation}
      * @example
-     * await multiplayerClient.listContainerImages({
+     * await multiplayerApi.listContainerImages({
      *   "PageSize": 10
      * });
      */
@@ -2012,7 +2012,7 @@ export default function getMultiplayerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/multiplayerserver/multiplayerserver/listcontainerimagetags Microsoft Documentation}
      * @example
-     * await multiplayerClient.listContainerImageTags({
+     * await multiplayerApi.listContainerImageTags({
      *   "ImageName": "imageName1",
      *   "PageSize": 10
      * });
@@ -2029,7 +2029,7 @@ export default function getMultiplayerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/match/matchmaking-admin/listmatchmakingqueues Microsoft Documentation}
      * @example
-     * await multiplayerClient.listMatchmakingQueues({});
+     * await multiplayerApi.listMatchmakingQueues({});
      */
     listMatchmakingQueues (request: ListMatchmakingQueuesRequest) {
       return playfab.request<ListMatchmakingQueuesResult>("/Match/ListMatchmakingQueues", {
@@ -2043,7 +2043,7 @@ export default function getMultiplayerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/match/matchmaking/listmatchmakingticketsforplayer Microsoft Documentation}
      * @example
-     * await multiplayerClient.listMatchmakingTicketsForPlayer({
+     * await multiplayerApi.listMatchmakingTicketsForPlayer({
      *   "QueueName": "custom123",
      *   "Entity": {
      *     "Id": "123123123",
@@ -2064,7 +2064,7 @@ export default function getMultiplayerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/multiplayerserver/multiplayerserver/listmultiplayerservers Microsoft Documentation}
      * @example
-     * await multiplayerClient.listMultiplayerServers({
+     * await multiplayerApi.listMultiplayerServers({
      *   "BuildId": "21781fa8-096d-4d9c-b699-75433d579285",
      *   "Region": "SouthCentralUs"
      * });
@@ -2081,7 +2081,7 @@ export default function getMultiplayerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/multiplayerserver/multiplayerserver/listpartyqosservers Microsoft Documentation}
      * @example
-     * await multiplayerClient.listPartyQosServers({
+     * await multiplayerApi.listPartyQosServers({
      *   "Version": "1.0.0"
      * });
      */
@@ -2109,7 +2109,7 @@ export default function getMultiplayerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/multiplayerserver/multiplayerserver/listqosserversfortitle Microsoft Documentation}
      * @example
-     * await multiplayerClient.listQosServersForTitle({
+     * await multiplayerApi.listQosServersForTitle({
      *   "IncludeAllRegions": true,
      *   "RoutingPreference": "Microsoft"
      * });
@@ -2126,7 +2126,7 @@ export default function getMultiplayerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/multiplayerserver/multiplayerserver/listsecretsummaries Microsoft Documentation}
      * @example
-     * await multiplayerClient.listSecretSummaries({
+     * await multiplayerApi.listSecretSummaries({
      *   "PageSize": 10
      * });
      */
@@ -2142,7 +2142,7 @@ export default function getMultiplayerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/match/matchmaking/listserverbackfillticketsforplayer Microsoft Documentation}
      * @example
-     * await multiplayerClient.listServerBackfillTicketsForPlayer({
+     * await multiplayerApi.listServerBackfillTicketsForPlayer({
      *   "QueueName": "custom123",
      *   "Entity": {
      *     "Id": "123123123",
@@ -2163,7 +2163,7 @@ export default function getMultiplayerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/multiplayerserver/multiplayerserver/listtitlemultiplayerserversquotachanges Microsoft Documentation}
      * @example
-     * await multiplayerClient.listTitleMultiplayerServersQuotaChanges({});
+     * await multiplayerApi.listTitleMultiplayerServersQuotaChanges({});
      */
     listTitleMultiplayerServersQuotaChanges (request: ListTitleMultiplayerServersQuotaChangesRequest) {
       return playfab.request<ListTitleMultiplayerServersQuotaChangesResponse>("/MultiplayerServer/ListTitleMultiplayerServersQuotaChanges", {
@@ -2177,7 +2177,7 @@ export default function getMultiplayerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/multiplayerserver/multiplayerserver/listvirtualmachinesummaries Microsoft Documentation}
      * @example
-     * await multiplayerClient.listVirtualMachineSummaries({
+     * await multiplayerApi.listVirtualMachineSummaries({
      *   "BuildId": "21781fa8-096d-4d9c-b699-75433d579285",
      *   "Region": "SouthCentralUs",
      *   "PageSize": 10
@@ -2195,7 +2195,7 @@ export default function getMultiplayerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/match/matchmaking-admin/removematchmakingqueue Microsoft Documentation}
      * @example
-     * await multiplayerClient.removeMatchmakingQueue({
+     * await multiplayerApi.removeMatchmakingQueue({
      *   "QueueName": "custom123"
      * });
      */
@@ -2211,7 +2211,7 @@ export default function getMultiplayerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/lobby/lobby/removemember Microsoft Documentation}
      * @example
-     * await multiplayerClient.removeMember({
+     * await multiplayerApi.removeMember({
      *   "LobbyId": "12345678-1234-1234-1234-123456789ABC",
      *   "MemberEntity": {
      *     "Id": "1234",
@@ -2234,7 +2234,7 @@ export default function getMultiplayerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/multiplayerserver/multiplayerserver/requestmultiplayerserver Microsoft Documentation}
      * @example
-     * await multiplayerClient.requestMultiplayerServer({
+     * await multiplayerApi.requestMultiplayerServer({
      *   "BuildId": "21781fa8-096d-4d9c-b699-75433d579285",
      *   "SessionId": "02bdef0e-e01e-4b29-8efe-ff9f47a06d8c",
      *   "SessionCookie": "U2Vzc2lvbkNvb2tpZQ==",
@@ -2261,7 +2261,7 @@ export default function getMultiplayerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/multiplayerserver/multiplayerserver/requestmultiplayerserverandtoken Microsoft Documentation}
      * @example
-     * await multiplayerClient.requestMultiplayerServerAndToken({
+     * await multiplayerApi.requestMultiplayerServerAndToken({
      *   "TokenPlayerIds": [
      *     "gamer1",
      *     "gamer2"
@@ -2291,7 +2291,7 @@ export default function getMultiplayerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/party/multiplayerserver/requestparty Microsoft Documentation}
      * @example
-     * await multiplayerClient.requestParty({
+     * await multiplayerApi.requestParty({
      *   "PartyId": "23781fa9-e01e-4b29-4f0b-dd9f37a06a1e",
      *   "PreferredRegions": [
      *     "EastUs",
@@ -2313,7 +2313,7 @@ export default function getMultiplayerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/party/multiplayerserver/requestpartyservice Microsoft Documentation}
      * @example
-     * await multiplayerClient.requestPartyService({
+     * await multiplayerApi.requestPartyService({
      *   "TitleId": "12345",
      *   "PartyId": "23781fa9-e01e-4b29-4f0b-dd9f37a06a1e",
      *   "PreferredRegions": [
@@ -2347,7 +2347,7 @@ export default function getMultiplayerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/multiplayerserver/multiplayerserver/rollovercontainerregistrycredentials Microsoft Documentation}
      * @example
-     * await multiplayerClient.rolloverContainerRegistryCredentials({});
+     * await multiplayerApi.rolloverContainerRegistryCredentials({});
      */
     rolloverContainerRegistryCredentials (request: RolloverContainerRegistryCredentialsRequest) {
       return playfab.request<RolloverContainerRegistryCredentialsResponse>("/MultiplayerServer/RolloverContainerRegistryCredentials", {
@@ -2361,7 +2361,7 @@ export default function getMultiplayerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/match/matchmaking-admin/setmatchmakingqueue Microsoft Documentation}
      * @example
-     * await multiplayerClient.setMatchmakingQueue({
+     * await multiplayerApi.setMatchmakingQueue({
      *   "MatchmakingQueue": {
      *     "Name": "ExampleQueueName",
      *     "MinMatchSize": 7,
@@ -2532,7 +2532,7 @@ export default function getMultiplayerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/multiplayerserver/multiplayerserver/shutdownmultiplayerserver Microsoft Documentation}
      * @example
-     * await multiplayerClient.shutdownMultiplayerServer({
+     * await multiplayerApi.shutdownMultiplayerServer({
      *   "Region": "AustraliaEast",
      *   "SessionId": "02bdef0e-e01e-4b29-8efe-ff9f47a06d8c"
      * });
@@ -2549,7 +2549,7 @@ export default function getMultiplayerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/lobby/lobby/subscribetolobbyresource Microsoft Documentation}
      * @example
-     * await multiplayerClient.subscribeToLobbyResource({
+     * await multiplayerApi.subscribeToLobbyResource({
      *   "Type": "LobbyChange",
      *   "ResourceId": "5c905725-0184-4112-a563-2f4187710d06",
      *   "SubscriptionVersion": 1,
@@ -2573,7 +2573,7 @@ export default function getMultiplayerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/match/matchmaking/subscribetomatchmakingresource Microsoft Documentation}
      * @example
-     * await multiplayerClient.subscribeToMatchmakingResource({
+     * await multiplayerApi.subscribeToMatchmakingResource({
      *   "Type": "MatchTicketStatusChange",
      *   "ResourceId": "5a58afee-a9d7-4a47-875b-48bae4dc0590",
      *   "SubscriptionVersion": 1,
@@ -2593,7 +2593,7 @@ export default function getMultiplayerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/lobby/lobby/unsubscribefromlobbyresource Microsoft Documentation}
      * @example
-     * await multiplayerClient.unsubscribeFromLobbyResource({
+     * await multiplayerApi.unsubscribeFromLobbyResource({
      *   "Type": "LobbyChange",
      *   "ResourceId": "5c905725-0184-4112-a563-2f4187710d06",
      *   "SubscriptionVersion": 1,
@@ -2617,7 +2617,7 @@ export default function getMultiplayerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/match/matchmaking/unsubscribefrommatchmakingresource Microsoft Documentation}
      * @example
-     * await multiplayerClient.unsubscribeFromMatchmakingResource({
+     * await multiplayerApi.unsubscribeFromMatchmakingResource({
      *   "Type": "MatchTicketStatusChange",
      *   "ResourceId": "5a58afee-a9d7-4a47-875b-48bae4dc0590",
      *   "SubscriptionVersion": 1,
@@ -2637,7 +2637,7 @@ export default function getMultiplayerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/multiplayerserver/multiplayerserver/untagcontainerimage Microsoft Documentation}
      * @example
-     * await multiplayerClient.untagContainerImage({
+     * await multiplayerApi.untagContainerImage({
      *   "ImageName": "imageName1",
      *   "Tag": "tag1"
      * });
@@ -2654,7 +2654,7 @@ export default function getMultiplayerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/multiplayerserver/multiplayerserver/updatebuildalias Microsoft Documentation}
      * @example
-     * await multiplayerClient.updateBuildAlias({
+     * await multiplayerApi.updateBuildAlias({
      *   "AliasName": "AliasName",
      *   "BuildSelectionCriteria": [
      *     {
@@ -2678,7 +2678,7 @@ export default function getMultiplayerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/multiplayerserver/multiplayerserver/updatebuildname Microsoft Documentation}
      * @example
-     * await multiplayerClient.updateBuildName({
+     * await multiplayerApi.updateBuildName({
      *   "BuildId": "21781fa8-096d-4d9c-b699-75433d579285",
      *   "BuildName": "GameBuildName"
      * });
@@ -2695,7 +2695,7 @@ export default function getMultiplayerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/multiplayerserver/multiplayerserver/updatebuildregion Microsoft Documentation}
      * @example
-     * await multiplayerClient.updateBuildRegion({
+     * await multiplayerApi.updateBuildRegion({
      *   "BuildId": "21781fa8-096d-4d9c-b699-75433d579285",
      *   "BuildRegion": {
      *     "Region": "NorthEurope",
@@ -2716,7 +2716,7 @@ export default function getMultiplayerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/multiplayerserver/multiplayerserver/updatebuildregions Microsoft Documentation}
      * @example
-     * await multiplayerClient.updateBuildRegions({
+     * await multiplayerApi.updateBuildRegions({
      *   "BuildId": "21781fa8-096d-4d9c-b699-75433d579285",
      *   "BuildRegions": [
      *     {
@@ -2749,7 +2749,7 @@ export default function getMultiplayerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/lobby/lobby/updatelobby Microsoft Documentation}
      * @example
-     * await multiplayerClient.updateLobby({
+     * await multiplayerApi.updateLobby({
      *   "LobbyId": "12345678-1234-1234-1234-123456789ABC",
      *   "MaxPlayers": 50,
      *   "AccessPolicy": "Friends",
@@ -2791,7 +2791,7 @@ export default function getMultiplayerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/lobby/lobby/updatelobbyasserver Microsoft Documentation}
      * @example
-     * await multiplayerClient.updateLobbyAsServer({
+     * await multiplayerApi.updateLobbyAsServer({
      *   "LobbyId": "12345678-1234-1234-1234-123456789ABC",
      *   "ServerEntity": {
      *     "Id": "1234",
@@ -2818,7 +2818,7 @@ export default function getMultiplayerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/trueskill/trueskill-admin/updatemodel Microsoft Documentation}
      * @example
-     * await multiplayerClient.updateModel({
+     * await multiplayerApi.updateModel({
      *   "ScenarioId": "f9f0331e-0149-42ba-a994-29b18cac4e4d",
      *   "ModelId": "73a2506e-9fd3-4d84-8dd7-570c8e9e02cf",
      *   "ModelName": "New Model Name",
@@ -2837,7 +2837,7 @@ export default function getMultiplayerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/trueskill/trueskill-admin/updateprimarymodel Microsoft Documentation}
      * @example
-     * await multiplayerClient.updatePrimaryModel({
+     * await multiplayerApi.updatePrimaryModel({
      *   "ScenarioId": "f9f0331e-0149-42ba-a994-29b18cac4e4d",
      *   "ModelId": "73a2506e-9fd3-4d84-8dd7-570c8e9e02cf"
      * });
@@ -2854,7 +2854,7 @@ export default function getMultiplayerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/trueskill/trueskill-admin/updatescenarioconfiguration Microsoft Documentation}
      * @example
-     * await multiplayerClient.updateScenarioConfiguration({
+     * await multiplayerApi.updateScenarioConfiguration({
      *   "ScenarioId": "f9f0331e-0149-42ba-a994-29b18cac4e4d",
      *   "ConditionsToUpdateOrAdd": [
      *     {
@@ -2879,7 +2879,7 @@ export default function getMultiplayerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/multiplayerserver/multiplayerserver/uploadcertificate Microsoft Documentation}
      * @example
-     * await multiplayerClient.uploadCertificate({
+     * await multiplayerApi.uploadCertificate({
      *   "GameCertificate": {
      *     "Name": "GameCertificate1",
      *     "Base64EncodedValue": "UGxheUZhYlJvY2tzISEhTGV0J3NtYWtlYWxvdG9mZ2FtZXMh",
@@ -2900,7 +2900,7 @@ export default function getMultiplayerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/trueskill/trueskill/uploadmatchresult Microsoft Documentation}
      * @example
-     * await multiplayerClient.uploadMatchResult({
+     * await multiplayerApi.uploadMatchResult({
      *   "MatchResult": {
      *     "ScenarioId": "f9f0331e-0149-42ba-a994-29b18cac4e4d",
      *     "Teams": [
@@ -3015,7 +3015,7 @@ export default function getMultiplayerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/multiplayerserver/multiplayerserver/uploadsecret Microsoft Documentation}
      * @example
-     * await multiplayerClient.uploadSecret({
+     * await multiplayerApi.uploadSecret({
      *   "GameSecret": {
      *     "Name": "GameSecret1",
      *     "Value": "Value123",

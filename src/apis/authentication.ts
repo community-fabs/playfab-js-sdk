@@ -18,7 +18,7 @@ export default function getAuthenticationApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/gameserveridentity/authentication/authenticategameserverwithcustomid Microsoft Documentation}
      * @example
-     * await authenticationClient.authenticateGameServerWithCustomId({
+     * await authenticationApi.authenticateGameServerWithCustomId({
      *   "CustomId": "12345678123412341234123456789abc"
      * });
      */
@@ -39,7 +39,7 @@ export default function getAuthenticationApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/gameserveridentity/authentication/delete Microsoft Documentation}
      * @example
-     * await authenticationClient.delete({
+     * await authenticationApi.delete({
      *   "Entity": {
      *     "Id": "3D00C64954",
      *     "Type": "game_server",
@@ -60,7 +60,7 @@ export default function getAuthenticationApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/authentication/authentication/getentitytoken Microsoft Documentation}
      * @example
-     * await authenticationClient.getEntityToken({});
+     * await authenticationApi.getEntityToken({});
      */
     getEntityToken (request: GetEntityTokenRequest) {
       let authKey: string | undefined = undefined;
@@ -89,7 +89,7 @@ export default function getAuthenticationApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/authentication/authentication/validateentitytoken Microsoft Documentation}
      * @example
-     * await authenticationClient.validateEntityToken({
+     * await authenticationApi.validateEntityToken({
      *   "EntityToken": "50c61b9065b27a124a400ee3b95d404313986969"
      * });
      */

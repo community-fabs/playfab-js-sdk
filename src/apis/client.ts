@@ -346,7 +346,7 @@ export default function getClientApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/client/trading/accepttrade Microsoft Documentation}
      * @example
-     * await clientClient.acceptTrade({
+     * await clientApi.acceptTrade({
      *   "OfferingPlayerId": "CD803BF233CE76CC",
      *   "TradeId": "D819CEC225EA9948C351",
      *   "AcceptedInventoryInstanceIds": [
@@ -368,7 +368,7 @@ export default function getClientApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/client/friend-list-management/addfriend Microsoft Documentation}
      * @example
-     * await clientClient.addFriend({
+     * await clientApi.addFriend({
      *   "FriendPlayFabId": "29837799"
      * });
      */
@@ -386,7 +386,7 @@ export default function getClientApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/client/account-management/addgenericid Microsoft Documentation}
      * @example
-     * await clientClient.addGenericID({
+     * await clientApi.addGenericID({
      *   "GenericId": {
      *     "ServiceName": "BigBizSocial",
      *     "UserId": "1234567890"
@@ -405,7 +405,7 @@ export default function getClientApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/client/account-management/addorupdatecontactemail Microsoft Documentation}
      * @example
-     * await clientClient.addOrUpdateContactEmail({
+     * await clientApi.addOrUpdateContactEmail({
      *   "EmailAddress": "theuser@domain.com"
      * });
      */
@@ -423,7 +423,7 @@ export default function getClientApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/client/shared-group-data/addsharedgroupmembers Microsoft Documentation}
      * @example
-     * await clientClient.addSharedGroupMembers({
+     * await clientApi.addSharedGroupMembers({
      *   "SharedGroupId": "Clan Data",
      *   "PlayFabIds": [
      *     "D984A64B832",
@@ -444,7 +444,7 @@ export default function getClientApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/client/account-management/addusernamepassword Microsoft Documentation}
      * @example
-     * await clientClient.addUsernamePassword({
+     * await clientApi.addUsernamePassword({
      *   "Username": "theuser",
      *   "Email": "me@here.com",
      *   "Password": "ExampleSecret"
@@ -463,7 +463,7 @@ export default function getClientApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/client/player-item-management/adduservirtualcurrency Microsoft Documentation}
      * @example
-     * await clientClient.addUserVirtualCurrency({
+     * await clientApi.addUserVirtualCurrency({
      *   "VirtualCurrency": "GC",
      *   "Amount": 100
      * });
@@ -480,7 +480,7 @@ export default function getClientApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/client/platform-specific-methods/androiddevicepushnotificationregistration Microsoft Documentation}
      * @example
-     * await clientClient.androidDevicePushNotificationRegistration({
+     * await clientApi.androidDevicePushNotificationRegistration({
      *   "DeviceToken": "59872d98fa632brn8hg3770",
      *   "SendPushNotificationConfirmation": true,
      *   "ConfirmationMessage": "Welcome to PlayFab!"
@@ -498,7 +498,7 @@ export default function getClientApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/client/advertising/attributeinstall Microsoft Documentation}
      * @example
-     * await clientClient.attributeInstall({
+     * await clientApi.attributeInstall({
      *   "Idfa": "11098810"
      * });
      */
@@ -516,7 +516,7 @@ export default function getClientApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/client/trading/canceltrade Microsoft Documentation}
      * @example
-     * await clientClient.cancelTrade({
+     * await clientApi.cancelTrade({
      *   "TradeId": "D819CEC225EA9948C351"
      * });
      */
@@ -534,7 +534,7 @@ export default function getClientApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/client/player-item-management/confirmpurchase Microsoft Documentation}
      * @example
-     * await clientClient.confirmPurchase({
+     * await clientApi.confirmPurchase({
      *   "OrderId": "8853591446005860822"
      * });
      */
@@ -552,7 +552,7 @@ export default function getClientApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/client/player-item-management/consumeitem Microsoft Documentation}
      * @example
-     * await clientClient.consumeItem({
+     * await clientApi.consumeItem({
      *   "ItemInstanceId": "94585729",
      *   "ConsumeCount": 1
      * });
@@ -569,7 +569,7 @@ export default function getClientApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/client/platform-specific-methods/consumemicrosoftstoreentitlements Microsoft Documentation}
      * @example
-     * await clientClient.consumeMicrosoftStoreEntitlements({
+     * await clientApi.consumeMicrosoftStoreEntitlements({
      *   "MarketplaceSpecificData": {
      *     "XboxToken": "XBL3.0 x=1981989841;akljdlkafdknad",
      *     "userId": "46239871",
@@ -591,7 +591,7 @@ export default function getClientApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/client/platform-specific-methods/consumeps5entitlements Microsoft Documentation}
      * @example
-     * await clientClient.consumePS5Entitlements({
+     * await clientApi.consumePS5Entitlements({
      *   "MarketplaceSpecificData": {
      *     "ServiceLabel": "1"
      *   },
@@ -610,7 +610,7 @@ export default function getClientApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/client/platform-specific-methods/consumepsnentitlements Microsoft Documentation}
      * @example
-     * await clientClient.consumePSNEntitlements({
+     * await clientApi.consumePSNEntitlements({
      *   "ServiceLabel": 1
      * });
      */
@@ -627,7 +627,7 @@ export default function getClientApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/client/platform-specific-methods/consumexboxentitlements Microsoft Documentation}
      * @example
-     * await clientClient.consumeXboxEntitlements({
+     * await clientApi.consumeXboxEntitlements({
      *   "XboxToken": "XBL3.0 x=1981989841;akljdlkafdknad",
      *   "CatalogVersion": "XboxItems"
      * });
@@ -647,7 +647,7 @@ export default function getClientApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/client/shared-group-data/createsharedgroup Microsoft Documentation}
      * @example
-     * await clientClient.createSharedGroup({
+     * await clientApi.createSharedGroup({
      *   "SharedGroupId": "Clan Data"
      * });
      */
@@ -663,7 +663,7 @@ export default function getClientApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/client/player-data-management/deleteplayercustomproperties Microsoft Documentation}
      * @example
-     * await clientClient.deletePlayerCustomProperties({
+     * await clientApi.deletePlayerCustomProperties({
      *   "PropertyNames": [
      *     "level",
      *     "created"
@@ -684,7 +684,7 @@ export default function getClientApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/client/server-side-cloud-script/executecloudscript Microsoft Documentation}
      * @example
-     * await clientClient.executeCloudScript({
+     * await clientApi.executeCloudScript({
      *   "FunctionName": "levelCompleted",
      *   "FunctionParameter": {
      *     "level": 3,
@@ -706,7 +706,7 @@ export default function getClientApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/client/account-management/getaccountinfo Microsoft Documentation}
      * @example
-     * await clientClient.getAccountInfo({
+     * await clientApi.getAccountInfo({
      *   "PlayFabId": "10931252888739651331"
      * });
      */
@@ -722,7 +722,7 @@ export default function getClientApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/client/advertising/getadplacements Microsoft Documentation}
      * @example
-     * await clientClient.getAdPlacements({
+     * await clientApi.getAdPlacements({
      *   "AppId": "A12784B",
      *   "Identifier": {
      *     "Name": "PowerBonusInterstitial"
@@ -742,7 +742,7 @@ export default function getClientApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/client/characters/getalluserscharacters Microsoft Documentation}
      * @example
-     * await clientClient.getAllUsersCharacters({
+     * await clientApi.getAllUsersCharacters({
      *   "PlayFabId": "98333765432"
      * });
      */
@@ -759,7 +759,7 @@ export default function getClientApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/client/title-wide-data-management/getcatalogitems Microsoft Documentation}
      * @example
-     * await clientClient.getCatalogItems({
+     * await clientApi.getCatalogItems({
      *   "CatalogVersion": "1"
      * });
      */
@@ -775,7 +775,7 @@ export default function getClientApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/client/character-data/getcharacterdata Microsoft Documentation}
      * @example
-     * await clientClient.getCharacterData({
+     * await clientApi.getCharacterData({
      *   "PlayFabId": "2039475",
      *   "CharacterId": "98342357",
      *   "Keys": [
@@ -797,7 +797,7 @@ export default function getClientApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/client/player-item-management/getcharacterinventory Microsoft Documentation}
      * @example
-     * await clientClient.getCharacterInventory({
+     * await clientApi.getCharacterInventory({
      *   "CharacterId": "9890723423",
      *   "CatalogVersion": "5"
      * });
@@ -814,7 +814,7 @@ export default function getClientApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/client/characters/getcharacterleaderboard Microsoft Documentation}
      * @example
-     * await clientClient.getCharacterLeaderboard({
+     * await clientApi.getCharacterLeaderboard({
      *   "CharacterType": "blue_warrior",
      *   "StatisticName": "Kills",
      *   "StartPosition": 0,
@@ -833,7 +833,7 @@ export default function getClientApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/client/character-data/getcharacterreadonlydata Microsoft Documentation}
      * @example
-     * await clientClient.getCharacterReadOnlyData({
+     * await clientApi.getCharacterReadOnlyData({
      *   "PlayFabId": "2039475",
      *   "CharacterId": "98342357",
      *   "Keys": [
@@ -854,7 +854,7 @@ export default function getClientApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/client/characters/getcharacterstatistics Microsoft Documentation}
      * @example
-     * await clientClient.getCharacterStatistics({
+     * await clientApi.getCharacterStatistics({
      *   "CharacterId": "98765432"
      * });
      */
@@ -889,7 +889,7 @@ export default function getClientApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/client/content/getcontentdownloadurl Microsoft Documentation}
      * @example
-     * await clientClient.getContentDownloadUrl({
+     * await clientApi.getContentDownloadUrl({
      *   "Key": "images/sword_icon.png"
      * });
      */
@@ -919,7 +919,7 @@ export default function getClientApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/client/player-data-management/getfriendleaderboard Microsoft Documentation}
      * @example
-     * await clientClient.getFriendLeaderboard({
+     * await clientApi.getFriendLeaderboard({
      *   "StatisticName": "Kills",
      *   "StartPosition": 1258,
      *   "MaxResultsCount": 20,
@@ -953,7 +953,7 @@ export default function getClientApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/client/player-data-management/getfriendleaderboardaroundplayer Microsoft Documentation}
      * @example
-     * await clientClient.getFriendLeaderboardAroundPlayer({
+     * await clientApi.getFriendLeaderboardAroundPlayer({
      *   "StatisticName": "Kills",
      *   "MaxResultsCount": 20,
      *   "ExternalPlatformFriends": "None"
@@ -972,7 +972,7 @@ export default function getClientApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/client/friend-list-management/getfriendslist Microsoft Documentation}
      * @example
-     * await clientClient.getFriendsList({
+     * await clientApi.getFriendsList({
      *   "ExternalPlatformFriends": "Steam"
      * });
      */
@@ -1001,7 +1001,7 @@ export default function getClientApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/client/player-data-management/getleaderboard Microsoft Documentation}
      * @example
-     * await clientClient.getLeaderboard({
+     * await clientApi.getLeaderboard({
      *   "StatisticName": "Kills",
      *   "StartPosition": 0,
      *   "MaxResultsCount": 20
@@ -1019,7 +1019,7 @@ export default function getClientApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/client/characters/getleaderboardaroundcharacter Microsoft Documentation}
      * @example
-     * await clientClient.getLeaderboardAroundCharacter({
+     * await clientApi.getLeaderboardAroundCharacter({
      *   "StatisticName": "Kills",
      *   "CharacterId": "987343220",
      *   "MaxResultsCount": 20
@@ -1051,7 +1051,7 @@ export default function getClientApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/client/player-data-management/getleaderboardaroundplayer Microsoft Documentation}
      * @example
-     * await clientClient.getLeaderboardAroundPlayer({
+     * await clientApi.getLeaderboardAroundPlayer({
      *   "StatisticName": "Kills",
      *   "MaxResultsCount": 20
      * });
@@ -1068,7 +1068,7 @@ export default function getClientApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/client/characters/getleaderboardforusercharacters Microsoft Documentation}
      * @example
-     * await clientClient.getLeaderboardForUserCharacters({
+     * await clientApi.getLeaderboardForUserCharacters({
      *   "StatisticName": "Kills"
      * });
      */
@@ -1087,7 +1087,7 @@ export default function getClientApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/client/player-item-management/getpaymenttoken Microsoft Documentation}
      * @example
-     * await clientClient.getPaymentToken({
+     * await clientApi.getPaymentToken({
      *   "TokenProvider": "xsolla"
      * });
      */
@@ -1104,7 +1104,7 @@ export default function getClientApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/client/authentication/getphotonauthenticationtoken Microsoft Documentation}
      * @example
-     * await clientClient.getPhotonAuthenticationToken({
+     * await clientApi.getPhotonAuthenticationToken({
      *   "PhotonApplicationId": "acaa26f3-fcdb-4af4-8c76-3a3d4dd3066f"
      * });
      */
@@ -1120,7 +1120,7 @@ export default function getClientApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/client/account-management/getplayercombinedinfo Microsoft Documentation}
      * @example
-     * await clientClient.getPlayerCombinedInfo({
+     * await clientApi.getPlayerCombinedInfo({
      *   "PlayFabId": "4027527BF22653D1",
      *   "InfoRequestParameters": {
      *     "GetUserAccountInfo": true,
@@ -1153,7 +1153,7 @@ export default function getClientApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/client/player-data-management/getplayercustomproperty Microsoft Documentation}
      * @example
-     * await clientClient.getPlayerCustomProperty({
+     * await clientApi.getPlayerCustomProperty({
      *   "PropertyName": "level"
      * });
      */
@@ -1169,7 +1169,7 @@ export default function getClientApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/client/account-management/getplayerprofile Microsoft Documentation}
      * @example
-     * await clientClient.getPlayerProfile({
+     * await clientApi.getPlayerProfile({
      *   "PlayFabId": "621EF20237534A44"
      * });
      */
@@ -1185,7 +1185,7 @@ export default function getClientApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/client/playstream/getplayersegments Microsoft Documentation}
      * @example
-     * await clientClient.getPlayerSegments({});
+     * await clientApi.getPlayerSegments({});
      */
     getPlayerSegments (request: GetPlayerSegmentsRequest) {
       return playfab.request<GetPlayerSegmentsResult>("/Client/GetPlayerSegments", {
@@ -1200,7 +1200,7 @@ export default function getClientApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/client/player-data-management/getplayerstatistics Microsoft Documentation}
      * @example
-     * await clientClient.getPlayerStatistics({
+     * await clientApi.getPlayerStatistics({
      *   "StatisticNames": [
      *     "Points",
      *     "Wins"
@@ -1219,7 +1219,7 @@ export default function getClientApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/client/player-data-management/getplayerstatisticversions Microsoft Documentation}
      * @example
-     * await clientClient.getPlayerStatisticVersions({
+     * await clientApi.getPlayerStatisticVersions({
      *   "StatisticName": "headshots"
      * });
      */
@@ -1235,7 +1235,7 @@ export default function getClientApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/client/playstream/getplayertags Microsoft Documentation}
      * @example
-     * await clientClient.getPlayerTags({
+     * await clientApi.getPlayerTags({
      *   "PlayFabId": "10931252888739651331",
      *   "Namespace": "title.AAA"
      * });
@@ -1252,7 +1252,7 @@ export default function getClientApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/client/trading/getplayertrades Microsoft Documentation}
      * @example
-     * await clientClient.getPlayerTrades({
+     * await clientApi.getPlayerTrades({
      *   "StatusFilter": "Filled"
      * });
      */
@@ -1268,7 +1268,7 @@ export default function getClientApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/client/account-management/getplayfabidsfrombattlenetaccountids Microsoft Documentation}
      * @example
-     * await clientClient.getPlayFabIDsFromBattleNetAccountIds({
+     * await clientApi.getPlayFabIDsFromBattleNetAccountIds({
      *   "BattleNetAccountIds": [
      *     "526f79204261747478",
      *     "526f79204261747479"
@@ -1287,7 +1287,7 @@ export default function getClientApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/client/account-management/getplayfabidsfromfacebookids Microsoft Documentation}
      * @example
-     * await clientClient.getPlayFabIDsFromFacebookIDs({
+     * await clientApi.getPlayFabIDsFromFacebookIDs({
      *   "FacebookIDs": [
      *     "857498576495",
      *     "759374651209"
@@ -1306,7 +1306,7 @@ export default function getClientApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/client/account-management/getplayfabidsfromfacebookinstantgamesids Microsoft Documentation}
      * @example
-     * await clientClient.getPlayFabIDsFromFacebookInstantGamesIds({
+     * await clientApi.getPlayFabIDsFromFacebookInstantGamesIds({
      *   "FacebookInstantGamesIds": [
      *     "1114685845316172",
      *     "1114685845316173"
@@ -1326,7 +1326,7 @@ export default function getClientApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/client/account-management/getplayfabidsfromgamecenterids Microsoft Documentation}
      * @example
-     * await clientClient.getPlayFabIDsFromGameCenterIDs({
+     * await clientApi.getPlayFabIDsFromGameCenterIDs({
      *   "GameCenterIDs": [
      *     "857498576495",
      *     "759374651209"
@@ -1347,7 +1347,7 @@ export default function getClientApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/client/account-management/getplayfabidsfromgenericids Microsoft Documentation}
      * @example
-     * await clientClient.getPlayFabIDsFromGenericIDs({
+     * await clientApi.getPlayFabIDsFromGenericIDs({
      *   "GenericIDs": [
      *     {
      *       "ServiceName": "BigBizSocial",
@@ -1373,7 +1373,7 @@ export default function getClientApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/client/account-management/getplayfabidsfromgoogleids Microsoft Documentation}
      * @example
-     * await clientClient.getPlayFabIDsFromGoogleIDs({
+     * await clientApi.getPlayFabIDsFromGoogleIDs({
      *   "GoogleIDs": [
      *     "857498576495",
      *     "759374651209"
@@ -1394,7 +1394,7 @@ export default function getClientApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/client/account-management/getplayfabidsfromgoogleplaygamesplayerids Microsoft Documentation}
      * @example
-     * await clientClient.getPlayFabIDsFromGooglePlayGamesPlayerIDs({
+     * await clientApi.getPlayFabIDsFromGooglePlayGamesPlayerIDs({
      *   "GooglePlayGamesPlayerIDs": [
      *     "857498576495",
      *     "759374651209"
@@ -1415,7 +1415,7 @@ export default function getClientApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/client/account-management/getplayfabidsfromkongregateids Microsoft Documentation}
      * @example
-     * await clientClient.getPlayFabIDsFromKongregateIDs({
+     * await clientApi.getPlayFabIDsFromKongregateIDs({
      *   "KongregateIDs": [
      *     "857498576495",
      *     "759374651209"
@@ -1434,7 +1434,7 @@ export default function getClientApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/client/account-management/getplayfabidsfromnintendoserviceaccountids Microsoft Documentation}
      * @example
-     * await clientClient.getPlayFabIDsFromNintendoServiceAccountIds({
+     * await clientApi.getPlayFabIDsFromNintendoServiceAccountIds({
      *   "NintendoAccountIds": [
      *     "526f79204261747478",
      *     "526f79204261747479"
@@ -1453,7 +1453,7 @@ export default function getClientApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/client/account-management/getplayfabidsfromnintendoswitchdeviceids Microsoft Documentation}
      * @example
-     * await clientClient.getPlayFabIDsFromNintendoSwitchDeviceIds({
+     * await clientApi.getPlayFabIDsFromNintendoSwitchDeviceIds({
      *   "NintendoSwitchDeviceIds": [
      *     "526f79204261747478",
      *     "526f79204261747479"
@@ -1474,7 +1474,7 @@ export default function getClientApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/client/account-management/getplayfabidsfromopenidsubjectidentifiers Microsoft Documentation}
      * @example
-     * await clientClient.getPlayFabIDsFromOpenIdSubjectIdentifiers({
+     * await clientApi.getPlayFabIDsFromOpenIdSubjectIdentifiers({
      *   "OpenIdSubjectIdentifiers": [
      *     {
      *       "Issuer": "https://example.com",
@@ -1499,7 +1499,7 @@ export default function getClientApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/client/account-management/getplayfabidsfrompsnaccountids Microsoft Documentation}
      * @example
-     * await clientClient.getPlayFabIDsFromPSNAccountIDs({
+     * await clientApi.getPlayFabIDsFromPSNAccountIDs({
      *   "PSNAccountIDs": [
      *     "857498576495",
      *     "759374651209"
@@ -1518,7 +1518,7 @@ export default function getClientApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/client/account-management/getplayfabidsfrompsnonlineids Microsoft Documentation}
      * @example
-     * await clientClient.getPlayFabIDsFromPSNOnlineIDs({
+     * await clientApi.getPlayFabIDsFromPSNOnlineIDs({
      *   "PSNOnlineIDs": [
      *     "857555576495",
      *     "759345551209"
@@ -1538,7 +1538,7 @@ export default function getClientApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/client/account-management/getplayfabidsfromsteamids Microsoft Documentation}
      * @example
-     * await clientClient.getPlayFabIDsFromSteamIDs({
+     * await clientApi.getPlayFabIDsFromSteamIDs({
      *   "SteamStringIDs": [
      *     "857498576495",
      *     "759374651209"
@@ -1558,7 +1558,7 @@ export default function getClientApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/client/account-management/getplayfabidsfromsteamnames Microsoft Documentation}
      * @example
-     * await clientClient.getPlayFabIDsFromSteamNames({
+     * await clientApi.getPlayFabIDsFromSteamNames({
      *   "SteamNames": [
      *     "steamPersonaName1",
      *     "steamPersonaName2"
@@ -1579,7 +1579,7 @@ export default function getClientApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/client/account-management/getplayfabidsfromtwitchids Microsoft Documentation}
      * @example
-     * await clientClient.getPlayFabIDsFromTwitchIDs({
+     * await clientApi.getPlayFabIDsFromTwitchIDs({
      *   "TwitchIds": [
      *     "127168541",
      *     "88315720"
@@ -1598,7 +1598,7 @@ export default function getClientApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/client/account-management/getplayfabidsfromxboxliveids Microsoft Documentation}
      * @example
-     * await clientClient.getPlayFabIDsFromXboxLiveIDs({
+     * await clientApi.getPlayFabIDsFromXboxLiveIDs({
      *   "XboxLiveAccountIDs": [
      *     "857498576495",
      *     "759374651209"
@@ -1618,7 +1618,7 @@ export default function getClientApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/client/title-wide-data-management/getpublisherdata Microsoft Documentation}
      * @example
-     * await clientClient.getPublisherData({
+     * await clientApi.getPublisherData({
      *   "Keys": [
      *     "color",
      *     "propertyA"
@@ -1639,7 +1639,7 @@ export default function getClientApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/client/player-item-management/getpurchase Microsoft Documentation}
      * @example
-     * await clientClient.getPurchase({
+     * await clientApi.getPurchase({
      *   "OrderId": "8853591446005860822"
      * });
      */
@@ -1658,7 +1658,7 @@ export default function getClientApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/client/shared-group-data/getsharedgroupdata Microsoft Documentation}
      * @example
-     * await clientClient.getSharedGroupData({
+     * await clientApi.getSharedGroupData({
      *   "SharedGroupId": "Clan Data",
      *   "Keys": [
      *     "ClanKills",
@@ -1680,7 +1680,7 @@ export default function getClientApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/client/title-wide-data-management/getstoreitems Microsoft Documentation}
      * @example
-     * await clientClient.getStoreItems({
+     * await clientApi.getStoreItems({
      *   "StoreId": "BonusStore"
      * });
      */
@@ -1696,7 +1696,7 @@ export default function getClientApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/client/title-wide-data-management/gettime Microsoft Documentation}
      * @example
-     * await clientClient.getTime({});
+     * await clientApi.getTime({});
      */
     getTime (request: GetTimeRequest) {
       return playfab.request<GetTimeResult>("/Client/GetTime", {
@@ -1710,7 +1710,7 @@ export default function getClientApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/client/title-wide-data-management/gettitledata Microsoft Documentation}
      * @example
-     * await clientClient.getTitleData({
+     * await clientApi.getTitleData({
      *   "Keys": [
      *     "color",
      *     "propertyA"
@@ -1729,7 +1729,7 @@ export default function getClientApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/client/title-wide-data-management/gettitlenews Microsoft Documentation}
      * @example
-     * await clientClient.getTitleNews({
+     * await clientApi.getTitleNews({
      *   "Count": 25
      * });
      */
@@ -1745,7 +1745,7 @@ export default function getClientApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/client/authentication/gettitlepublickey Microsoft Documentation}
      * @example
-     * await clientClient.getTitlePublicKey({
+     * await clientApi.getTitlePublicKey({
      *   "TitleId": "ID",
      *   "TitleSharedSecret": "ExampleSecret"
      * });
@@ -1761,7 +1761,7 @@ export default function getClientApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/client/trading/gettradestatus Microsoft Documentation}
      * @example
-     * await clientClient.getTradeStatus({
+     * await clientApi.getTradeStatus({
      *   "OfferingPlayerId": "CD803BF233CE76CC",
      *   "TradeId": "D819CEC225EA9948C351"
      * });
@@ -1798,7 +1798,7 @@ export default function getClientApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/client/player-data-management/getuserdata Microsoft Documentation}
      * @example
-     * await clientClient.getUserData({
+     * await clientApi.getUserData({
      *   "Keys": [
      *     "preferences",
      *     "progress"
@@ -1818,7 +1818,7 @@ export default function getClientApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/client/player-item-management/getuserinventory Microsoft Documentation}
      * @example
-     * await clientClient.getUserInventory({});
+     * await clientApi.getUserInventory({});
      */
     getUserInventory (request: GetUserInventoryRequest) {
       return playfab.request<GetUserInventoryResult>("/Client/GetUserInventory", {
@@ -1832,7 +1832,7 @@ export default function getClientApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/client/player-data-management/getuserpublisherdata Microsoft Documentation}
      * @example
-     * await clientClient.getUserPublisherData({
+     * await clientApi.getUserPublisherData({
      *   "Keys": [
      *     "preferences",
      *     "progress"
@@ -1851,7 +1851,7 @@ export default function getClientApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/client/player-data-management/getuserpublisherreadonlydata Microsoft Documentation}
      * @example
-     * await clientClient.getUserPublisherReadOnlyData({
+     * await clientApi.getUserPublisherReadOnlyData({
      *   "Keys": [
      *     "preferences",
      *     "progress"
@@ -1870,7 +1870,7 @@ export default function getClientApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/client/player-data-management/getuserreadonlydata Microsoft Documentation}
      * @example
-     * await clientClient.getUserReadOnlyData({
+     * await clientApi.getUserReadOnlyData({
      *   "Keys": [
      *     "preferences",
      *     "progress"
@@ -1903,7 +1903,7 @@ export default function getClientApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/client/characters/grantcharactertouser Microsoft Documentation}
      * @example
-     * await clientClient.grantCharacterToUser({
+     * await clientApi.grantCharacterToUser({
      *   "CatalogVersion": "2.2",
      *   "ItemId": "Blue Warrior",
      *   "CharacterName": "FighterDude"
@@ -1921,7 +1921,7 @@ export default function getClientApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/client/account-management/linkandroiddeviceid Microsoft Documentation}
      * @example
-     * await clientClient.linkAndroidDeviceID({
+     * await clientApi.linkAndroidDeviceID({
      *   "AndroidDeviceId": "526f79204261747479",
      *   "OS": "5.0",
      *   "AndroidDevice": "Nexus 6"
@@ -1939,7 +1939,7 @@ export default function getClientApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/client/account-management/linkapple Microsoft Documentation}
      * @example
-     * await clientClient.linkApple({
+     * await clientApi.linkApple({
      *   "IdentityToken": "eyJraWQi..."
      * });
      */
@@ -1955,7 +1955,7 @@ export default function getClientApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/client/account-management/linkbattlenetaccount Microsoft Documentation}
      * @example
-     * await clientClient.linkBattleNetAccount({
+     * await clientApi.linkBattleNetAccount({
      *   "IdentityToken": "eyJraWQi..."
      * });
      */
@@ -1971,7 +1971,7 @@ export default function getClientApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/client/account-management/linkcustomid Microsoft Documentation}
      * @example
-     * await clientClient.linkCustomID({
+     * await clientApi.linkCustomID({
      *   "CustomId": "67AB-5397-CC54-EA31"
      * });
      */
@@ -1987,7 +1987,7 @@ export default function getClientApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/client/account-management/linkfacebookaccount Microsoft Documentation}
      * @example
-     * await clientClient.linkFacebookAccount({
+     * await clientApi.linkFacebookAccount({
      *   "AccessToken": "FaceAccessTokenID"
      * });
      */
@@ -2003,7 +2003,7 @@ export default function getClientApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/client/account-management/linkfacebookinstantgamesid Microsoft Documentation}
      * @example
-     * await clientClient.linkFacebookInstantGamesId({
+     * await clientApi.linkFacebookInstantGamesId({
      *   "FacebookInstantGamesSignature": "abcdef"
      * });
      */
@@ -2022,7 +2022,7 @@ export default function getClientApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/client/account-management/linkgamecenteraccount Microsoft Documentation}
      * @example
-     * await clientClient.linkGameCenterAccount({
+     * await clientApi.linkGameCenterAccount({
      *   "GameCenterId": "2998h2998f0b000d0993"
      * });
      */
@@ -2038,7 +2038,7 @@ export default function getClientApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/client/account-management/linkgoogleaccount Microsoft Documentation}
      * @example
-     * await clientClient.linkGoogleAccount({
+     * await clientApi.linkGoogleAccount({
      *   "ServerAuthCode": "4/TPdB1ter7eJ7cQ0lGBa6p1Cn-sSHJEXmPJ7t1-v4_ds#"
      * });
      */
@@ -2055,7 +2055,7 @@ export default function getClientApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/client/account-management/linkgoogleplaygamesservicesaccount Microsoft Documentation}
      * @example
-     * await clientClient.linkGooglePlayGamesServicesAccount({
+     * await clientApi.linkGooglePlayGamesServicesAccount({
      *   "ServerAuthCode": "4/TPdB1ter7eJ7cQ0lGBa6p1Cn-sSHJEXmPJ7t1-v4_ds#"
      * });
      */
@@ -2071,7 +2071,7 @@ export default function getClientApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/client/account-management/linkiosdeviceid Microsoft Documentation}
      * @example
-     * await clientClient.linkIOSDeviceID({
+     * await clientApi.linkIOSDeviceID({
      *   "DeviceId": "29848d9bh8900a0b003",
      *   "OS": "7.11",
      *   "DeviceModel": "Iphone 5s"
@@ -2089,7 +2089,7 @@ export default function getClientApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/client/account-management/linkkongregate Microsoft Documentation}
      * @example
-     * await clientClient.linkKongregate({
+     * await clientApi.linkKongregate({
      *   "KongregateId": "457332",
      *   "AuthTicket": "{123-456-78931212}"
      * });
@@ -2106,7 +2106,7 @@ export default function getClientApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/client/account-management/linknintendoserviceaccount Microsoft Documentation}
      * @example
-     * await clientClient.linkNintendoServiceAccount({
+     * await clientApi.linkNintendoServiceAccount({
      *   "IdentityToken": "eyJraWQi..."
      * });
      */
@@ -2122,7 +2122,7 @@ export default function getClientApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/client/account-management/linknintendoswitchdeviceid Microsoft Documentation}
      * @example
-     * await clientClient.linkNintendoSwitchDeviceId({
+     * await clientApi.linkNintendoSwitchDeviceId({
      *   "NintendoSwitchDeviceId": "526f79204261747479"
      * });
      */
@@ -2139,7 +2139,7 @@ export default function getClientApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/client/account-management/linkopenidconnect Microsoft Documentation}
      * @example
-     * await clientClient.linkOpenIdConnect({
+     * await clientApi.linkOpenIdConnect({
      *   "ConnectionId": "exampleprovider",
      *   "IdToken": "eyJraWQi..."
      * });
@@ -2156,7 +2156,7 @@ export default function getClientApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/client/account-management/linkpsnaccount Microsoft Documentation}
      * @example
-     * await clientClient.linkPSNAccount({
+     * await clientApi.linkPSNAccount({
      *   "AuthCode": "LKJDG7DDE",
      *   "RedirectUri": "orbis://games"
      * });
@@ -2173,7 +2173,7 @@ export default function getClientApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/client/account-management/linksteamaccount Microsoft Documentation}
      * @example
-     * await clientClient.linkSteamAccount({
+     * await clientApi.linkSteamAccount({
      *   "SteamTicket": "steamTicketID",
      *   "TicketIsServiceSpecific": true
      * });
@@ -2190,7 +2190,7 @@ export default function getClientApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/client/account-management/linktwitch Microsoft Documentation}
      * @example
-     * await clientClient.linkTwitch({
+     * await clientApi.linkTwitch({
      *   "AccessToken": "TwitchAccessToken"
      * });
      */
@@ -2206,7 +2206,7 @@ export default function getClientApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/client/account-management/linkxboxaccount Microsoft Documentation}
      * @example
-     * await clientClient.linkXboxAccount({
+     * await clientApi.linkXboxAccount({
      *   "XboxToken": "XBL3.0 x=1981989841;akljdlkafdknad"
      * });
      */
@@ -2222,7 +2222,7 @@ export default function getClientApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/client/player-data-management/listplayercustomproperties Microsoft Documentation}
      * @example
-     * await clientClient.listPlayerCustomProperties({});
+     * await clientApi.listPlayerCustomProperties({});
      */
     listPlayerCustomProperties (request: ListPlayerCustomPropertiesRequest) {
       return playfab.request<ListPlayerCustomPropertiesResult>("/Client/ListPlayerCustomProperties", {
@@ -2250,7 +2250,7 @@ export default function getClientApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/client/authentication/loginwithandroiddeviceid Microsoft Documentation}
      * @example
-     * await clientClient.loginWithAndroidDeviceID({
+     * await clientApi.loginWithAndroidDeviceID({
      *   "AndroidDeviceId": "526f79204261747479",
      *   "OS": "5.0",
      *   "AndroidDevice": "Nexus 6",
@@ -2287,7 +2287,7 @@ export default function getClientApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/client/authentication/loginwithapple Microsoft Documentation}
      * @example
-     * await clientClient.loginWithApple({
+     * await clientApi.loginWithApple({
      *   "IdentityToken": "eyJraWQi...",
      *   "TitleId": "144"
      * });
@@ -2321,7 +2321,7 @@ export default function getClientApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/client/authentication/loginwithbattlenet Microsoft Documentation}
      * @example
-     * await clientClient.loginWithBattleNet({
+     * await clientApi.loginWithBattleNet({
      *   "IdentityToken": "eyJraWQi...",
      *   "TitleId": "144"
      * });
@@ -2356,7 +2356,7 @@ export default function getClientApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/client/authentication/loginwithcustomid Microsoft Documentation}
      * @example
-     * await clientClient.loginWithCustomID({
+     * await clientApi.loginWithCustomID({
      *   "CustomId": "67AB-5397-CC54-EA31",
      *   "CreateAccount": false,
      *   "TitleId": "144"
@@ -2394,7 +2394,7 @@ export default function getClientApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/client/authentication/loginwithemailaddress Microsoft Documentation}
      * @example
-     * await clientClient.loginWithEmailAddress({
+     * await clientApi.loginWithEmailAddress({
      *   "Email": "theuser@domain.com",
      *   "Password": "thepassword",
      *   "TitleId": "144"
@@ -2430,7 +2430,7 @@ export default function getClientApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/client/authentication/loginwithfacebook Microsoft Documentation}
      * @example
-     * await clientClient.loginWithFacebook({
+     * await clientApi.loginWithFacebook({
      *   "AccessToken": "FaceAccessTokenID",
      *   "CreateAccount": false,
      *   "TitleId": "144"
@@ -2466,7 +2466,7 @@ export default function getClientApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/client/authentication/loginwithfacebookinstantgamesid Microsoft Documentation}
      * @example
-     * await clientClient.loginWithFacebookInstantGamesId({
+     * await clientApi.loginWithFacebookInstantGamesId({
      *   "FacebookInstantGamesSignature": "abcdef",
      *   "CreateAccount": false,
      *   "TitleId": "144"
@@ -2505,7 +2505,7 @@ export default function getClientApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/client/authentication/loginwithgamecenter Microsoft Documentation}
      * @example
-     * await clientClient.loginWithGameCenter({
+     * await clientApi.loginWithGameCenter({
      *   "PlayerId": "pachycephalosaurus01",
      *   "CreateAccount": false,
      *   "TitleId": "144"
@@ -2540,7 +2540,7 @@ export default function getClientApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/client/authentication/loginwithgoogleaccount Microsoft Documentation}
      * @example
-     * await clientClient.loginWithGoogleAccount({
+     * await clientApi.loginWithGoogleAccount({
      *   "ServerAuthCode": "4/TPdB1ter7eJ7cQ0lGBa6p1Cn-sSHJEXmPJ7t1-v4_ds#",
      *   "CreateAccount": false,
      *   "SetEmail": true,
@@ -2576,7 +2576,7 @@ export default function getClientApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/client/authentication/loginwithgoogleplaygamesservices Microsoft Documentation}
      * @example
-     * await clientClient.loginWithGooglePlayGamesServices({
+     * await clientApi.loginWithGooglePlayGamesServices({
      *   "ServerAuthCode": "4/TPdB1ter7eJ7cQ0lGBa6p1Cn-sSHJEXmPJ7t1-v4_ds#",
      *   "CreateAccount": false,
      *   "TitleId": "144"
@@ -2612,7 +2612,7 @@ export default function getClientApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/client/authentication/loginwithiosdeviceid Microsoft Documentation}
      * @example
-     * await clientClient.loginWithIOSDeviceID({
+     * await clientApi.loginWithIOSDeviceID({
      *   "DeviceId": "29848d9bh8900a0b003",
      *   "OS": "7.11",
      *   "DeviceModel": "Iphone 5s",
@@ -2649,7 +2649,7 @@ export default function getClientApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/client/authentication/loginwithkongregate Microsoft Documentation}
      * @example
-     * await clientClient.loginWithKongregate({
+     * await clientApi.loginWithKongregate({
      *   "KongregateId": "457332",
      *   "AuthTicket": "SomeKongregateTokenHere",
      *   "CreateAccount": false,
@@ -2685,7 +2685,7 @@ export default function getClientApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/client/authentication/loginwithnintendoserviceaccount Microsoft Documentation}
      * @example
-     * await clientClient.loginWithNintendoServiceAccount({
+     * await clientApi.loginWithNintendoServiceAccount({
      *   "IdentityToken": "eyJraWQi...",
      *   "TitleId": "144"
      * });
@@ -2720,7 +2720,7 @@ export default function getClientApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/client/authentication/loginwithnintendoswitchdeviceid Microsoft Documentation}
      * @example
-     * await clientClient.loginWithNintendoSwitchDeviceId({
+     * await clientApi.loginWithNintendoSwitchDeviceId({
      *   "NintendoSwitchDeviceId": "526f79204261747479",
      *   "CreateAccount": false,
      *   "TitleId": "144"
@@ -2756,7 +2756,7 @@ export default function getClientApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/client/authentication/loginwithopenidconnect Microsoft Documentation}
      * @example
-     * await clientClient.loginWithOpenIdConnect({
+     * await clientApi.loginWithOpenIdConnect({
      *   "ConnectionId": "exampleprovider",
      *   "IdToken": "eyJraWQi...",
      *   "TitleId": "144"
@@ -2794,7 +2794,7 @@ export default function getClientApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/client/authentication/loginwithplayfab Microsoft Documentation}
      * @example
-     * await clientClient.loginWithPlayFab({
+     * await clientApi.loginWithPlayFab({
      *   "Username": "theuser",
      *   "Password": "ExampleSecret",
      *   "TitleId": "144"
@@ -2830,7 +2830,7 @@ export default function getClientApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/client/authentication/loginwithpsn Microsoft Documentation}
      * @example
-     * await clientClient.loginWithPSN({
+     * await clientApi.loginWithPSN({
      *   "AuthCode": "LKJ6D896D",
      *   "RedirectUri": "orbis://games",
      *   "CreateAccount": false,
@@ -2867,7 +2867,7 @@ export default function getClientApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/client/authentication/loginwithsteam Microsoft Documentation}
      * @example
-     * await clientClient.loginWithSteam({
+     * await clientApi.loginWithSteam({
      *   "SteamTicket": "steamTicketID",
      *   "CreateAccount": false,
      *   "TicketIsServiceSpecific": true,
@@ -2903,7 +2903,7 @@ export default function getClientApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/client/authentication/loginwithtwitch Microsoft Documentation}
      * @example
-     * await clientClient.loginWithTwitch({
+     * await clientApi.loginWithTwitch({
      *   "AccessToken": "SomeTwitchTokenHere",
      *   "CreateAccount": false,
      *   "TitleId": "144"
@@ -2939,7 +2939,7 @@ export default function getClientApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/client/authentication/loginwithxbox Microsoft Documentation}
      * @example
-     * await clientClient.loginWithXbox({
+     * await clientApi.loginWithXbox({
      *   "XboxToken": "XBL3.0 x=1981989841;akljdlkafdknad",
      *   "CreateAccount": false,
      *   "TitleId": "144"
@@ -2992,7 +2992,7 @@ export default function getClientApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/client/trading/opentrade Microsoft Documentation}
      * @example
-     * await clientClient.openTrade({
+     * await clientApi.openTrade({
      *   "OfferedInventoryInstanceIds": [
      *     "1359447",
      *     "635691"
@@ -3015,7 +3015,7 @@ export default function getClientApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/client/player-item-management/payforpurchase Microsoft Documentation}
      * @example
-     * await clientClient.payForPurchase({
+     * await clientApi.payForPurchase({
      *   "OrderId": "8853591446005860822",
      *   "ProviderName": "PayPal",
      *   "Currency": "RM"
@@ -3035,7 +3035,7 @@ export default function getClientApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/client/player-item-management/purchaseitem Microsoft Documentation}
      * @example
-     * await clientClient.purchaseItem({
+     * await clientApi.purchaseItem({
      *   "ItemId": "shield_level_5",
      *   "VirtualCurrency": "GV",
      *   "Price": 25
@@ -3055,7 +3055,7 @@ export default function getClientApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/client/player-item-management/redeemcoupon Microsoft Documentation}
      * @example
-     * await clientClient.redeemCoupon({
+     * await clientApi.redeemCoupon({
      *   "CouponCode": "123-1234-123",
      *   "CatalogVersion": "5"
      * });
@@ -3072,7 +3072,7 @@ export default function getClientApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/client/platform-specific-methods/refreshpsnauthtoken Microsoft Documentation}
      * @example
-     * await clientClient.refreshPSNAuthToken({
+     * await clientApi.refreshPSNAuthToken({
      *   "AuthCode": "LKJDG7DDE",
      *   "RedirectUri": "orbis://games"
      * });
@@ -3089,7 +3089,7 @@ export default function getClientApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/client/platform-specific-methods/registerforiospushnotification Microsoft Documentation}
      * @example
-     * await clientClient.registerForIOSPushNotification({
+     * await clientApi.registerForIOSPushNotification({
      *   "DeviceToken": "39872f98eb882brn8hg3889",
      *   "SendPushNotificationConfirmation": true,
      *   "ConfirmationMessage": "Welcome to PlayFab"
@@ -3108,7 +3108,7 @@ export default function getClientApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/client/authentication/registerplayfabuser Microsoft Documentation}
      * @example
-     * await clientClient.registerPlayFabUser({
+     * await clientApi.registerPlayFabUser({
      *   "Username": "theuser",
      *   "Email": "me@here.com",
      *   "Password": "ExampleSecret",
@@ -3144,7 +3144,7 @@ export default function getClientApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/client/account-management/removecontactemail Microsoft Documentation}
      * @example
-     * await clientClient.removeContactEmail({});
+     * await clientApi.removeContactEmail({});
      */
     removeContactEmail (request: RemoveContactEmailRequest) {
       return playfab.request<RemoveContactEmailResult>("/Client/RemoveContactEmail", {
@@ -3158,7 +3158,7 @@ export default function getClientApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/client/friend-list-management/removefriend Microsoft Documentation}
      * @example
-     * await clientClient.removeFriend({
+     * await clientApi.removeFriend({
      *   "FriendPlayFabId": "29837799"
      * });
      */
@@ -3174,7 +3174,7 @@ export default function getClientApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/client/account-management/removegenericid Microsoft Documentation}
      * @example
-     * await clientClient.removeGenericID({
+     * await clientApi.removeGenericID({
      *   "GenericId": {
      *     "ServiceName": "BigBizSocial",
      *     "UserId": "1234567890"
@@ -3196,7 +3196,7 @@ export default function getClientApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/client/shared-group-data/removesharedgroupmembers Microsoft Documentation}
      * @example
-     * await clientClient.removeSharedGroupMembers({
+     * await clientApi.removeSharedGroupMembers({
      *   "SharedGroupId": "Clan Data",
      *   "PlayFabIds": [
      *     "D984A64B832",
@@ -3216,7 +3216,7 @@ export default function getClientApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/client/advertising/reportadactivity Microsoft Documentation}
      * @example
-     * await clientClient.reportAdActivity({
+     * await clientApi.reportAdActivity({
      *   "PlacementId": "A124572382B",
      *   "RewardId": "B2674981A",
      *   "Activity": "End"
@@ -3235,7 +3235,7 @@ export default function getClientApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/client/analytics/reportdeviceinfo Microsoft Documentation}
      * @example
-     * await clientClient.reportDeviceInfo({
+     * await clientApi.reportDeviceInfo({
      *   "Info": {
      *     "UserAgent": "Some Browser",
      *     "ScreenResolution": "640x480",
@@ -3256,7 +3256,7 @@ export default function getClientApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/client/account-management/reportplayer Microsoft Documentation}
      * @example
-     * await clientClient.reportPlayer({
+     * await clientApi.reportPlayer({
      *   "ReporteeId": "1a46086aed40f142",
      *   "Comment": "cheating"
      * });
@@ -3274,7 +3274,7 @@ export default function getClientApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/client/platform-specific-methods/restoreiospurchases Microsoft Documentation}
      * @example
-     * await clientClient.restoreIOSPurchases({
+     * await clientApi.restoreIOSPurchases({
      *   "ReceiptData": "F00000000000000000000"
      * });
      */
@@ -3290,7 +3290,7 @@ export default function getClientApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/client/advertising/rewardadactivity Microsoft Documentation}
      * @example
-     * await clientClient.rewardAdActivity({
+     * await clientApi.rewardAdActivity({
      *   "PlacementId": "A124572382B",
      *   "RewardId": "B2674981A"
      * });
@@ -3325,7 +3325,7 @@ export default function getClientApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/client/account-management/sendaccountrecoveryemail Microsoft Documentation}
      * @example
-     * await clientClient.sendAccountRecoveryEmail({
+     * await clientApi.sendAccountRecoveryEmail({
      *   "Email": "Me@here.com",
      *   "TitleId": "1000",
      *   "EmailTemplateId": "D53AB15D8F12E330"
@@ -3342,7 +3342,7 @@ export default function getClientApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/client/friend-list-management/setfriendtags Microsoft Documentation}
      * @example
-     * await clientClient.setFriendTags({
+     * await clientApi.setFriendTags({
      *   "FriendPlayFabId": "29837799",
      *   "Tags": [
      *     "great sniper",
@@ -3363,7 +3363,7 @@ export default function getClientApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/client/authentication/setplayersecret Microsoft Documentation}
      * @example
-     * await clientClient.setPlayerSecret({
+     * await clientApi.setPlayerSecret({
      *   "PlayerSecret": "A cryptographically strong string"
      * });
      */
@@ -3393,7 +3393,7 @@ export default function getClientApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/client/player-item-management/startpurchase Microsoft Documentation}
      * @example
-     * await clientClient.startPurchase({
+     * await clientApi.startPurchase({
      *   "CatalogVersion": "0",
      *   "StoreId": "BonusStore",
      *   "Items": [
@@ -3419,7 +3419,7 @@ export default function getClientApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/client/player-item-management/subtractuservirtualcurrency Microsoft Documentation}
      * @example
-     * await clientClient.subtractUserVirtualCurrency({
+     * await clientApi.subtractUserVirtualCurrency({
      *   "VirtualCurrency": "GC",
      *   "Amount": 100
      * });
@@ -3436,7 +3436,7 @@ export default function getClientApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/client/account-management/unlinkandroiddeviceid Microsoft Documentation}
      * @example
-     * await clientClient.unlinkAndroidDeviceID({
+     * await clientApi.unlinkAndroidDeviceID({
      *   "AndroidDeviceId": "526f79204261747479"
      * });
      */
@@ -3452,7 +3452,7 @@ export default function getClientApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/client/account-management/unlinkapple Microsoft Documentation}
      * @example
-     * await clientClient.unlinkApple({});
+     * await clientApi.unlinkApple({});
      */
     unlinkApple (request: UnlinkAppleRequest) {
       return playfab.request<EmptyResponse>("/Client/UnlinkApple", {
@@ -3466,7 +3466,7 @@ export default function getClientApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/client/account-management/unlinkbattlenetaccount Microsoft Documentation}
      * @example
-     * await clientClient.unlinkBattleNetAccount({});
+     * await clientApi.unlinkBattleNetAccount({});
      */
     unlinkBattleNetAccount (request: UnlinkBattleNetAccountRequest) {
       return playfab.request<EmptyResponse>("/Client/UnlinkBattleNetAccount", {
@@ -3480,7 +3480,7 @@ export default function getClientApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/client/account-management/unlinkcustomid Microsoft Documentation}
      * @example
-     * await clientClient.unlinkCustomID({
+     * await clientApi.unlinkCustomID({
      *   "CustomId": "67AB-5397-CC54-EA31"
      * });
      */
@@ -3496,7 +3496,7 @@ export default function getClientApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/client/account-management/unlinkfacebookaccount Microsoft Documentation}
      * @example
-     * await clientClient.unlinkFacebookAccount({});
+     * await clientApi.unlinkFacebookAccount({});
      */
     unlinkFacebookAccount (request: UnlinkFacebookAccountRequest) {
       return playfab.request<UnlinkFacebookAccountResult>("/Client/UnlinkFacebookAccount", {
@@ -3510,7 +3510,7 @@ export default function getClientApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/client/account-management/unlinkfacebookinstantgamesid Microsoft Documentation}
      * @example
-     * await clientClient.unlinkFacebookInstantGamesId({
+     * await clientApi.unlinkFacebookInstantGamesId({
      *   "FacebookInstantGamesId": "1114685845316173"
      * });
      */
@@ -3526,7 +3526,7 @@ export default function getClientApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/client/account-management/unlinkgamecenteraccount Microsoft Documentation}
      * @example
-     * await clientClient.unlinkGameCenterAccount({});
+     * await clientApi.unlinkGameCenterAccount({});
      */
     unlinkGameCenterAccount (request: UnlinkGameCenterAccountRequest) {
       return playfab.request<UnlinkGameCenterAccountResult>("/Client/UnlinkGameCenterAccount", {
@@ -3541,7 +3541,7 @@ export default function getClientApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/client/account-management/unlinkgoogleaccount Microsoft Documentation}
      * @example
-     * await clientClient.unlinkGoogleAccount({});
+     * await clientApi.unlinkGoogleAccount({});
      */
     unlinkGoogleAccount (request: UnlinkGoogleAccountRequest) {
       return playfab.request<UnlinkGoogleAccountResult>("/Client/UnlinkGoogleAccount", {
@@ -3555,7 +3555,7 @@ export default function getClientApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/client/account-management/unlinkgoogleplaygamesservicesaccount Microsoft Documentation}
      * @example
-     * await clientClient.unlinkGooglePlayGamesServicesAccount({});
+     * await clientApi.unlinkGooglePlayGamesServicesAccount({});
      */
     unlinkGooglePlayGamesServicesAccount (request: UnlinkGooglePlayGamesServicesAccountRequest) {
       return playfab.request<UnlinkGooglePlayGamesServicesAccountResult>("/Client/UnlinkGooglePlayGamesServicesAccount", {
@@ -3569,7 +3569,7 @@ export default function getClientApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/client/account-management/unlinkiosdeviceid Microsoft Documentation}
      * @example
-     * await clientClient.unlinkIOSDeviceID({
+     * await clientApi.unlinkIOSDeviceID({
      *   "DeviceId": "29848d9bh8900a0b003"
      * });
      */
@@ -3585,7 +3585,7 @@ export default function getClientApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/client/account-management/unlinkkongregate Microsoft Documentation}
      * @example
-     * await clientClient.unlinkKongregate({});
+     * await clientApi.unlinkKongregate({});
      */
     unlinkKongregate (request: UnlinkKongregateAccountRequest) {
       return playfab.request<UnlinkKongregateAccountResult>("/Client/UnlinkKongregate", {
@@ -3599,7 +3599,7 @@ export default function getClientApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/client/account-management/unlinknintendoserviceaccount Microsoft Documentation}
      * @example
-     * await clientClient.unlinkNintendoServiceAccount({});
+     * await clientApi.unlinkNintendoServiceAccount({});
      */
     unlinkNintendoServiceAccount (request: UnlinkNintendoServiceAccountRequest) {
       return playfab.request<EmptyResponse>("/Client/UnlinkNintendoServiceAccount", {
@@ -3613,7 +3613,7 @@ export default function getClientApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/client/account-management/unlinknintendoswitchdeviceid Microsoft Documentation}
      * @example
-     * await clientClient.unlinkNintendoSwitchDeviceId({
+     * await clientApi.unlinkNintendoSwitchDeviceId({
      *   "NintendoSwitchDeviceId": "526f79204261747479"
      * });
      */
@@ -3630,7 +3630,7 @@ export default function getClientApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/client/account-management/unlinkopenidconnect Microsoft Documentation}
      * @example
-     * await clientClient.unlinkOpenIdConnect({
+     * await clientApi.unlinkOpenIdConnect({
      *   "ConnectionId": "exampleprovider"
      * });
      */
@@ -3646,7 +3646,7 @@ export default function getClientApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/client/account-management/unlinkpsnaccount Microsoft Documentation}
      * @example
-     * await clientClient.unlinkPSNAccount({});
+     * await clientApi.unlinkPSNAccount({});
      */
     unlinkPSNAccount (request: UnlinkPSNAccountRequest) {
       return playfab.request<UnlinkPSNAccountResult>("/Client/UnlinkPSNAccount", {
@@ -3660,7 +3660,7 @@ export default function getClientApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/client/account-management/unlinksteamaccount Microsoft Documentation}
      * @example
-     * await clientClient.unlinkSteamAccount({});
+     * await clientApi.unlinkSteamAccount({});
      */
     unlinkSteamAccount (request: UnlinkSteamAccountRequest) {
       return playfab.request<UnlinkSteamAccountResult>("/Client/UnlinkSteamAccount", {
@@ -3674,7 +3674,7 @@ export default function getClientApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/client/account-management/unlinktwitch Microsoft Documentation}
      * @example
-     * await clientClient.unlinkTwitch({});
+     * await clientApi.unlinkTwitch({});
      */
     unlinkTwitch (request: UnlinkTwitchAccountRequest) {
       return playfab.request<UnlinkTwitchAccountResult>("/Client/UnlinkTwitch", {
@@ -3688,7 +3688,7 @@ export default function getClientApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/client/account-management/unlinkxboxaccount Microsoft Documentation}
      * @example
-     * await clientClient.unlinkXboxAccount({});
+     * await clientApi.unlinkXboxAccount({});
      */
     unlinkXboxAccount (request: UnlinkXboxAccountRequest) {
       return playfab.request<UnlinkXboxAccountResult>("/Client/UnlinkXboxAccount", {
@@ -3705,7 +3705,7 @@ export default function getClientApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/client/player-item-management/unlockcontainerinstance Microsoft Documentation}
      * @example
-     * await clientClient.unlockContainerInstance({
+     * await clientApi.unlockContainerInstance({
      *   "ContainerItemInstanceId": "123456788",
      *   "KeyItemInstanceId": "123456789"
      * });
@@ -3725,7 +3725,7 @@ export default function getClientApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/client/player-item-management/unlockcontaineritem Microsoft Documentation}
      * @example
-     * await clientClient.unlockContainerItem({
+     * await clientApi.unlockContainerItem({
      *   "ContainerItemId": "crate block 1"
      * });
      */
@@ -3741,7 +3741,7 @@ export default function getClientApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/client/account-management/updateavatarurl Microsoft Documentation}
      * @example
-     * await clientClient.updateAvatarUrl({
+     * await clientApi.updateAvatarUrl({
      *   "ImageUrl": "https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50"
      * });
      */
@@ -3757,7 +3757,7 @@ export default function getClientApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/client/character-data/updatecharacterdata Microsoft Documentation}
      * @example
-     * await clientClient.updateCharacterData({
+     * await clientApi.updateCharacterData({
      *   "CharacterId": "98765456",
      *   "Data": {
      *     "Class": "Fighter",
@@ -3781,7 +3781,7 @@ export default function getClientApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/client/characters/updatecharacterstatistics Microsoft Documentation}
      * @example
-     * await clientClient.updateCharacterStatistics({
+     * await clientApi.updateCharacterStatistics({
      *   "CharacterId": "98765432",
      *   "CharacterStatistics": {
      *     "Headshots": 18,
@@ -3801,7 +3801,7 @@ export default function getClientApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/client/player-data-management/updateplayercustomproperties Microsoft Documentation}
      * @example
-     * await clientClient.updatePlayerCustomProperties({
+     * await clientApi.updatePlayerCustomProperties({
      *   "Properties": [
      *     {
      *       "Name": "level",
@@ -3828,7 +3828,7 @@ export default function getClientApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/client/player-data-management/updateplayerstatistics Microsoft Documentation}
      * @example
-     * await clientClient.updatePlayerStatistics({
+     * await clientApi.updatePlayerStatistics({
      *   "Statistics": [
      *     {
      *       "StatisticName": "Points",
@@ -3863,7 +3863,7 @@ export default function getClientApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/client/shared-group-data/updatesharedgroupdata Microsoft Documentation}
      * @example
-     * await clientClient.updateSharedGroupData({
+     * await clientApi.updateSharedGroupData({
      *   "SharedGroupId": "Clan Data",
      *   "Data": {
      *     "ClanKills": "34",
@@ -3884,7 +3884,7 @@ export default function getClientApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/client/player-data-management/updateuserdata Microsoft Documentation}
      * @example
-     * await clientClient.updateUserData({
+     * await clientApi.updateUserData({
      *   "Data": {
      *     "Class": "Fighter",
      *     "Gender": "Female",
@@ -3906,7 +3906,7 @@ export default function getClientApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/client/player-data-management/updateuserpublisherdata Microsoft Documentation}
      * @example
-     * await clientClient.updateUserPublisherData({
+     * await clientApi.updateUserPublisherData({
      *   "Data": {
      *     "Class": "Fighter",
      *     "Gender": "Female",
@@ -3942,7 +3942,7 @@ export default function getClientApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/client/account-management/updateusertitledisplayname Microsoft Documentation}
      * @example
-     * await clientClient.updateUserTitleDisplayName({
+     * await clientApi.updateUserTitleDisplayName({
      *   "DisplayName": "User Title Name"
      * });
      */
@@ -3960,7 +3960,7 @@ export default function getClientApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/client/platform-specific-methods/validateamazoniapreceipt Microsoft Documentation}
      * @example
-     * await clientClient.validateAmazonIAPReceipt({
+     * await clientApi.validateAmazonIAPReceipt({
      *   "ReceiptId": "q1YqVbJSyjH28DGPKChw9c0o8nd3vSstssQtzSkrzM8tCk43K6z0d_HOTcwwN8vxCrVV0lEqBmpJzs_VK8hJrExLTNLLTCzQK8_MSUnJTy8LSpcoWRnoKKUAFRmaGBtZmBqCCFMzpVoA",
      *   "UserId": "l3HL7XppEMhrOGDgur9-ulvqomrSg6qyODKmah72lJU="
      * });
@@ -3978,7 +3978,7 @@ export default function getClientApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/client/platform-specific-methods/validategoogleplaypurchase Microsoft Documentation}
      * @example
-     * await clientClient.validateGooglePlayPurchase({
+     * await clientApi.validateGooglePlayPurchase({
      *   "ReceiptJson": "{\"orderId\":\"12999763169054705758.1375794066587622\",\"packageName\":\"com.playfab.android.testbed\",\"productId\":\"com.playfab.android.permatest.consumable\",\"purchaseTime\":1410891177231,\"purchaseState\":0,\"purchaseToken\":\"eaflhokdkobkmomjadmoobgb.AO-J1OwoLkW2cqvBcPEgk6SfGceQpOHALMUFmJYeawa-GuDFtl3oKct-5D28t_KvNscFiJOFiWXIS74vJBYg-CGFJgyrdbxalKEMPzXZrg5nLomCME-jIVFAUrzcPah-_66KPImG5ftsMJKI9uzldqEF9OPcakUEmt-kWoXAsl_6-9HH0gBCwh4\"}",
      *   "Signature": "ks12w0hHHpuit4xW3Fyoa5XX6TkxZ2KpEnBsLfpHHpeakYs2JgVtlLdgyLp/05Zp8oHAuKZyIAJTd2RIFXWMAUwDNUsI0JPBDMpr2oaL66Kuneg4VrGWJkJZTrvTyQoGpnTDdXfEME31iFKX6CrKHvWlAG9nwWxYatd58l83eevQ8CIrJhka/bC5ynw3j18OmFG7AcxymO37a4HkM8QjytvAYDJeOnDU9mooY7afcHIajtffdyAU9kzGWOqDByiU9IsRdkliwQoQYbuX/R5wQnMVZ+FGDDwO1mybx9B20rm7/WCBnWGy2NLsSAFI77iX8tUy/QebfBQhrVnRORi7bw==",
      *   "CurrencyCode": "USD",
@@ -3999,7 +3999,7 @@ export default function getClientApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/client/platform-specific-methods/validateiosreceipt Microsoft Documentation}
      * @example
-     * await clientClient.validateIOSReceipt({
+     * await clientApi.validateIOSReceipt({
      *   "ReceiptData": "MTExMTExMTExMTENCjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMg0KMzMzMzMzMzMzMzMzMzMzMzMNCjQ0NDQ0NDQ0NDQ0NDQNCjU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NQ0KNjY2NjY2NjY2NjY2Ng0KNzc3Nzc3Nzc3Nzc3NzcNCjg4DQo5OTk5OTk5OTk5OTkNCjAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMA0KMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTENCjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjINCjMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMw0KNDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0DQo1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1DQo2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2Ng0KNzc3Nzc3Nzc3NzcNCjg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4DQo5DQpBcHBsZSBJbmMuIFdvcmxkd2lkZSBEZXZlbG9wZXIgUmVsYXRpb25zIENlcnRpZmljYXRpb24gQXV0aG9yaXR5IChub3QgcmVhbGx5IC0gZmFrZSBQbGF5RmFiIGV4YW1wbGUsIGJ1dCBjb25ncmF0cyBvbiB0aGlua2luZyB0byBkZWNvZGUgdGhpcyEpDQowMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwDQoxMTExMTExMTExMQ0KMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyDQozMzMzMzMzMzMzMzMzMzMzMw0KNDQ0NDQ0NDQ0NDQ0NA0KNTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1DQo2NjY2NjY2NjY2NjY2DQo3Nzc3Nzc3Nzc3Nzc3Nw0KODgNCjk5OTk5OTk5OTk5OQ0KMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwDQoxMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMQ0KMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMg0KMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzDQo0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQNCjU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTUNCjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2DQo3Nzc3Nzc3Nzc3Nw0KODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODgNCjkNCkFwcGxlIEluYy4gV29ybGR3aWRlIERldmVsb3BlciBSZWxhdGlvbnMgQ2VydGlmaWNhdGlvbiBBdXRob3JpdHkgKG5vdCByZWFsbHkgLSBmYWtlIFBsYXlGYWIgZXhhbXBsZSwgYnV0IGNvbmdyYXRzIG9uIHRoaW5raW5nIHRvIGRlY29kZSB0aGlzISkNCjAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDANCjExMTExMTExMTExDQoyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjINCjMzMzMzMzMzMzMzMzMzMzMzDQo0NDQ0NDQ0NDQ0NDQ0DQo1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTUNCjY2NjY2NjY2NjY2NjYNCjc3Nzc3Nzc3Nzc3Nzc3DQo4OA0KOTk5OTk5OTk5OTk5DQowMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDANCjExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExDQoyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyDQozMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMNCjQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NA0KNTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NQ0KNjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjYNCjc3Nzc3Nzc3Nzc3DQo4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4OA0KOQ0KQXBwbGUgSW5jLiBXb3JsZHdpZGUgRGV2ZWxvcGVyIFJlbGF0aW9ucyBDZXJ0aWZpY2F0aW9uIEF1dGhvcml0eSAobm90IHJlYWxseSAtIGZha2UgUGxheUZhYiBleGFtcGxlLCBidXQgY29uZ3JhdHMgb24gdGhpbmtpbmcgdG8gZGVjb2RlIHRoaXMhKQ0KMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMA0KMTExMTExMTExMTENCjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMg0KMzMzMzMzMzMzMzMzMzMzMzMNCjQ0NDQ0NDQ0NDQ0NDQNCjU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NQ0KNjY2NjY2NjY2NjY2Ng0KNzc3Nzc3Nzc3Nzc3NzcNCjg4DQo5OTk5OTk5OTk5OTkNCjAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMA0KMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTENCjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjINCjMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMw0KNDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0DQo1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1DQo2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2Ng0KNzc3Nzc3Nzc3NzcNCjg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4DQo5DQpBcHBsZSBJbmMuIFdvcmxkd2lkZSBEZXZlbG9wZXIgUmVsYXRpb25zIENlcnRpZmljYXRpb24gQXV0aG9yaXR5IChub3QgcmVhbGx5IC0gZmFrZSBQbGF5RmFiIGV4YW1wbGUsIGJ1dCBjb25ncmF0cyBvbiB0aGlua2luZyB0byBkZWNvZGUgdGhpcyEpDQowMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAw",
      *   "CurrencyCode": "GBP",
      *   "PurchasePrice": 199
@@ -4019,7 +4019,7 @@ export default function getClientApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/client/platform-specific-methods/validatewindowsstorereceipt Microsoft Documentation}
      * @example
-     * await clientClient.validateWindowsStoreReceipt({
+     * await clientApi.validateWindowsStoreReceipt({
      *   "Receipt": "<Receipt Version=\"1.0\" ReceiptDate=\"2012-08-30T23:10:05Z\" CertificateId=\"b809e47cd0110a4db043b3f73e83acd917fe1336\" ReceiptDeviceId=\"4e362949-acc3-fe3a-e71b-89893eb4f528\">\r\n    <AppReceipt Id=\"8ffa256d-eca8-712a-7cf8-cbf5522df24b\" AppId=\"55428GreenlakeApps.CurrentAppSimulatorEventTest_z7q3q7z11crfr\" PurchaseDate=\"2012-06-04T23:07:24Z\" LicenseType=\"Full\" />\r\n    <ProductReceipt Id=\"6bbf4366-6fb2-8be8-7947-92fd5f683530\" ProductId=\"Product1\" PurchaseDate=\"2012-08-30T23:08:52Z\" ExpirationDate=\"2012-09-02T23:08:49Z\" ProductType=\"Durable\" AppId=\"55428GreenlakeApps.CurrentAppSimulatorEventTest_z7q3q7z11crfr\" />\r\n    <Signature xmlns=\"http://www.w3.org/2000/09/xmldsig#\">\r\n        <SignedInfo>\r\n            <CanonicalizationMethod Algorithm=\"http://www.w3.org/2001/10/xml-exc-c14n#\" />\r\n            <SignatureMethod Algorithm=\"http://www.w3.org/2001/04/xmldsig-more#rsa-sha256\" />\r\n            <Reference URI=\"\">\r\n                <Transforms>\r\n                    <Transform Algorithm=\"http://www.w3.org/2000/09/xmldsig#enveloped-signature\" />\r\n                </Transforms>\r\n                <DigestMethod Algorithm=\"http://www.w3.org/2001/04/xmlenc#sha256\" />\r\n                <DigestValue>cdiU06eD8X/w1aGCHeaGCG9w/kWZ8I099rw4mmPpvdU=</DigestValue>\r\n            </Reference>\r\n        </SignedInfo>\r\n        <SignatureValue>SjRIxS/2r2P6ZdgaR9bwUSa6ZItYYFpKLJZrnAa3zkMylbiWjh9oZGGng2p6/gtBHC2dSTZlLbqnysJjl7mQp/A3wKaIkzjyRXv3kxoVaSV0pkqiPt04cIfFTP0JZkE5QD/vYxiWjeyGp1dThEM2RV811sRWvmEs/hHhVxb32e8xCLtpALYx3a9lW51zRJJN0eNdPAvNoiCJlnogAoTToUQLHs72I1dECnSbeNPXiG7klpy5boKKMCZfnVXXkneWvVFtAA1h2sB7ll40LEHO4oYN6VzD+uKd76QOgGmsu9iGVyRvvmMtahvtL1/pxoxsTRedhKq6zrzCfT8qfh3C1w==</SignatureValue>\r\n    </Signature>\r\n</Receipt>\r\n"
      * });
      */
@@ -4035,7 +4035,7 @@ export default function getClientApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/client/analytics/writecharacterevent Microsoft Documentation}
      * @example
-     * await clientClient.writeCharacterEvent({
+     * await clientApi.writeCharacterEvent({
      *   "CharacterId": "E161CB4B7F6C34B",
      *   "EventName": "character_defeated_enemy",
      *   "Timestamp": "2016-03-07T00:00:00Z",
@@ -4061,7 +4061,7 @@ export default function getClientApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/client/analytics/writeplayerevent Microsoft Documentation}
      * @example
-     * await clientClient.writePlayerEvent({
+     * await clientApi.writePlayerEvent({
      *   "EventName": "player_defeated_enemy",
      *   "Timestamp": "2014-03-07T00:00:00Z",
      *   "Body": {
@@ -4086,7 +4086,7 @@ export default function getClientApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/client/analytics/writetitleevent Microsoft Documentation}
      * @example
-     * await clientClient.writeTitleEvent({
+     * await clientApi.writeTitleEvent({
      *   "EventName": "client_update_submitted",
      *   "Timestamp": "2016-03-07T00:00:00Z",
      *   "Body": {

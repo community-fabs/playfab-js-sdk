@@ -48,7 +48,7 @@ export default function getProgressionApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/leaderboard/leaderboards/createleaderboarddefinition Microsoft Documentation}
      * @example
-     * await progressionClient.createLeaderboardDefinition({
+     * await progressionApi.createLeaderboardDefinition({
      *   "Name": "HighestScoresByLevel",
      *   "EntityType": "title_player_account",
      *   "VersionConfiguration": {
@@ -85,7 +85,7 @@ export default function getProgressionApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/statistic/statistics/createstatisticdefinition Microsoft Documentation}
      * @example
-     * await progressionClient.createStatisticDefinition({
+     * await progressionApi.createStatisticDefinition({
      *   "Name": "HighestScoresByLevel",
      *   "AggregationMethod": "Last",
      *   "Columns": [
@@ -112,7 +112,7 @@ export default function getProgressionApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/leaderboard/leaderboards/deleteleaderboarddefinition Microsoft Documentation}
      * @example
-     * await progressionClient.deleteLeaderboardDefinition({
+     * await progressionApi.deleteLeaderboardDefinition({
      *   "Name": "HighestScoresByLevel"
      * });
      */
@@ -128,7 +128,7 @@ export default function getProgressionApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/leaderboard/leaderboards/deleteleaderboardentries Microsoft Documentation}
      * @example
-     * await progressionClient.deleteLeaderboardEntries({
+     * await progressionApi.deleteLeaderboardEntries({
      *   "Name": "Points",
      *   "EntityIds": [
      *     "12802710371",
@@ -148,7 +148,7 @@ export default function getProgressionApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/statistic/statistics/deletestatisticdefinition Microsoft Documentation}
      * @example
-     * await progressionClient.deleteStatisticDefinition({
+     * await progressionApi.deleteStatisticDefinition({
      *   "Name": "HighestScoresByLevel"
      * });
      */
@@ -164,7 +164,7 @@ export default function getProgressionApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/statistic/statistics/deletestatistics Microsoft Documentation}
      * @example
-     * await progressionClient.deleteStatistics({
+     * await progressionApi.deleteStatistics({
      *   "Statistics": [
      *     {
      *       "Name": "TotalCarTime"
@@ -188,7 +188,7 @@ export default function getProgressionApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/leaderboard/leaderboards/getfriendleaderboardforentity Microsoft Documentation}
      * @example
-     * await progressionClient.getFriendLeaderboardForEntity({
+     * await progressionApi.getFriendLeaderboardForEntity({
      *   "LeaderboardName": "Points"
      * });
      */
@@ -204,7 +204,7 @@ export default function getProgressionApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/leaderboard/leaderboards/getleaderboard Microsoft Documentation}
      * @example
-     * await progressionClient.getLeaderboard({
+     * await progressionApi.getLeaderboard({
      *   "LeaderboardName": "Points",
      *   "Version": 2,
      *   "StartingPosition": 100,
@@ -223,7 +223,7 @@ export default function getProgressionApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/leaderboard/leaderboards/getleaderboardaroundentity Microsoft Documentation}
      * @example
-     * await progressionClient.getLeaderboardAroundEntity({
+     * await progressionApi.getLeaderboardAroundEntity({
      *   "LeaderboardName": "Points",
      *   "Version": 2,
      *   "MaxSurroundingEntries": 0,
@@ -246,7 +246,7 @@ export default function getProgressionApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/leaderboard/leaderboards/getleaderboarddefinition Microsoft Documentation}
      * @example
-     * await progressionClient.getLeaderboardDefinition({
+     * await progressionApi.getLeaderboardDefinition({
      *   "Name": "HighestScoresByLevel"
      * });
      */
@@ -262,7 +262,7 @@ export default function getProgressionApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/leaderboard/leaderboards/getleaderboardforentities Microsoft Documentation}
      * @example
-     * await progressionClient.getLeaderboardForEntities({
+     * await progressionApi.getLeaderboardForEntities({
      *   "LeaderboardName": "Points",
      *   "Version": 2,
      *   "EntityIds": [
@@ -283,7 +283,7 @@ export default function getProgressionApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/statistic/statistics/getstatisticdefinition Microsoft Documentation}
      * @example
-     * await progressionClient.getStatisticDefinition({
+     * await progressionApi.getStatisticDefinition({
      *   "Name": "Points"
      * });
      */
@@ -312,7 +312,7 @@ export default function getProgressionApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/statistic/statistics/getstatistics Microsoft Documentation}
      * @example
-     * await progressionClient.getStatistics({
+     * await progressionApi.getStatistics({
      *   "StatisticNames": [
      *     "SpeedRuns",
      *     "Boosts"
@@ -336,7 +336,7 @@ export default function getProgressionApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/statistic/statistics/getstatisticsforentities Microsoft Documentation}
      * @example
-     * await progressionClient.getStatisticsForEntities({
+     * await progressionApi.getStatisticsForEntities({
      *   "Entities": [
      *     {
      *       "Id": "A197412JDA",
@@ -367,7 +367,7 @@ export default function getProgressionApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/leaderboard/leaderboards/incrementleaderboardversion Microsoft Documentation}
      * @example
-     * await progressionClient.incrementLeaderboardVersion({
+     * await progressionApi.incrementLeaderboardVersion({
      *   "Name": "HighestScoresByLevel"
      * });
      */
@@ -383,7 +383,7 @@ export default function getProgressionApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/statistic/statistics/incrementstatisticversion Microsoft Documentation}
      * @example
-     * await progressionClient.incrementStatisticVersion({
+     * await progressionApi.incrementStatisticVersion({
      *   "Name": "HighestScoresByLevel"
      * });
      */
@@ -399,7 +399,7 @@ export default function getProgressionApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/leaderboard/leaderboards/listleaderboarddefinitions Microsoft Documentation}
      * @example
-     * await progressionClient.listLeaderboardDefinitions({});
+     * await progressionApi.listLeaderboardDefinitions({});
      */
     listLeaderboardDefinitions (request: ListLeaderboardDefinitionsRequest) {
       return playfab.request<ListLeaderboardDefinitionsResponse>("/Leaderboard/ListLeaderboardDefinitions", {
@@ -413,7 +413,7 @@ export default function getProgressionApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/statistic/statistics/liststatisticdefinitions Microsoft Documentation}
      * @example
-     * await progressionClient.listStatisticDefinitions({});
+     * await progressionApi.listStatisticDefinitions({});
      */
     listStatisticDefinitions (request: ListStatisticDefinitionsRequest) {
       return playfab.request<ListStatisticDefinitionsResponse>("/Statistic/ListStatisticDefinitions", {
@@ -427,7 +427,7 @@ export default function getProgressionApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/statistic/statistics/unlinkaggregationsourcefromstatistic Microsoft Documentation}
      * @example
-     * await progressionClient.unlinkAggregationSourceFromStatistic({
+     * await progressionApi.unlinkAggregationSourceFromStatistic({
      *   "Name": "TotalKills",
      *   "SourceStatisticName": "KillsPerPlayer"
      * });
@@ -444,7 +444,7 @@ export default function getProgressionApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/leaderboard/leaderboards/unlinkleaderboardfromstatistic Microsoft Documentation}
      * @example
-     * await progressionClient.unlinkLeaderboardFromStatistic({
+     * await progressionApi.unlinkLeaderboardFromStatistic({
      *   "Name": "HighestScoresByLevel",
      *   "StatisticName": "HighestScoresByLevel"
      * });
@@ -461,7 +461,7 @@ export default function getProgressionApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/leaderboard/leaderboards/updateleaderboarddefinition Microsoft Documentation}
      * @example
-     * await progressionClient.updateLeaderboardDefinition({
+     * await progressionApi.updateLeaderboardDefinition({
      *   "Name": "HighestScoresByLevel",
      *   "VersionConfiguration": {
      *     "ResetInterval": "Manual",
@@ -491,7 +491,7 @@ export default function getProgressionApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/leaderboard/leaderboards/updateleaderboardentries Microsoft Documentation}
      * @example
-     * await progressionClient.updateLeaderboardEntries({
+     * await progressionApi.updateLeaderboardEntries({
      *   "LeaderboardName": "Points",
      *   "Entries": [
      *     {
@@ -523,7 +523,7 @@ export default function getProgressionApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/statistic/statistics/updatestatisticdefinition Microsoft Documentation}
      * @example
-     * await progressionClient.updateStatisticDefinition({
+     * await progressionApi.updateStatisticDefinition({
      *   "Name": "HighestScoresByLevel",
      *   "VersionConfiguration": {
      *     "ResetInterval": "Manual",
@@ -549,7 +549,7 @@ export default function getProgressionApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/statistic/statistics/updatestatistics Microsoft Documentation}
      * @example
-     * await progressionClient.updateStatistics({
+     * await progressionApi.updateStatistics({
      *   "Statistics": [
      *     {
      *       "Name": "RoundsWon",

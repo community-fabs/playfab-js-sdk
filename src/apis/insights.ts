@@ -21,7 +21,7 @@ export default function getInsightsApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/insights/analytics/getdetails Microsoft Documentation}
      * @example
-     * await insightsClient.getDetails({});
+     * await insightsApi.getDetails({});
      */
     getDetails (request: InsightsEmptyRequest) {
       return playfab.request<InsightsGetDetailsResponse>("/Insights/GetDetails", {
@@ -36,7 +36,7 @@ export default function getInsightsApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/insights/analytics/getlimits Microsoft Documentation}
      * @example
-     * await insightsClient.getLimits({});
+     * await insightsApi.getLimits({});
      */
     getLimits (request: InsightsEmptyRequest) {
       return playfab.request<InsightsGetLimitsResponse>("/Insights/GetLimits", {
@@ -50,7 +50,7 @@ export default function getInsightsApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/insights/analytics/getoperationstatus Microsoft Documentation}
      * @example
-     * await insightsClient.getOperationStatus({
+     * await insightsApi.getOperationStatus({
      *   "OperationId": "3ee468c4-ad09-4bb1-bccf-209ef5abfb96"
      * });
      */
@@ -66,7 +66,7 @@ export default function getInsightsApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/insights/analytics/getpendingoperations Microsoft Documentation}
      * @example
-     * await insightsClient.getPendingOperations({
+     * await insightsApi.getPendingOperations({
      *   "OperationType": "SetPerformance"
      * });
      */
@@ -82,7 +82,7 @@ export default function getInsightsApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/insights/analytics/setperformance Microsoft Documentation}
      * @example
-     * await insightsClient.setPerformance({
+     * await insightsApi.setPerformance({
      *   "PerformanceLevel": 3
      * });
      */
@@ -98,7 +98,7 @@ export default function getInsightsApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/insights/analytics/setstorageretention Microsoft Documentation}
      * @example
-     * await insightsClient.setStorageRetention({
+     * await insightsApi.setStorageRetention({
      *   "RetentionDays": 30
      * });
      */

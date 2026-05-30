@@ -70,7 +70,7 @@ export default function getAddonApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/addon/addon/createorupdateapple Microsoft Documentation}
      * @example
-     * await addonClient.createOrUpdateApple({
+     * await addonApi.createOrUpdateApple({
      *   "AppBundleId": "123456",
      *   "AppSharedSecret": "654321",
      *   "AppId": "78901",
@@ -94,7 +94,7 @@ export default function getAddonApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/addon/addon/createorupdatefacebook Microsoft Documentation}
      * @example
-     * await addonClient.createOrUpdateFacebook({
+     * await addonApi.createOrUpdateFacebook({
      *   "AppID": "123456",
      *   "AppSecret": "654321",
      *   "NotificationEmail": "user@example.com"
@@ -112,7 +112,7 @@ export default function getAddonApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/addon/addon/createorupdatefacebookinstantgames Microsoft Documentation}
      * @example
-     * await addonClient.createOrUpdateFacebookInstantGames({
+     * await addonApi.createOrUpdateFacebookInstantGames({
      *   "AppID": "123456",
      *   "AppSecret": "654321"
      * });
@@ -129,7 +129,7 @@ export default function getAddonApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/addon/addon/createorupdategoogle Microsoft Documentation}
      * @example
-     * await addonClient.createOrUpdateGoogle({
+     * await addonApi.createOrUpdateGoogle({
      *   "AppPackageID": "abcdef",
      *   "AppLicenseKey": "fedcba",
      *   "OAuthClientID": "123456",
@@ -149,7 +149,7 @@ export default function getAddonApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/addon/addon/createorupdatekongregate Microsoft Documentation}
      * @example
-     * await addonClient.createOrUpdateKongregate({
+     * await addonApi.createOrUpdateKongregate({
      *   "SecretAPIKey": "123456"
      * });
      */
@@ -165,7 +165,7 @@ export default function getAddonApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/addon/addon/createorupdatenintendo Microsoft Documentation}
      * @example
-     * await addonClient.createOrUpdateNintendo({
+     * await addonApi.createOrUpdateNintendo({
      *   "ApplicationID": "123456",
      *   "Environments": [
      *     {
@@ -188,7 +188,7 @@ export default function getAddonApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/addon/addon/createorupdatepsn Microsoft Documentation}
      * @example
-     * await addonClient.createOrUpdatePSN({
+     * await addonApi.createOrUpdatePSN({
      *   "ClientID": "123456",
      *   "ClientSecret": "abcdef",
      *   "NextGenClientID": "654321",
@@ -207,7 +207,7 @@ export default function getAddonApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/addon/addon/createorupdatesteam Microsoft Documentation}
      * @example
-     * await addonClient.createOrUpdateSteam({
+     * await addonApi.createOrUpdateSteam({
      *   "ApplicationId": "123456",
      *   "SecretKey": "654321",
      *   "UseSandbox": true,
@@ -226,7 +226,7 @@ export default function getAddonApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/addon/addon/createorupdatetoxmod Microsoft Documentation}
      * @example
-     * await addonClient.createOrUpdateToxMod({
+     * await addonApi.createOrUpdateToxMod({
      *   "Enabled": false,
      *   "AccountId": "123456",
      *   "AccountKey": "654321"
@@ -244,7 +244,7 @@ export default function getAddonApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/addon/addon/createorupdatetwitch Microsoft Documentation}
      * @example
-     * await addonClient.createOrUpdateTwitch({
+     * await addonApi.createOrUpdateTwitch({
      *   "ClientID": "123456",
      *   "ClientSecret": "654321"
      * });
@@ -261,7 +261,7 @@ export default function getAddonApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/addon/addon/deleteapple Microsoft Documentation}
      * @example
-     * await addonClient.deleteApple({});
+     * await addonApi.deleteApple({});
      */
     deleteApple (request: DeleteAppleRequest) {
       return playfab.request<DeleteAppleResponse>("/Addon/DeleteApple", {
@@ -275,7 +275,7 @@ export default function getAddonApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/addon/addon/deletefacebook Microsoft Documentation}
      * @example
-     * await addonClient.deleteFacebook({});
+     * await addonApi.deleteFacebook({});
      */
     deleteFacebook (request: DeleteFacebookRequest) {
       return playfab.request<DeleteFacebookResponse>("/Addon/DeleteFacebook", {
@@ -289,7 +289,7 @@ export default function getAddonApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/addon/addon/deletefacebookinstantgames Microsoft Documentation}
      * @example
-     * await addonClient.deleteFacebookInstantGames({});
+     * await addonApi.deleteFacebookInstantGames({});
      */
     deleteFacebookInstantGames (request: DeleteFacebookInstantGamesRequest) {
       return playfab.request<DeleteFacebookInstantGamesResponse>("/Addon/DeleteFacebookInstantGames", {
@@ -303,7 +303,7 @@ export default function getAddonApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/addon/addon/deletegoogle Microsoft Documentation}
      * @example
-     * await addonClient.deleteGoogle({});
+     * await addonApi.deleteGoogle({});
      */
     deleteGoogle (request: DeleteGoogleRequest) {
       return playfab.request<DeleteGoogleResponse>("/Addon/DeleteGoogle", {
@@ -317,7 +317,7 @@ export default function getAddonApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/addon/addon/deletekongregate Microsoft Documentation}
      * @example
-     * await addonClient.deleteKongregate({});
+     * await addonApi.deleteKongregate({});
      */
     deleteKongregate (request: DeleteKongregateRequest) {
       return playfab.request<DeleteKongregateResponse>("/Addon/DeleteKongregate", {
@@ -331,7 +331,7 @@ export default function getAddonApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/addon/addon/deletenintendo Microsoft Documentation}
      * @example
-     * await addonClient.deleteNintendo({});
+     * await addonApi.deleteNintendo({});
      */
     deleteNintendo (request: DeleteNintendoRequest) {
       return playfab.request<DeleteNintendoResponse>("/Addon/DeleteNintendo", {
@@ -345,7 +345,7 @@ export default function getAddonApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/addon/addon/deletepsn Microsoft Documentation}
      * @example
-     * await addonClient.deletePSN({});
+     * await addonApi.deletePSN({});
      */
     deletePSN (request: DeletePSNRequest) {
       return playfab.request<DeletePSNResponse>("/Addon/DeletePSN", {
@@ -359,7 +359,7 @@ export default function getAddonApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/addon/addon/deletesteam Microsoft Documentation}
      * @example
-     * await addonClient.deleteSteam({});
+     * await addonApi.deleteSteam({});
      */
     deleteSteam (request: DeleteSteamRequest) {
       return playfab.request<DeleteSteamResponse>("/Addon/DeleteSteam", {
@@ -373,7 +373,7 @@ export default function getAddonApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/addon/addon/deletetoxmod Microsoft Documentation}
      * @example
-     * await addonClient.deleteToxMod({});
+     * await addonApi.deleteToxMod({});
      */
     deleteToxMod (request: DeleteToxModRequest) {
       return playfab.request<DeleteToxModResponse>("/Addon/DeleteToxMod", {
@@ -387,7 +387,7 @@ export default function getAddonApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/addon/addon/deletetwitch Microsoft Documentation}
      * @example
-     * await addonClient.deleteTwitch({});
+     * await addonApi.deleteTwitch({});
      */
     deleteTwitch (request: DeleteTwitchRequest) {
       return playfab.request<DeleteTwitchResponse>("/Addon/DeleteTwitch", {
@@ -401,7 +401,7 @@ export default function getAddonApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/addon/addon/getapple Microsoft Documentation}
      * @example
-     * await addonClient.getApple({});
+     * await addonApi.getApple({});
      */
     getApple (request: GetAppleRequest) {
       return playfab.request<GetAppleResponse>("/Addon/GetApple", {
@@ -415,7 +415,7 @@ export default function getAddonApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/addon/addon/getfacebook Microsoft Documentation}
      * @example
-     * await addonClient.getFacebook({});
+     * await addonApi.getFacebook({});
      */
     getFacebook (request: GetFacebookRequest) {
       return playfab.request<GetFacebookResponse>("/Addon/GetFacebook", {
@@ -429,7 +429,7 @@ export default function getAddonApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/addon/addon/getfacebookinstantgames Microsoft Documentation}
      * @example
-     * await addonClient.getFacebookInstantGames({});
+     * await addonApi.getFacebookInstantGames({});
      */
     getFacebookInstantGames (request: GetFacebookInstantGamesRequest) {
       return playfab.request<GetFacebookInstantGamesResponse>("/Addon/GetFacebookInstantGames", {
@@ -443,7 +443,7 @@ export default function getAddonApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/addon/addon/getgoogle Microsoft Documentation}
      * @example
-     * await addonClient.getGoogle({});
+     * await addonApi.getGoogle({});
      */
     getGoogle (request: GetGoogleRequest) {
       return playfab.request<GetGoogleResponse>("/Addon/GetGoogle", {
@@ -457,7 +457,7 @@ export default function getAddonApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/addon/addon/getkongregate Microsoft Documentation}
      * @example
-     * await addonClient.getKongregate({});
+     * await addonApi.getKongregate({});
      */
     getKongregate (request: GetKongregateRequest) {
       return playfab.request<GetKongregateResponse>("/Addon/GetKongregate", {
@@ -471,7 +471,7 @@ export default function getAddonApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/addon/addon/getnintendo Microsoft Documentation}
      * @example
-     * await addonClient.getNintendo({});
+     * await addonApi.getNintendo({});
      */
     getNintendo (request: GetNintendoRequest) {
       return playfab.request<GetNintendoResponse>("/Addon/GetNintendo", {
@@ -485,7 +485,7 @@ export default function getAddonApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/addon/addon/getpsn Microsoft Documentation}
      * @example
-     * await addonClient.getPSN({});
+     * await addonApi.getPSN({});
      */
     getPSN (request: GetPSNRequest) {
       return playfab.request<GetPSNResponse>("/Addon/GetPSN", {
@@ -499,7 +499,7 @@ export default function getAddonApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/addon/addon/getsteam Microsoft Documentation}
      * @example
-     * await addonClient.getSteam({});
+     * await addonApi.getSteam({});
      */
     getSteam (request: GetSteamRequest) {
       return playfab.request<GetSteamResponse>("/Addon/GetSteam", {
@@ -513,7 +513,7 @@ export default function getAddonApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/addon/addon/gettoxmod Microsoft Documentation}
      * @example
-     * await addonClient.getToxMod({});
+     * await addonApi.getToxMod({});
      */
     getToxMod (request: GetToxModRequest) {
       return playfab.request<GetToxModResponse>("/Addon/GetToxMod", {
@@ -527,7 +527,7 @@ export default function getAddonApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/addon/addon/gettwitch Microsoft Documentation}
      * @example
-     * await addonClient.getTwitch({});
+     * await addonApi.getTwitch({});
      */
     getTwitch (request: GetTwitchRequest) {
       return playfab.request<GetTwitchResponse>("/Addon/GetTwitch", {

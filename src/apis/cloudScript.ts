@@ -31,7 +31,7 @@ export default function getCloudScriptApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/cloudscript/server-side-cloud-script/executeentitycloudscript Microsoft Documentation}
      * @example
-     * await cloudScriptClient.executeEntityCloudScript({
+     * await cloudScriptApi.executeEntityCloudScript({
      *   "FunctionName": "levelCompleted",
      *   "FunctionParameter": {
      *     "level": 3,
@@ -59,7 +59,7 @@ export default function getCloudScriptApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/cloudscript/server-side-cloud-script/executefunction Microsoft Documentation}
      * @example
-     * await cloudScriptClient.executeFunction({
+     * await cloudScriptApi.executeFunction({
      *   "FunctionName": "LevelCompleted",
      *   "FunctionParameter": {
      *     "level": 3,
@@ -85,7 +85,7 @@ export default function getCloudScriptApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/cloudscript/server-side-cloud-script/getfunction Microsoft Documentation}
      * @example
-     * await cloudScriptClient.getFunction({
+     * await cloudScriptApi.getFunction({
      *   "FunctionName": "LevelCompleted"
      * });
      */
@@ -101,7 +101,7 @@ export default function getCloudScriptApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/cloudscript/server-side-cloud-script/listeventhubfunctions Microsoft Documentation}
      * @example
-     * await cloudScriptClient.listEventHubFunctions({});
+     * await cloudScriptApi.listEventHubFunctions({});
      */
     listEventHubFunctions (request: ListFunctionsRequest) {
       return playfab.request<ListEventHubFunctionsResult>("/CloudScript/ListEventHubFunctions", {
@@ -115,7 +115,7 @@ export default function getCloudScriptApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/cloudscript/server-side-cloud-script/listfunctions Microsoft Documentation}
      * @example
-     * await cloudScriptClient.listFunctions({});
+     * await cloudScriptApi.listFunctions({});
      */
     listFunctions (request: ListFunctionsRequest) {
       return playfab.request<ListFunctionsResult>("/CloudScript/ListFunctions", {
@@ -129,7 +129,7 @@ export default function getCloudScriptApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/cloudscript/server-side-cloud-script/listhttpfunctions Microsoft Documentation}
      * @example
-     * await cloudScriptClient.listHttpFunctions({});
+     * await cloudScriptApi.listHttpFunctions({});
      */
     listHttpFunctions (request: ListFunctionsRequest) {
       return playfab.request<ListHttpFunctionsResult>("/CloudScript/ListHttpFunctions", {
@@ -143,7 +143,7 @@ export default function getCloudScriptApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/cloudscript/server-side-cloud-script/listqueuedfunctions Microsoft Documentation}
      * @example
-     * await cloudScriptClient.listQueuedFunctions({});
+     * await cloudScriptApi.listQueuedFunctions({});
      */
     listQueuedFunctions (request: ListFunctionsRequest) {
       return playfab.request<ListQueuedFunctionsResult>("/CloudScript/ListQueuedFunctions", {
@@ -157,7 +157,7 @@ export default function getCloudScriptApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/cloudscript/server-side-cloud-script/postfunctionresultforentitytriggeredaction Microsoft Documentation}
      * @example
-     * await cloudScriptClient.postFunctionResultForEntityTriggeredAction({
+     * await cloudScriptApi.postFunctionResultForEntityTriggeredAction({
      *   "FunctionResult": {
      *     "ExecutionTimeMilliseconds": 367,
      *     "FunctionName": "LevelCompleted",
@@ -186,7 +186,7 @@ export default function getCloudScriptApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/cloudscript/server-side-cloud-script/postfunctionresultforfunctionexecution Microsoft Documentation}
      * @example
-     * await cloudScriptClient.postFunctionResultForFunctionExecution({
+     * await cloudScriptApi.postFunctionResultForFunctionExecution({
      *   "FunctionResult": {
      *     "ExecutionTimeMilliseconds": 367,
      *     "FunctionName": "LevelCompleted",
@@ -215,7 +215,7 @@ export default function getCloudScriptApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/cloudscript/server-side-cloud-script/postfunctionresultforplayertriggeredaction Microsoft Documentation}
      * @example
-     * await cloudScriptClient.postFunctionResultForPlayerTriggeredAction({
+     * await cloudScriptApi.postFunctionResultForPlayerTriggeredAction({
      *   "PlayStreamEventEnvelope": {
      *     "EntityId": "1234ABCD",
      *     "EntityType": "title_player_account",
@@ -255,7 +255,7 @@ export default function getCloudScriptApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/cloudscript/server-side-cloud-script/postfunctionresultforscheduledtask Microsoft Documentation}
      * @example
-     * await cloudScriptClient.postFunctionResultForScheduledTask({
+     * await cloudScriptApi.postFunctionResultForScheduledTask({
      *   "ScheduledTaskId": {
      *     "Name": "MyTask",
      *     "Id": "d739e188-22f6-4d13-a4d5-df2e93d4d2f7"
@@ -283,7 +283,7 @@ export default function getCloudScriptApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/cloudscript/server-side-cloud-script/registereventhubfunction Microsoft Documentation}
      * @example
-     * await cloudScriptClient.registerEventHubFunction({
+     * await cloudScriptApi.registerEventHubFunction({
      *   "EventHubName": "fn-eventhub",
      *   "ConnectionString": "SampleConnectionString",
      *   "FunctionName": "functionName"
@@ -301,7 +301,7 @@ export default function getCloudScriptApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/cloudscript/server-side-cloud-script/registerhttpfunction Microsoft Documentation}
      * @example
-     * await cloudScriptClient.registerHttpFunction({
+     * await cloudScriptApi.registerHttpFunction({
      *   "FunctionUrl": "http://function.url",
      *   "FunctionName": "functionName"
      * });
@@ -318,7 +318,7 @@ export default function getCloudScriptApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/cloudscript/server-side-cloud-script/registerqueuedfunction Microsoft Documentation}
      * @example
-     * await cloudScriptClient.registerQueuedFunction({
+     * await cloudScriptApi.registerQueuedFunction({
      *   "QueueName": "fn-queue",
      *   "ConnectionString": "SampleConnectionString",
      *   "FunctionName": "functionName"
@@ -336,7 +336,7 @@ export default function getCloudScriptApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/cloudscript/server-side-cloud-script/unregisterfunction Microsoft Documentation}
      * @example
-     * await cloudScriptClient.unregisterFunction({
+     * await cloudScriptApi.unregisterFunction({
      *   "FunctionName": "functionName"
      * });
      */

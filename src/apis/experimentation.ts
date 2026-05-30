@@ -31,7 +31,7 @@ export default function getExperimentationApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/experimentation/experimentation/createexclusiongroup Microsoft Documentation}
      * @example
-     * await experimentationClient.createExclusionGroup({
+     * await experimentationApi.createExclusionGroup({
      *   "Name": "Commerce Exclusion Group",
      *   "Description": "Exclusion group for independent, commerce-related experiments"
      * });
@@ -48,7 +48,7 @@ export default function getExperimentationApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/experimentation/experimentation/createexperiment Microsoft Documentation}
      * @example
-     * await experimentationClient.createExperiment({
+     * await experimentationApi.createExperiment({
      *   "Name": "BackgroundColor Experiment",
      *   "Description": "Tests whether a green background color increases revenue",
      *   "StartDate": "2019-10-25T20:37:00Z",
@@ -94,7 +94,7 @@ export default function getExperimentationApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/experimentation/experimentation/deleteexclusiongroup Microsoft Documentation}
      * @example
-     * await experimentationClient.deleteExclusionGroup({
+     * await experimentationApi.deleteExclusionGroup({
      *   "ExclusionGroupId": "00000000-0000-0000-0000-000000000000"
      * });
      */
@@ -110,7 +110,7 @@ export default function getExperimentationApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/experimentation/experimentation/deleteexperiment Microsoft Documentation}
      * @example
-     * await experimentationClient.deleteExperiment({
+     * await experimentationApi.deleteExperiment({
      *   "ExperimentId": "00000000-0000-0000-0000-000000000000"
      * });
      */
@@ -126,7 +126,7 @@ export default function getExperimentationApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/experimentation/experimentation/getexclusiongroups Microsoft Documentation}
      * @example
-     * await experimentationClient.getExclusionGroups({});
+     * await experimentationApi.getExclusionGroups({});
      */
     getExclusionGroups (request: GetExclusionGroupsRequest) {
       return playfab.request<GetExclusionGroupsResult>("/Experimentation/GetExclusionGroups", {
@@ -140,7 +140,7 @@ export default function getExperimentationApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/experimentation/experimentation/getexclusiongrouptraffic Microsoft Documentation}
      * @example
-     * await experimentationClient.getExclusionGroupTraffic({});
+     * await experimentationApi.getExclusionGroupTraffic({});
      */
     getExclusionGroupTraffic (request: GetExclusionGroupTrafficRequest) {
       return playfab.request<GetExclusionGroupTrafficResult>("/Experimentation/GetExclusionGroupTraffic", {
@@ -154,7 +154,7 @@ export default function getExperimentationApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/experimentation/experimentation/getexperiments Microsoft Documentation}
      * @example
-     * await experimentationClient.getExperiments({});
+     * await experimentationApi.getExperiments({});
      */
     getExperiments (request: GetExperimentsRequest) {
       return playfab.request<GetExperimentsResult>("/Experimentation/GetExperiments", {
@@ -168,7 +168,7 @@ export default function getExperimentationApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/experimentation/experimentation/getlatestscorecard Microsoft Documentation}
      * @example
-     * await experimentationClient.getLatestScorecard({
+     * await experimentationApi.getLatestScorecard({
      *   "ExperimentId": "00000000-0000-0000-0000-000000000000"
      * });
      */
@@ -184,7 +184,7 @@ export default function getExperimentationApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/experimentation/experimentation/gettreatmentassignment Microsoft Documentation}
      * @example
-     * await experimentationClient.getTreatmentAssignment({});
+     * await experimentationApi.getTreatmentAssignment({});
      */
     getTreatmentAssignment (request: GetTreatmentAssignmentRequest) {
       return playfab.request<GetTreatmentAssignmentResult>("/Experimentation/GetTreatmentAssignment", {
@@ -198,7 +198,7 @@ export default function getExperimentationApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/experimentation/experimentation/startexperiment Microsoft Documentation}
      * @example
-     * await experimentationClient.startExperiment({
+     * await experimentationApi.startExperiment({
      *   "ExperimentId": "00000000-0000-0000-0000-000000000000"
      * });
      */
@@ -214,7 +214,7 @@ export default function getExperimentationApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/experimentation/experimentation/stopexperiment Microsoft Documentation}
      * @example
-     * await experimentationClient.stopExperiment({
+     * await experimentationApi.stopExperiment({
      *   "ExperimentId": "00000000-0000-0000-0000-000000000000"
      * });
      */
@@ -230,7 +230,7 @@ export default function getExperimentationApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/experimentation/experimentation/updateexclusiongroup Microsoft Documentation}
      * @example
-     * await experimentationClient.updateExclusionGroup({
+     * await experimentationApi.updateExclusionGroup({
      *   "ExclusionGroupId": "00000000-0000-0000-0000-000000000000",
      *   "Name": "Commerce Exclusion Group",
      *   "Description": "Exclusion group for independent, commerce-related experiments"
@@ -248,7 +248,7 @@ export default function getExperimentationApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/experimentation/experimentation/updateexperiment Microsoft Documentation}
      * @example
-     * await experimentationClient.updateExperiment({
+     * await experimentationApi.updateExperiment({
      *   "Name": "BackgroundColor Experiment",
      *   "Id": "B9A90E90-A009-4254-80A4-46B5933E9D26",
      *   "Description": "Tests whether a green background color increases revenue",

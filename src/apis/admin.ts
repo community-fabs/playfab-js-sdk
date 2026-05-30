@@ -239,7 +239,7 @@ export default function getAdminApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/admin/scheduledtask/aborttaskinstance Microsoft Documentation}
      * @example
-     * await adminClient.abortTaskInstance({
+     * await adminApi.abortTaskInstance({
      *   "TaskInstanceId": "E52531B47B1761C7-4"
      * });
      */
@@ -255,7 +255,7 @@ export default function getAdminApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/admin/title-wide-data-management/addlocalizednews Microsoft Documentation}
      * @example
-     * await adminClient.addLocalizedNews({
+     * await adminApi.addLocalizedNews({
      *   "NewsId": "74623b12-6c80-ee4b-7c3b-58e638aa62bd",
      *   "Language": "en",
      *   "Title": "News of the Day",
@@ -274,7 +274,7 @@ export default function getAdminApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/admin/title-wide-data-management/addnews Microsoft Documentation}
      * @example
-     * await adminClient.addNews({
+     * await adminApi.addNews({
      *   "Timestamp": "2014-04-06T00:00:00Z",
      *   "Title": "News of the Day",
      *   "Body": "<b>We have a new object to buy!</b>",
@@ -293,7 +293,7 @@ export default function getAdminApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/admin/playstream/addplayertag Microsoft Documentation}
      * @example
-     * await adminClient.addPlayerTag({
+     * await adminApi.addPlayerTag({
      *   "PlayFabId": "10931252888739651331",
      *   "TagName": "MostKilled"
      * });
@@ -325,7 +325,7 @@ export default function getAdminApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/admin/player-item-management/adduservirtualcurrency Microsoft Documentation}
      * @example
-     * await adminClient.addUserVirtualCurrency({
+     * await adminApi.addUserVirtualCurrency({
      *   "PlayFabId": "20394883",
      *   "VirtualCurrency": "GC",
      *   "Amount": 100
@@ -345,7 +345,7 @@ export default function getAdminApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/admin/title-wide-data-management/addvirtualcurrencytypes Microsoft Documentation}
      * @example
-     * await adminClient.addVirtualCurrencyTypes({
+     * await adminApi.addVirtualCurrencyTypes({
      *   "VirtualCurrencies": [
      *     {
      *       "CurrencyCode": "CC",
@@ -372,7 +372,7 @@ export default function getAdminApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/admin/account-management/banusers Microsoft Documentation}
      * @example
-     * await adminClient.banUsers({
+     * await adminApi.banUsers({
      *   "Bans": [
      *     {
      *       "PlayFabId": "1679AF5CD04BD838",
@@ -400,7 +400,7 @@ export default function getAdminApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/admin/player-item-management/checklimitededitionitemavailability Microsoft Documentation}
      * @example
-     * await adminClient.checkLimitedEditionItemAvailability({
+     * await adminApi.checkLimitedEditionItemAvailability({
      *   "CatalogVersion": "Rares",
      *   "ItemId": "FreeHoodie"
      * });
@@ -417,7 +417,7 @@ export default function getAdminApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/admin/scheduledtask/createactionsonplayersinsegmenttask Microsoft Documentation}
      * @example
-     * await adminClient.createActionsOnPlayersInSegmentTask({
+     * await adminApi.createActionsOnPlayersInSegmentTask({
      *   "Name": "PushNotificationVIP_Halloween",
      *   "Description": "Send push notification to VIP players about Halloween event",
      *   "IsActive": false,
@@ -447,7 +447,7 @@ export default function getAdminApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/admin/scheduledtask/createcloudscriptazurefunctionstask Microsoft Documentation}
      * @example
-     * await adminClient.createCloudScriptAzureFunctionsTask({
+     * await adminApi.createCloudScriptAzureFunctionsTask({
      *   "Name": "EnableWeekdayHappyHour",
      *   "Description": "Turn on special pricing for weekday happy hour.",
      *   "Schedule": "0 17 * * 1-5",
@@ -472,7 +472,7 @@ export default function getAdminApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/admin/scheduledtask/createcloudscripttask Microsoft Documentation}
      * @example
-     * await adminClient.createCloudScriptTask({
+     * await adminApi.createCloudScriptTask({
      *   "Name": "EnableWeekdayHappyHour",
      *   "Description": "Turn on special pricing for weekday happy hour.",
      *   "Schedule": "0 17 * * 1-5",
@@ -497,7 +497,7 @@ export default function getAdminApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/admin/scheduledtask/createinsightsscheduledscalingtask Microsoft Documentation}
      * @example
-     * await adminClient.createInsightsScheduledScalingTask({
+     * await adminApi.createInsightsScheduledScalingTask({
      *   "Name": "EnableWeekdayPerformance",
      *   "Description": "Scale up Insights Performance Units during weekdays.",
      *   "Schedule": "0 0 * * 1-5",
@@ -519,7 +519,7 @@ export default function getAdminApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/admin/authentication/createopenidconnection Microsoft Documentation}
      * @example
-     * await adminClient.createOpenIdConnection({
+     * await adminApi.createOpenIdConnection({
      *   "ConnectionId": "oidconnection1",
      *   "ClientId": "example_id_1",
      *   "ClientSecret": "example_secret_1",
@@ -550,7 +550,7 @@ export default function getAdminApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/admin/authentication/createplayersharedsecret Microsoft Documentation}
      * @example
-     * await adminClient.createPlayerSharedSecret({
+     * await adminApi.createPlayerSharedSecret({
      *   "FriendlyName": "iOS Users"
      * });
      */
@@ -567,7 +567,7 @@ export default function getAdminApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/admin/player-data-management/createplayerstatisticdefinition Microsoft Documentation}
      * @example
-     * await adminClient.createPlayerStatisticDefinition({
+     * await adminApi.createPlayerStatisticDefinition({
      *   "StatisticName": "headshots",
      *   "VersionChangeInterval": "Never",
      *   "ShouldProvisionLeaderboard": false
@@ -586,7 +586,7 @@ export default function getAdminApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/admin/segments/createsegment Microsoft Documentation}
      * @example
-     * await adminClient.createSegment({
+     * await adminApi.createSegment({
      *   "SegmentModel": {
      *     "Name": "My user segment",
      *     "LastUpdateTime": "0001-01-01T00:00:00Z",
@@ -631,7 +631,7 @@ export default function getAdminApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/admin/content/deletecontent Microsoft Documentation}
      * @example
-     * await adminClient.deleteContent({
+     * await adminApi.deleteContent({
      *   "Key": "images/sword_icon.png"
      * });
      */
@@ -647,7 +647,7 @@ export default function getAdminApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/admin/playstream/deleteeventsink Microsoft Documentation}
      * @example
-     * await adminClient.deleteEventSink({
+     * await adminApi.deleteEventSink({
      *   "Name": "MyStorage"
      * });
      */
@@ -663,7 +663,7 @@ export default function getAdminApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/admin/account-management/deletemasterplayeraccount Microsoft Documentation}
      * @example
-     * await adminClient.deleteMasterPlayerAccount({
+     * await adminApi.deleteMasterPlayerAccount({
      *   "PlayFabId": "A68C908B66C23C5",
      *   "MetaData": "Identifying info"
      * });
@@ -680,7 +680,7 @@ export default function getAdminApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/admin/account-management/deletemasterplayereventdata Microsoft Documentation}
      * @example
-     * await adminClient.deleteMasterPlayerEventData({
+     * await adminApi.deleteMasterPlayerEventData({
      *   "PlayFabId": "A68C908B66C23C5"
      * });
      */
@@ -696,7 +696,7 @@ export default function getAdminApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/admin/account-management/deletemembershipsubscription Microsoft Documentation}
      * @example
-     * await adminClient.deleteMembershipSubscription({
+     * await adminApi.deleteMembershipSubscription({
      *   "MembershipId": "ShieldBonusMembership",
      *   "SubscriptionId": "39F6B89A-0F0C-4D96-B12C-BA89543A11A1",
      *   "PlayFabId": "204883457"
@@ -714,7 +714,7 @@ export default function getAdminApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/admin/authentication/deleteopenidconnection Microsoft Documentation}
      * @example
-     * await adminClient.deleteOpenIdConnection({
+     * await adminApi.deleteOpenIdConnection({
      *   "ConnectionId": "oidconnection1"
      * });
      */
@@ -730,7 +730,7 @@ export default function getAdminApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/admin/account-management/deleteplayer Microsoft Documentation}
      * @example
-     * await adminClient.deletePlayer({
+     * await adminApi.deletePlayer({
      *   "PlayFabId": "A68C908B66C23C5"
      * });
      */
@@ -746,7 +746,7 @@ export default function getAdminApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/admin/player-data-management/deleteplayercustomproperties Microsoft Documentation}
      * @example
-     * await adminClient.deletePlayerCustomProperties({
+     * await adminApi.deletePlayerCustomProperties({
      *   "PlayFabId": "2039475",
      *   "PropertyNames": [
      *     "level",
@@ -768,7 +768,7 @@ export default function getAdminApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/admin/authentication/deleteplayersharedsecret Microsoft Documentation}
      * @example
-     * await adminClient.deletePlayerSharedSecret({
+     * await adminApi.deletePlayerSharedSecret({
      *   "SecretKey": "keysaresecret"
      * });
      */
@@ -784,7 +784,7 @@ export default function getAdminApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/admin/segments/deletesegment Microsoft Documentation}
      * @example
-     * await adminClient.deleteSegment({
+     * await adminApi.deleteSegment({
      *   "SegmentId": "97EF0E9302CBE996"
      * });
      */
@@ -801,7 +801,7 @@ export default function getAdminApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/admin/title-wide-data-management/deletestore Microsoft Documentation}
      * @example
-     * await adminClient.deleteStore({
+     * await adminApi.deleteStore({
      *   "StoreId": "BonusStore"
      * });
      */
@@ -817,7 +817,7 @@ export default function getAdminApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/admin/scheduledtask/deletetask Microsoft Documentation}
      * @example
-     * await adminClient.deleteTask({
+     * await adminApi.deleteTask({
      *   "Identifier": {
      *     "Id": "E1772FD927D8539D"
      *   }
@@ -835,7 +835,7 @@ export default function getAdminApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/admin/account-management/deletetitle Microsoft Documentation}
      * @example
-     * await adminClient.deleteTitle({});
+     * await adminApi.deleteTitle({});
      */
     deleteTitle (request: DeleteTitleRequest) {
       return playfab.request<DeleteTitleResult>("/Admin/DeleteTitle", {
@@ -849,7 +849,7 @@ export default function getAdminApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/admin/title-wide-data-management/deletetitledataoverride Microsoft Documentation}
      * @example
-     * await adminClient.deleteTitleDataOverride({
+     * await adminApi.deleteTitleDataOverride({
      *   "OverrideLabel": "LaunchData"
      * });
      */
@@ -879,7 +879,7 @@ export default function getAdminApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/admin/account-management/exportmasterplayerdata Microsoft Documentation}
      * @example
-     * await adminClient.exportMasterPlayerData({
+     * await adminApi.exportMasterPlayerData({
      *   "PlayFabId": "A68C908B66C23C5"
      * });
      */
@@ -897,7 +897,7 @@ export default function getAdminApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/admin/playstream/exportplayersinsegment Microsoft Documentation}
      * @example
-     * await adminClient.exportPlayersInSegment({
+     * await adminApi.exportPlayersInSegment({
      *   "SegmentId": "ABCDEF1234567890"
      * });
      */
@@ -913,7 +913,7 @@ export default function getAdminApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/admin/scheduledtask/getactionsonplayersinsegmenttaskinstance Microsoft Documentation}
      * @example
-     * await adminClient.getActionsOnPlayersInSegmentTaskInstance({
+     * await adminApi.getActionsOnPlayersInSegmentTaskInstance({
      *   "TaskInstanceId": "E52531B47B1761C7-4"
      * });
      */
@@ -944,7 +944,7 @@ export default function getAdminApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/admin/playstream/getallsegments Microsoft Documentation}
      * @example
-     * await adminClient.getAllSegments({});
+     * await adminApi.getAllSegments({});
      */
     getAllSegments (request: GetAllSegmentsRequest) {
       return playfab.request<GetAllSegmentsResult>("/Admin/GetAllSegments", {
@@ -959,7 +959,7 @@ export default function getAdminApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/admin/title-wide-data-management/getcatalogitems Microsoft Documentation}
      * @example
-     * await adminClient.getCatalogItems({
+     * await adminApi.getCatalogItems({
      *   "CatalogVersion": "1"
      * });
      */
@@ -975,7 +975,7 @@ export default function getAdminApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/admin/scheduledtask/getcloudscriptazurefunctionstaskinstance Microsoft Documentation}
      * @example
-     * await adminClient.getCloudScriptAzureFunctionsTaskInstance({
+     * await adminApi.getCloudScriptAzureFunctionsTaskInstance({
      *   "TaskInstanceId": "E52531B47B1761C7-4"
      * });
      */
@@ -991,7 +991,7 @@ export default function getAdminApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/admin/server-side-cloud-script/getcloudscriptrevision Microsoft Documentation}
      * @example
-     * await adminClient.getCloudScriptRevision({
+     * await adminApi.getCloudScriptRevision({
      *   "Version": 1,
      *   "Revision": 3
      * });
@@ -1008,7 +1008,7 @@ export default function getAdminApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/admin/scheduledtask/getcloudscripttaskinstance Microsoft Documentation}
      * @example
-     * await adminClient.getCloudScriptTaskInstance({
+     * await adminApi.getCloudScriptTaskInstance({
      *   "TaskInstanceId": "E52531B47B1761C7-4"
      * });
      */
@@ -1025,7 +1025,7 @@ export default function getAdminApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/admin/server-side-cloud-script/getcloudscriptversions Microsoft Documentation}
      * @example
-     * await adminClient.getCloudScriptVersions({});
+     * await adminApi.getCloudScriptVersions({});
      */
     getCloudScriptVersions (request: GetCloudScriptVersionsRequest) {
       return playfab.request<GetCloudScriptVersionsResult>("/Admin/GetCloudScriptVersions", {
@@ -1039,7 +1039,7 @@ export default function getAdminApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/admin/content/getcontentlist Microsoft Documentation}
      * @example
-     * await adminClient.getContentList({
+     * await adminApi.getContentList({
      *   "Prefix": "2016/1"
      * });
      */
@@ -1057,7 +1057,7 @@ export default function getAdminApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/admin/content/getcontentuploadurl Microsoft Documentation}
      * @example
-     * await adminClient.getContentUploadUrl({
+     * await adminApi.getContentUploadUrl({
      *   "Key": "images/sword_icon.png",
      *   "ContentType": "image/png"
      * });
@@ -1074,7 +1074,7 @@ export default function getAdminApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/admin/player-data-management/getdatareport Microsoft Documentation}
      * @example
-     * await adminClient.getDataReport({
+     * await adminApi.getDataReport({
      *   "ReportName": "PurchaseDataReport",
      *   "Year": 2014,
      *   "Month": 12,
@@ -1093,7 +1093,7 @@ export default function getAdminApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/admin/playstream/geteventsinks Microsoft Documentation}
      * @example
-     * await adminClient.getEventSinks({});
+     * await adminApi.getEventSinks({});
      */
     getEventSinks (request: GetEventSinksRequest) {
       return playfab.request<GetEventSinksResult>("/Admin/GetEventSinks", {
@@ -1133,7 +1133,7 @@ export default function getAdminApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/admin/account-management/getplayedtitlelist Microsoft Documentation}
      * @example
-     * await adminClient.getPlayedTitleList({
+     * await adminApi.getPlayedTitleList({
      *   "PlayFabId": "A68C908B66C23C5"
      * });
      */
@@ -1149,7 +1149,7 @@ export default function getAdminApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/admin/player-data-management/getplayercustomproperty Microsoft Documentation}
      * @example
-     * await adminClient.getPlayerCustomProperty({
+     * await adminApi.getPlayerCustomProperty({
      *   "PlayFabId": "2039475",
      *   "PropertyName": "level"
      * });
@@ -1166,7 +1166,7 @@ export default function getAdminApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/admin/account-management/getplayeridfromauthtoken Microsoft Documentation}
      * @example
-     * await adminClient.getPlayerIdFromAuthToken({
+     * await adminApi.getPlayerIdFromAuthToken({
      *   "Token": "3F584AD0EF943E2",
      *   "TokenType": "Email"
      * });
@@ -1183,7 +1183,7 @@ export default function getAdminApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/admin/account-management/getplayerprofile Microsoft Documentation}
      * @example
-     * await adminClient.getPlayerProfile({
+     * await adminApi.getPlayerProfile({
      *   "PlayFabId": "621EF20237534A44"
      * });
      */
@@ -1199,7 +1199,7 @@ export default function getAdminApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/admin/playstream/getplayersegments Microsoft Documentation}
      * @example
-     * await adminClient.getPlayerSegments({
+     * await adminApi.getPlayerSegments({
      *   "PlayFabId": "1337AA00"
      * });
      */
@@ -1215,7 +1215,7 @@ export default function getAdminApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/admin/authentication/getplayersharedsecrets Microsoft Documentation}
      * @example
-     * await adminClient.getPlayerSharedSecrets({});
+     * await adminApi.getPlayerSharedSecrets({});
      */
     getPlayerSharedSecrets (request: GetPlayerSharedSecretsRequest) {
       return playfab.request<GetPlayerSharedSecretsResult>("/Admin/GetPlayerSharedSecrets", {
@@ -1230,7 +1230,7 @@ export default function getAdminApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/admin/player-data-management/getplayerstatisticdefinitions Microsoft Documentation}
      * @example
-     * await adminClient.getPlayerStatisticDefinitions({});
+     * await adminApi.getPlayerStatisticDefinitions({});
      */
     getPlayerStatisticDefinitions (request: GetPlayerStatisticDefinitionsRequest) {
       return playfab.request<GetPlayerStatisticDefinitionsResult>("/Admin/GetPlayerStatisticDefinitions", {
@@ -1244,7 +1244,7 @@ export default function getAdminApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/admin/player-data-management/getplayerstatisticversions Microsoft Documentation}
      * @example
-     * await adminClient.getPlayerStatisticVersions({
+     * await adminApi.getPlayerStatisticVersions({
      *   "StatisticName": "headshots"
      * });
      */
@@ -1260,7 +1260,7 @@ export default function getAdminApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/admin/playstream/getplayertags Microsoft Documentation}
      * @example
-     * await adminClient.getPlayerTags({
+     * await adminApi.getPlayerTags({
      *   "PlayFabId": "10931252888739651331",
      *   "Namespace": "title.AAA"
      * });
@@ -1277,7 +1277,7 @@ export default function getAdminApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/admin/authentication/getpolicy Microsoft Documentation}
      * @example
-     * await adminClient.getPolicy({
+     * await adminApi.getPolicy({
      *   "PolicyName": "ApiPolicy"
      * });
      */
@@ -1293,7 +1293,7 @@ export default function getAdminApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/admin/title-wide-data-management/getpublisherdata Microsoft Documentation}
      * @example
-     * await adminClient.getPublisherData({
+     * await adminApi.getPublisherData({
      *   "Keys": [
      *     "color",
      *     "propertyA"
@@ -1313,7 +1313,7 @@ export default function getAdminApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/admin/title-wide-data-management/getrandomresulttables Microsoft Documentation}
      * @example
-     * await adminClient.getRandomResultTables({});
+     * await adminApi.getRandomResultTables({});
      */
     getRandomResultTables (request: GetRandomResultTablesRequest) {
       return playfab.request<GetRandomResultTablesResult>("/Admin/GetRandomResultTables", {
@@ -1330,7 +1330,7 @@ export default function getAdminApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/admin/playstream/getsegmentexport Microsoft Documentation}
      * @example
-     * await adminClient.getSegmentExport({
+     * await adminApi.getSegmentExport({
      *   "ExportId": "ABCDEF1234567890"
      * });
      */
@@ -1346,7 +1346,7 @@ export default function getAdminApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/admin/playstream/getsegmentplayercount Microsoft Documentation}
      * @example
-     * await adminClient.getSegmentPlayerCount({
+     * await adminApi.getSegmentPlayerCount({
      *   "SegmentId": "1337AA00"
      * });
      */
@@ -1362,7 +1362,7 @@ export default function getAdminApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/admin/segments/getsegments Microsoft Documentation}
      * @example
-     * await adminClient.getSegments({
+     * await adminApi.getSegments({
      *   "SegmentIds": [
      *     "B05FC8CB558A6570",
      *     "97EF0E9302CBE996"
@@ -1395,7 +1395,7 @@ export default function getAdminApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/admin/title-wide-data-management/getstoreitems Microsoft Documentation}
      * @example
-     * await adminClient.getStoreItems({
+     * await adminApi.getStoreItems({
      *   "StoreId": "BonusStore"
      * });
      */
@@ -1412,7 +1412,7 @@ export default function getAdminApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/admin/xbox-store/getstoremetrics Microsoft Documentation}
      * @example
-     * await adminClient.getStoreMetrics({
+     * await adminApi.getStoreMetrics({
      *   "MetricName": "page_view_count",
      *   "LookbackPeriod": "24h",
      *   "DimensionFilters": {
@@ -1441,7 +1441,7 @@ export default function getAdminApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/admin/scheduledtask/gettaskinstances Microsoft Documentation}
      * @example
-     * await adminClient.getTaskInstances({
+     * await adminApi.getTaskInstances({
      *   "StatusFilter": "Failed",
      *   "StartedAtRangeFrom": "2016-08-23T11:00:00Z"
      * });
@@ -1458,7 +1458,7 @@ export default function getAdminApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/admin/scheduledtask/gettasks Microsoft Documentation}
      * @example
-     * await adminClient.getTasks({
+     * await adminApi.getTasks({
      *   "Identifier": {
      *     "Name": "EnableDailyHappyHour"
      *   }
@@ -1476,7 +1476,7 @@ export default function getAdminApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/admin/title-wide-data-management/gettitledata Microsoft Documentation}
      * @example
-     * await adminClient.getTitleData({
+     * await adminApi.getTitleData({
      *   "Keys": [
      *     "color",
      *     "propertyA"
@@ -1495,7 +1495,7 @@ export default function getAdminApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/admin/title-wide-data-management/gettitleinternaldata Microsoft Documentation}
      * @example
-     * await adminClient.getTitleInternalData({
+     * await adminApi.getTitleInternalData({
      *   "Keys": [
      *     "color",
      *     "propertyA"
@@ -1514,7 +1514,7 @@ export default function getAdminApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/admin/account-management/getuseraccountinfo Microsoft Documentation}
      * @example
-     * await adminClient.getUserAccountInfo({
+     * await adminApi.getUserAccountInfo({
      *   "PlayFabId": "293753934",
      *   "IgnoreMissingTitleActivation": false
      * });
@@ -1531,7 +1531,7 @@ export default function getAdminApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/admin/account-management/getuserbans Microsoft Documentation}
      * @example
-     * await adminClient.getUserBans({
+     * await adminApi.getUserBans({
      *   "PlayFabId": "1679AF5CD04BD838"
      * });
      */
@@ -1547,7 +1547,7 @@ export default function getAdminApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/admin/player-data-management/getuserdata Microsoft Documentation}
      * @example
-     * await adminClient.getUserData({
+     * await adminApi.getUserData({
      *   "PlayFabId": "2039475",
      *   "Keys": [
      *     "preferences",
@@ -1568,7 +1568,7 @@ export default function getAdminApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/admin/player-data-management/getuserinternaldata Microsoft Documentation}
      * @example
-     * await adminClient.getUserInternalData({
+     * await adminApi.getUserInternalData({
      *   "PlayFabId": "2039475",
      *   "Keys": [
      *     "preferences",
@@ -1590,7 +1590,7 @@ export default function getAdminApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/admin/player-item-management/getuserinventory Microsoft Documentation}
      * @example
-     * await adminClient.getUserInventory({
+     * await adminApi.getUserInventory({
      *   "PlayFabId": "204883457"
      * });
      */
@@ -1606,7 +1606,7 @@ export default function getAdminApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/admin/player-data-management/getuserpublisherdata Microsoft Documentation}
      * @example
-     * await adminClient.getUserPublisherData({
+     * await adminApi.getUserPublisherData({
      *   "PlayFabId": "2039475",
      *   "Keys": [
      *     "preferences",
@@ -1627,7 +1627,7 @@ export default function getAdminApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/admin/player-data-management/getuserpublisherinternaldata Microsoft Documentation}
      * @example
-     * await adminClient.getUserPublisherInternalData({
+     * await adminApi.getUserPublisherInternalData({
      *   "PlayFabId": "2039475",
      *   "Keys": [
      *     "preferences",
@@ -1648,7 +1648,7 @@ export default function getAdminApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/admin/player-data-management/getuserpublisherreadonlydata Microsoft Documentation}
      * @example
-     * await adminClient.getUserPublisherReadOnlyData({
+     * await adminApi.getUserPublisherReadOnlyData({
      *   "PlayFabId": "2039475",
      *   "Keys": [
      *     "preferences",
@@ -1669,7 +1669,7 @@ export default function getAdminApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/admin/player-data-management/getuserreadonlydata Microsoft Documentation}
      * @example
-     * await adminClient.getUserReadOnlyData({
+     * await adminApi.getUserReadOnlyData({
      *   "PlayFabId": "2039475",
      *   "Keys": [
      *     "preferences",
@@ -1691,7 +1691,7 @@ export default function getAdminApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/admin/player-item-management/grantitemstousers Microsoft Documentation}
      * @example
-     * await adminClient.grantItemsToUsers({
+     * await adminApi.grantItemsToUsers({
      *   "CatalogVersion": "5",
      *   "ItemGrants": [
      *     {
@@ -1724,7 +1724,7 @@ export default function getAdminApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/admin/player-item-management/incrementlimitededitionitemavailability Microsoft Documentation}
      * @example
-     * await adminClient.incrementLimitedEditionItemAvailability({
+     * await adminApi.incrementLimitedEditionItemAvailability({
      *   "CatalogVersion": "Rares",
      *   "ItemId": "FreeHoodie",
      *   "Amount": 50
@@ -1742,7 +1742,7 @@ export default function getAdminApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/admin/player-data-management/incrementplayerstatisticversion Microsoft Documentation}
      * @example
-     * await adminClient.incrementPlayerStatisticVersion({
+     * await adminApi.incrementPlayerStatisticVersion({
      *   "StatisticName": "headshots"
      * });
      */
@@ -1758,7 +1758,7 @@ export default function getAdminApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/admin/authentication/listopenidconnection Microsoft Documentation}
      * @example
-     * await adminClient.listOpenIdConnection({});
+     * await adminApi.listOpenIdConnection({});
      */
     listOpenIdConnection (request: ListOpenIdConnectionRequest) {
       return playfab.request<ListOpenIdConnectionResponse>("/Admin/ListOpenIdConnection", {
@@ -1772,7 +1772,7 @@ export default function getAdminApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/admin/player-data-management/listplayercustomproperties Microsoft Documentation}
      * @example
-     * await adminClient.listPlayerCustomProperties({
+     * await adminApi.listPlayerCustomProperties({
      *   "PlayFabId": "2039475"
      * });
      */
@@ -1802,7 +1802,7 @@ export default function getAdminApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/admin/title-wide-data-management/listvirtualcurrencytypes Microsoft Documentation}
      * @example
-     * await adminClient.listVirtualCurrencyTypes({});
+     * await adminApi.listVirtualCurrencyTypes({});
      */
     listVirtualCurrencyTypes (request: ListVirtualCurrencyTypesRequest) {
       return playfab.request<ListVirtualCurrencyTypesResult>("/Admin/ListVirtualCurrencyTypes", {
@@ -1843,7 +1843,7 @@ export default function getAdminApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/admin/player-data-management/refundpurchase Microsoft Documentation}
      * @example
-     * await adminClient.refundPurchase({
+     * await adminApi.refundPurchase({
      *   "PlayFabId": "20394883",
      *   "OrderId": "B456AE0",
      *   "Reason": "Customer Request"
@@ -1861,7 +1861,7 @@ export default function getAdminApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/admin/playstream/removeplayertag Microsoft Documentation}
      * @example
-     * await adminClient.removePlayerTag({
+     * await adminApi.removePlayerTag({
      *   "PlayFabId": "10931252888739651331",
      *   "TagName": "MostKilled"
      * });
@@ -1893,7 +1893,7 @@ export default function getAdminApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/admin/title-wide-data-management/removevirtualcurrencytypes Microsoft Documentation}
      * @example
-     * await adminClient.removeVirtualCurrencyTypes({
+     * await adminApi.removeVirtualCurrencyTypes({
      *   "VirtualCurrencies": [
      *     {
      *       "CurrencyCode": "CC"
@@ -1916,7 +1916,7 @@ export default function getAdminApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/admin/characters/resetcharacterstatistics Microsoft Documentation}
      * @example
-     * await adminClient.resetCharacterStatistics({
+     * await adminApi.resetCharacterStatistics({
      *   "PlayFabId": "293753934",
      *   "CharacterId": "7654321"
      * });
@@ -1933,7 +1933,7 @@ export default function getAdminApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/admin/account-management/resetpassword Microsoft Documentation}
      * @example
-     * await adminClient.resetPassword({
+     * await adminApi.resetPassword({
      *   "Token": "2B584FA1DF645E4",
      *   "Password": "ExampleSecret@r"
      * });
@@ -1964,7 +1964,7 @@ export default function getAdminApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/admin/player-data-management/resetuserstatistics Microsoft Documentation}
      * @example
-     * await adminClient.resetUserStatistics({
+     * await adminApi.resetUserStatistics({
      *   "PlayFabId": "293753934"
      * });
      */
@@ -1981,7 +1981,7 @@ export default function getAdminApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/admin/player-data-management/resolvepurchasedispute Microsoft Documentation}
      * @example
-     * await adminClient.resolvePurchaseDispute({
+     * await adminApi.resolvePurchaseDispute({
      *   "PlayFabId": "20394883",
      *   "OrderId": "B456AE0",
      *   "Reason": "Customer Request",
@@ -2000,7 +2000,7 @@ export default function getAdminApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/admin/account-management/revokeallbansforuser Microsoft Documentation}
      * @example
-     * await adminClient.revokeAllBansForUser({
+     * await adminApi.revokeAllBansForUser({
      *   "PlayFabId": "1679AF5CD04BD838"
      * });
      */
@@ -2016,7 +2016,7 @@ export default function getAdminApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/admin/account-management/revokebans Microsoft Documentation}
      * @example
-     * await adminClient.revokeBans({
+     * await adminApi.revokeBans({
      *   "BanIds": [
      *     "E0B5FF89542D413C",
      *     "EF43FF89542G1546"
@@ -2036,7 +2036,7 @@ export default function getAdminApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/admin/player-item-management/revokeinventoryitem Microsoft Documentation}
      * @example
-     * await adminClient.revokeInventoryItem({
+     * await adminApi.revokeInventoryItem({
      *   "PlayFabId": "203945882",
      *   "ItemInstanceId": "2048583045"
      * });
@@ -2054,7 +2054,7 @@ export default function getAdminApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/admin/player-item-management/revokeinventoryitems Microsoft Documentation}
      * @example
-     * await adminClient.revokeInventoryItems({
+     * await adminApi.revokeInventoryItems({
      *   "Items": [
      *     {
      *       "PlayFabId": "203945882",
@@ -2075,7 +2075,7 @@ export default function getAdminApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/admin/scheduledtask/runtask Microsoft Documentation}
      * @example
-     * await adminClient.runTask({
+     * await adminApi.runTask({
      *   "Identifier": {
      *     "Id": "E1772FD927D8539D"
      *   }
@@ -2095,7 +2095,7 @@ export default function getAdminApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/admin/account-management/sendaccountrecoveryemail Microsoft Documentation}
      * @example
-     * await adminClient.sendAccountRecoveryEmail({
+     * await adminApi.sendAccountRecoveryEmail({
      *   "Email": "assignedemail@here.com",
      *   "EmailTemplateId": "D53AB15D8F12E330"
      * });
@@ -2113,7 +2113,7 @@ export default function getAdminApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/admin/title-wide-data-management/setcatalogitems Microsoft Documentation}
      * @example
-     * await adminClient.setCatalogItems({
+     * await adminApi.setCatalogItems({
      *   "CatalogVersion": "5",
      *   "Catalog": [
      *     {
@@ -2418,7 +2418,7 @@ export default function getAdminApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/admin/playstream/seteventsink Microsoft Documentation}
      * @example
-     * await adminClient.setEventSink({
+     * await adminApi.setEventSink({
      *   "Sink": {
      *     "Name": "MyStorage",
      *     "DestinationType": "AzureBlobStorage",
@@ -2446,7 +2446,7 @@ export default function getAdminApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/admin/account-management/setmembershipoverride Microsoft Documentation}
      * @example
-     * await adminClient.setMembershipOverride({
+     * await adminApi.setMembershipOverride({
      *   "ExpirationTime": "2014-04-06T00:00:00Z",
      *   "MembershipId": "ShieldBonusMembership",
      *   "PlayFabId": "204883457"
@@ -2464,7 +2464,7 @@ export default function getAdminApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/admin/authentication/setplayersecret Microsoft Documentation}
      * @example
-     * await adminClient.setPlayerSecret({
+     * await adminApi.setPlayerSecret({
      *   "PlayerSecret": "ExampleSecret",
      *   "PlayFabId": "ABCD1234"
      * });
@@ -2481,7 +2481,7 @@ export default function getAdminApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/admin/server-side-cloud-script/setpublishedrevision Microsoft Documentation}
      * @example
-     * await adminClient.setPublishedRevision({
+     * await adminApi.setPublishedRevision({
      *   "Version": 1,
      *   "Revision": 3
      * });
@@ -2498,7 +2498,7 @@ export default function getAdminApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/admin/shared-group-data/setpublisherdata Microsoft Documentation}
      * @example
-     * await adminClient.setPublisherData({
+     * await adminApi.setPublisherData({
      *   "Key": "Running Speed",
      *   "Value": "1.03"
      * });
@@ -2516,7 +2516,7 @@ export default function getAdminApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/admin/title-wide-data-management/setstoreitems Microsoft Documentation}
      * @example
-     * await adminClient.setStoreItems({
+     * await adminApi.setStoreItems({
      *   "StoreId": "BonusStore",
      *   "Store": [
      *     {
@@ -2560,7 +2560,7 @@ export default function getAdminApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/admin/title-wide-data-management/settitledata Microsoft Documentation}
      * @example
-     * await adminClient.setTitleData({
+     * await adminApi.setTitleData({
      *   "Key": "Running Speed",
      *   "Value": "1.03"
      * });
@@ -2577,7 +2577,7 @@ export default function getAdminApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/admin/title-wide-data-management/settitledataandoverrides Microsoft Documentation}
      * @example
-     * await adminClient.setTitleDataAndOverrides({
+     * await adminApi.setTitleDataAndOverrides({
      *   "OverrideLabel": "Holiday title data",
      *   "TitleId": "8FF3A797",
      *   "KeyValues": [
@@ -2605,7 +2605,7 @@ export default function getAdminApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/admin/title-wide-data-management/settitleinternaldata Microsoft Documentation}
      * @example
-     * await adminClient.setTitleInternalData({
+     * await adminApi.setTitleInternalData({
      *   "Key": "Running Speed",
      *   "Value": "1.03"
      * });
@@ -2624,7 +2624,7 @@ export default function getAdminApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/admin/title-wide-data-management/setuppushnotification Microsoft Documentation}
      * @example
-     * await adminClient.setupPushNotification({
+     * await adminApi.setupPushNotification({
      *   "Platform": "APNS_SANDBOX",
      *   "Key": "MyKey123",
      *   "Credential": "MyCredentialsXYZ",
@@ -2644,7 +2644,7 @@ export default function getAdminApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/admin/player-item-management/subtractuservirtualcurrency Microsoft Documentation}
      * @example
-     * await adminClient.subtractUserVirtualCurrency({
+     * await adminApi.subtractUserVirtualCurrency({
      *   "PlayFabId": "20394883",
      *   "VirtualCurrency": "GC",
      *   "Amount": 100
@@ -2662,7 +2662,7 @@ export default function getAdminApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/admin/account-management/updatebans Microsoft Documentation}
      * @example
-     * await adminClient.updateBans({
+     * await adminApi.updateBans({
      *   "Bans": [
      *     {
      *       "BanId": "E0B5FF89542D413C",
@@ -2690,7 +2690,7 @@ export default function getAdminApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/admin/title-wide-data-management/updatecatalogitems Microsoft Documentation}
      * @example
-     * await adminClient.updateCatalogItems({
+     * await adminApi.updateCatalogItems({
      *   "CatalogVersion": "5",
      *   "Catalog": [
      *     {
@@ -2996,7 +2996,7 @@ export default function getAdminApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/admin/server-side-cloud-script/updatecloudscript Microsoft Documentation}
      * @example
-     * await adminClient.updateCloudScript({
+     * await adminApi.updateCloudScript({
      *   "Files": [
      *     {
      *       "Filename": "main.js",
@@ -3018,7 +3018,7 @@ export default function getAdminApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/admin/authentication/updateopenidconnection Microsoft Documentation}
      * @example
-     * await adminClient.updateOpenIdConnection({
+     * await adminApi.updateOpenIdConnection({
      *   "ConnectionId": "oidconnection1",
      *   "ClientId": "example_id_1",
      *   "ClientSecret": "new_example_secret",
@@ -3047,7 +3047,7 @@ export default function getAdminApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/admin/player-data-management/updateplayercustomproperties Microsoft Documentation}
      * @example
-     * await adminClient.updatePlayerCustomProperties({
+     * await adminApi.updatePlayerCustomProperties({
      *   "PlayFabId": "2039475",
      *   "Properties": [
      *     {
@@ -3075,7 +3075,7 @@ export default function getAdminApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/admin/authentication/updateplayersharedsecret Microsoft Documentation}
      * @example
-     * await adminClient.updatePlayerSharedSecret({
+     * await adminApi.updatePlayerSharedSecret({
      *   "SecretKey": "keysaresecret",
      *   "FriendlyName": "XBox Users",
      *   "Disabled": false
@@ -3093,7 +3093,7 @@ export default function getAdminApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/admin/player-data-management/updateplayerstatisticdefinition Microsoft Documentation}
      * @example
-     * await adminClient.updatePlayerStatisticDefinition({
+     * await adminApi.updatePlayerStatisticDefinition({
      *   "StatisticName": "headshots",
      *   "VersionChangeInterval": "Day",
      *   "ShouldProvisionLeaderboard": false
@@ -3111,7 +3111,7 @@ export default function getAdminApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/admin/authentication/updatepolicy Microsoft Documentation}
      * @example
-     * await adminClient.updatePolicy({
+     * await adminApi.updatePolicy({
      *   "PolicyName": "ApiPolicy",
      *   "Statements": [
      *     {
@@ -3146,7 +3146,7 @@ export default function getAdminApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/admin/title-wide-data-management/updaterandomresulttables Microsoft Documentation}
      * @example
-     * await adminClient.updateRandomResultTables({
+     * await adminApi.updateRandomResultTables({
      *   "Tables": [
      *     {
      *       "TableId": "DropTable 1",
@@ -3183,7 +3183,7 @@ export default function getAdminApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/admin/segments/updatesegment Microsoft Documentation}
      * @example
-     * await adminClient.updateSegment({
+     * await adminApi.updateSegment({
      *   "SegmentModel": {
      *     "SegmentId": "B05FC8CB558A6570",
      *     "Name": "My user segment",
@@ -3230,7 +3230,7 @@ export default function getAdminApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/admin/title-wide-data-management/updatestoreitems Microsoft Documentation}
      * @example
-     * await adminClient.updateStoreItems({
+     * await adminApi.updateStoreItems({
      *   "StoreId": "BonusStore",
      *   "Store": [
      *     {
@@ -3271,7 +3271,7 @@ export default function getAdminApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/admin/scheduledtask/updatetask Microsoft Documentation}
      * @example
-     * await adminClient.updateTask({
+     * await adminApi.updateTask({
      *   "Identifier": {
      *     "Name": "PushEventNotificationVIP_Halloween"
      *   },
@@ -3305,7 +3305,7 @@ export default function getAdminApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/admin/player-data-management/updateuserdata Microsoft Documentation}
      * @example
-     * await adminClient.updateUserData({
+     * await adminApi.updateUserData({
      *   "PlayFabId": "2039475",
      *   "Data": {
      *     "Class": "Fighter",
@@ -3328,7 +3328,7 @@ export default function getAdminApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/admin/player-data-management/updateuserinternaldata Microsoft Documentation}
      * @example
-     * await adminClient.updateUserInternalData({
+     * await adminApi.updateUserInternalData({
      *   "PlayFabId": "2039475",
      *   "Data": {
      *     "Class": "Fighter",
@@ -3350,7 +3350,7 @@ export default function getAdminApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/admin/player-data-management/updateuserpublisherdata Microsoft Documentation}
      * @example
-     * await adminClient.updateUserPublisherData({
+     * await adminApi.updateUserPublisherData({
      *   "PlayFabId": "2039475",
      *   "Data": {
      *     "Class": "Fighter",
@@ -3373,7 +3373,7 @@ export default function getAdminApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/admin/player-data-management/updateuserpublisherinternaldata Microsoft Documentation}
      * @example
-     * await adminClient.updateUserPublisherInternalData({
+     * await adminApi.updateUserPublisherInternalData({
      *   "PlayFabId": "2039475",
      *   "Data": {
      *     "Class": "Fighter",
@@ -3395,7 +3395,7 @@ export default function getAdminApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/admin/player-data-management/updateuserpublisherreadonlydata Microsoft Documentation}
      * @example
-     * await adminClient.updateUserPublisherReadOnlyData({
+     * await adminApi.updateUserPublisherReadOnlyData({
      *   "PlayFabId": "2039475",
      *   "Data": {
      *     "Class": "Fighter",
@@ -3418,7 +3418,7 @@ export default function getAdminApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/admin/player-data-management/updateuserreadonlydata Microsoft Documentation}
      * @example
-     * await adminClient.updateUserReadOnlyData({
+     * await adminApi.updateUserReadOnlyData({
      *   "PlayFabId": "2039475",
      *   "Data": {
      *     "Class": "Fighter",
@@ -3441,7 +3441,7 @@ export default function getAdminApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/admin/account-management/updateusertitledisplayname Microsoft Documentation}
      * @example
-     * await adminClient.updateUserTitleDisplayName({
+     * await adminApi.updateUserTitleDisplayName({
      *   "PlayFabId": "293438",
      *   "DisplayName": "New Display Name"
      * });
@@ -3458,7 +3458,7 @@ export default function getAdminApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/admin/authentication/validateapipolicy Microsoft Documentation}
      * @example
-     * await adminClient.validateApiPolicy({
+     * await adminApi.validateApiPolicy({
      *   "PolicyName": "ApiPolicy",
      *   "Statements": [
      *     {

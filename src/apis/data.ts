@@ -24,7 +24,7 @@ export default function getDataApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/file/file/abortfileuploads Microsoft Documentation}
      * @example
-     * await dataClient.abortFileUploads({
+     * await dataApi.abortFileUploads({
      *   "FileNames": [
      *     "avatar",
      *     "game_state"
@@ -48,7 +48,7 @@ export default function getDataApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/file/file/deletefiles Microsoft Documentation}
      * @example
-     * await dataClient.deleteFiles({
+     * await dataApi.deleteFiles({
      *   "FileNames": [
      *     "game_state",
      *     "avatar"
@@ -72,7 +72,7 @@ export default function getDataApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/file/file/finalizefileuploads Microsoft Documentation}
      * @example
-     * await dataClient.finalizeFileUploads({
+     * await dataApi.finalizeFileUploads({
      *   "ProfileVersion": 0,
      *   "FileNames": [
      *     "avatar",
@@ -97,7 +97,7 @@ export default function getDataApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/file/file/getfiles Microsoft Documentation}
      * @example
-     * await dataClient.getFiles({
+     * await dataApi.getFiles({
      *   "Entity": {
      *     "Id": "ID",
      *     "Type": "title_player_account",
@@ -117,7 +117,7 @@ export default function getDataApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/object/object/getobjects Microsoft Documentation}
      * @example
-     * await dataClient.getObjects({
+     * await dataApi.getObjects({
      *   "Entity": {
      *     "Id": "ABC90712ABC",
      *     "Type": "title_player_account",
@@ -137,7 +137,7 @@ export default function getDataApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/file/file/initiatefileuploads Microsoft Documentation}
      * @example
-     * await dataClient.initiateFileUploads({
+     * await dataApi.initiateFileUploads({
      *   "FileNames": [
      *     "avatar",
      *     "game_state"
@@ -161,7 +161,7 @@ export default function getDataApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/object/object/setobjects Microsoft Documentation}
      * @example
-     * await dataClient.setObjects({
+     * await dataApi.setObjects({
      *   "ExpectedProfileVersion": 5,
      *   "Objects": [
      *     {

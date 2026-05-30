@@ -126,7 +126,7 @@ export default function getEconomyApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/inventory/inventory/addinventoryitems Microsoft Documentation}
      * @example
-     * await economyClient.addInventoryItems({
+     * await economyApi.addInventoryItems({
      *   "Item": {
      *     "Id": "11111111-1111-1111-1111-111111111111"
      *   },
@@ -146,7 +146,7 @@ export default function getEconomyApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/versionedcatalog/versionedcatalog/completeversionedcatalogupload Microsoft Documentation}
      * @example
-     * await economyClient.completeVersionedCatalogUpload({});
+     * await economyApi.completeVersionedCatalogUpload({});
      */
     completeVersionedCatalogUpload (request: CompleteVersionedCatalogUploadRequest) {
       return playfab.request<CompleteVersionedCatalogUploadResponse>("/VersionedCatalog/CompleteVersionedCatalogUpload", {
@@ -160,7 +160,7 @@ export default function getEconomyApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/catalog/catalog/createdraftitem Microsoft Documentation}
      * @example
-     * await economyClient.createDraftItem({
+     * await economyApi.createDraftItem({
      *   "Item": {
      *     "Type": "ugc",
      *     "Title": {
@@ -235,7 +235,7 @@ export default function getEconomyApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/catalog/catalog/createuploadurls Microsoft Documentation}
      * @example
-     * await economyClient.createUploadUrls({
+     * await economyApi.createUploadUrls({
      *   "Files": [
      *     {
      *       "FileName": "textures.zip"
@@ -259,7 +259,7 @@ export default function getEconomyApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/versionedcatalog/versionedcatalog/createversionedcataloguploadurl Microsoft Documentation}
      * @example
-     * await economyClient.createVersionedCatalogUploadURL({});
+     * await economyApi.createVersionedCatalogUploadURL({});
      */
     createVersionedCatalogUploadURL (request: CreateVersionedCatalogUploadURLRequest) {
       return playfab.request<CreateVersionedCatalogUploadURLResponse>("/VersionedCatalog/CreateVersionedCatalogUploadURL", {
@@ -273,7 +273,7 @@ export default function getEconomyApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/catalog/catalog/createview Microsoft Documentation}
      * @example
-     * await economyClient.createView({
+     * await economyApi.createView({
      *   "View": {
      *     "FriendlyId": "exampleView",
      *     "IsTitleView": false,
@@ -296,7 +296,7 @@ export default function getEconomyApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/catalog/catalog/deleteentityitemreviews Microsoft Documentation}
      * @example
-     * await economyClient.deleteEntityItemReviews({
+     * await economyApi.deleteEntityItemReviews({
      *   "Entity": {
      *     "Id": "ABC123",
      *     "Type": "title_player_account",
@@ -317,7 +317,7 @@ export default function getEconomyApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/inventory/inventory/deleteinventorycollection Microsoft Documentation}
      * @example
-     * await economyClient.deleteInventoryCollection({
+     * await economyApi.deleteInventoryCollection({
      *   "CollectionId": "backpack"
      * });
      */
@@ -333,7 +333,7 @@ export default function getEconomyApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/inventory/inventory/deleteinventoryitems Microsoft Documentation}
      * @example
-     * await economyClient.deleteInventoryItems({
+     * await economyApi.deleteInventoryItems({
      *   "Item": {
      *     "Id": "11111111-1111-1111-1111-111111111111"
      *   }
@@ -351,7 +351,7 @@ export default function getEconomyApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/catalog/catalog/deleteitem Microsoft Documentation}
      * @example
-     * await economyClient.deleteItem({
+     * await economyApi.deleteItem({
      *   "Id": "dddddddd-dddd-dddd-dddd-dddddddddddd"
      * });
      */
@@ -367,7 +367,7 @@ export default function getEconomyApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/versionedcatalog/versionedcatalog/deleteversionedcatalog Microsoft Documentation}
      * @example
-     * await economyClient.deleteVersionedCatalog({});
+     * await economyApi.deleteVersionedCatalog({});
      */
     deleteVersionedCatalog (request: DeleteVersionedCatalogRequest) {
       return playfab.request<EmptyResponse>("/VersionedCatalog/DeleteVersionedCatalog", {
@@ -381,7 +381,7 @@ export default function getEconomyApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/catalog/catalog/deleteview Microsoft Documentation}
      * @example
-     * await economyClient.deleteView({
+     * await economyApi.deleteView({
      *   "Id": "dddddddd-dddd-dddd-dddd-dddddddddddd"
      * });
      */
@@ -400,7 +400,7 @@ export default function getEconomyApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/inventory/inventory/executeinventoryoperations Microsoft Documentation}
      * @example
-     * await economyClient.executeInventoryOperations({
+     * await economyApi.executeInventoryOperations({
      *   "Operations": [
      *     {
      *       "Add": {
@@ -437,7 +437,7 @@ export default function getEconomyApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/inventory/inventory/executetransferoperations Microsoft Documentation}
      * @example
-     * await economyClient.executeTransferOperations({
+     * await economyApi.executeTransferOperations({
      *   "Operations": [
      *     {
      *       "GivingItem": {
@@ -478,7 +478,7 @@ export default function getEconomyApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/versionedcatalog/versionedcatalog/exportversionedcatalog Microsoft Documentation}
      * @example
-     * await economyClient.exportVersionedCatalog({});
+     * await economyApi.exportVersionedCatalog({});
      */
     exportVersionedCatalog (request: ExportVersionedCatalogRequest) {
       return playfab.request<IActionResult>("/VersionedCatalog/ExportVersionedCatalog", {
@@ -494,7 +494,7 @@ export default function getEconomyApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/catalog/catalog/getcatalogconfig Microsoft Documentation}
      * @example
-     * await economyClient.getCatalogConfig({});
+     * await economyApi.getCatalogConfig({});
      */
     getCatalogConfig (request: GetCatalogConfigRequest) {
       return playfab.request<GetCatalogConfigResponse>("/Catalog/GetCatalogConfig", {
@@ -511,7 +511,7 @@ export default function getEconomyApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/catalog/catalog/getdraftitem Microsoft Documentation}
      * @example
-     * await economyClient.getDraftItem({
+     * await economyApi.getDraftItem({
      *   "Id": "dddddddd-dddd-dddd-dddd-dddddddddddd"
      * });
      */
@@ -529,7 +529,7 @@ export default function getEconomyApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/catalog/catalog/getdraftitems Microsoft Documentation}
      * @example
-     * await economyClient.getDraftItems({
+     * await economyApi.getDraftItems({
      *   "Ids": [
      *     "dddddddd-dddd-dddd-dddd-dddddddddddd",
      *     "eeeeeeee-eeee-eeee-eeee-eeeeeeeeeeee"
@@ -550,7 +550,7 @@ export default function getEconomyApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/catalog/catalog/getentitydraftitems Microsoft Documentation}
      * @example
-     * await economyClient.getEntityDraftItems({
+     * await economyApi.getEntityDraftItems({
      *   "Count": 2,
      *   "Entity": {
      *     "Id": "someId",
@@ -572,7 +572,7 @@ export default function getEconomyApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/catalog/catalog/getentityitemreview Microsoft Documentation}
      * @example
-     * await economyClient.getEntityItemReview({
+     * await economyApi.getEntityItemReview({
      *   "Id": "dddddddd-dddd-dddd-dddd-dddddddddddd"
      * });
      */
@@ -590,7 +590,7 @@ export default function getEconomyApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/inventory/inventory/getinventorycollectionids Microsoft Documentation}
      * @example
-     * await economyClient.getInventoryCollectionIds({
+     * await economyApi.getInventoryCollectionIds({
      *   "Count": 5
      * });
      */
@@ -606,7 +606,7 @@ export default function getEconomyApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/inventory/inventory/getinventoryitems Microsoft Documentation}
      * @example
-     * await economyClient.getInventoryItems({
+     * await economyApi.getInventoryItems({
      *   "Count": 5
      * });
      */
@@ -623,7 +623,7 @@ export default function getEconomyApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/inventory/inventory/getinventoryoperationstatus Microsoft Documentation}
      * @example
-     * await economyClient.getInventoryOperationStatus({
+     * await economyApi.getInventoryOperationStatus({
      *   "OperationToken": "token"
      * });
      */
@@ -641,7 +641,7 @@ export default function getEconomyApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/catalog/catalog/getitem Microsoft Documentation}
      * @example
-     * await economyClient.getItem({
+     * await economyApi.getItem({
      *   "Id": "dddddddd-dddd-dddd-dddd-dddddddddddd"
      * });
      */
@@ -660,7 +660,7 @@ export default function getEconomyApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/catalog/catalog/getitemcontainers Microsoft Documentation}
      * @example
-     * await economyClient.getItemContainers({
+     * await economyApi.getItemContainers({
      *   "Count": 5,
      *   "Id": "dddddddd-dddd-dddd-dddd-dddddddddddd"
      * });
@@ -678,7 +678,7 @@ export default function getEconomyApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/catalog/catalog/getitemmoderationstate Microsoft Documentation}
      * @example
-     * await economyClient.getItemModerationState({
+     * await economyApi.getItemModerationState({
      *   "Id": "dddddddd-dddd-dddd-dddd-dddddddddddd"
      * });
      */
@@ -694,7 +694,7 @@ export default function getEconomyApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/catalog/catalog/getitempublishstatus Microsoft Documentation}
      * @example
-     * await economyClient.getItemPublishStatus({
+     * await economyApi.getItemPublishStatus({
      *   "Id": "dddddddd-dddd-dddd-dddd-dddddddddddd"
      * });
      */
@@ -711,7 +711,7 @@ export default function getEconomyApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/catalog/catalog/getitemreviews Microsoft Documentation}
      * @example
-     * await economyClient.getItemReviews({
+     * await economyApi.getItemReviews({
      *   "Count": 2,
      *   "Id": "dddddddd-dddd-dddd-dddd-dddddddddddd"
      * });
@@ -729,7 +729,7 @@ export default function getEconomyApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/catalog/catalog/getitemreviewsummary Microsoft Documentation}
      * @example
-     * await economyClient.getItemReviewSummary({
+     * await economyApi.getItemReviewSummary({
      *   "Id": "dddddddd-dddd-dddd-dddd-dddddddddddd"
      * });
      */
@@ -747,7 +747,7 @@ export default function getEconomyApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/catalog/catalog/getitems Microsoft Documentation}
      * @example
-     * await economyClient.getItems({
+     * await economyApi.getItems({
      *   "Ids": [
      *     "dddddddd-dddd-dddd-dddd-dddddddddddd",
      *     "eeeeeeee-eeee-eeee-eeee-eeeeeeeeeeee"
@@ -769,7 +769,7 @@ export default function getEconomyApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/inventory/inventory/gettransactionhistory Microsoft Documentation}
      * @example
-     * await economyClient.getTransactionHistory({
+     * await economyApi.getTransactionHistory({
      *   "Count": 10,
      *   "CollectionId": "default"
      * });
@@ -798,7 +798,7 @@ export default function getEconomyApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/versionedcatalog/versionedcatalog/getversionedcataloguploadstatus Microsoft Documentation}
      * @example
-     * await economyClient.getVersionedCatalogUploadStatus({});
+     * await economyApi.getVersionedCatalogUploadStatus({});
      */
     getVersionedCatalogUploadStatus (request: GetVersionedCatalogUploadStatusRequest) {
       return playfab.request<GetVersionedCatalogUploadStatusResponse>("/VersionedCatalog/GetVersionedCatalogUploadStatus", {
@@ -812,7 +812,7 @@ export default function getEconomyApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/catalog/catalog/getview Microsoft Documentation}
      * @example
-     * await economyClient.getView({
+     * await economyApi.getView({
      *   "Id": "dddddddd-dddd-dddd-dddd-dddddddddddd"
      * });
      */
@@ -828,7 +828,7 @@ export default function getEconomyApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/catalog/catalog/getviews Microsoft Documentation}
      * @example
-     * await economyClient.getViews({
+     * await economyApi.getViews({
      *   "Count": 5,
      *   "Entity": {
      *     "Id": "someId",
@@ -849,7 +849,7 @@ export default function getEconomyApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/versionedcatalog/versionedcatalog/listversionedcatalogs Microsoft Documentation}
      * @example
-     * await economyClient.listVersionedCatalogs({});
+     * await economyApi.listVersionedCatalogs({});
      */
     listVersionedCatalogs (request: ListVersionedCatalogsRequest) {
       return playfab.request<ListVersionedCatalogsResponse>("/VersionedCatalog/ListVersionedCatalogs", {
@@ -864,7 +864,7 @@ export default function getEconomyApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/catalog/catalog/publishdraftitem Microsoft Documentation}
      * @example
-     * await economyClient.publishDraftItem({
+     * await economyApi.publishDraftItem({
      *   "Id": "dddddddd-dddd-dddd-dddd-dddddddddddd"
      * });
      */
@@ -881,7 +881,7 @@ export default function getEconomyApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/inventory/inventory/purchaseinventoryitems Microsoft Documentation}
      * @example
-     * await economyClient.purchaseInventoryItems({
+     * await economyApi.purchaseInventoryItems({
      *   "Item": {
      *     "Id": "11111111-1111-1111-1111-111111111111"
      *   },
@@ -907,7 +907,7 @@ export default function getEconomyApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/inventory/inventory/redeemappleappstoreinventoryitems Microsoft Documentation}
      * @example
-     * await economyClient.redeemAppleAppStoreInventoryItems({
+     * await economyApi.redeemAppleAppStoreInventoryItems({
      *   "Receipt": "receipt"
      * });
      */
@@ -923,7 +923,7 @@ export default function getEconomyApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/inventory/inventory/redeemappleappstorewithjwsinventoryitems Microsoft Documentation}
      * @example
-     * await economyClient.redeemAppleAppStoreWithJwsInventoryItems({
+     * await economyApi.redeemAppleAppStoreWithJwsInventoryItems({
      *   "JWSTransactions": [
      *     "JWS1",
      *     "JWS2"
@@ -942,7 +942,7 @@ export default function getEconomyApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/inventory/inventory/redeemgoogleplayinventoryitems Microsoft Documentation}
      * @example
-     * await economyClient.redeemGooglePlayInventoryItems({
+     * await economyApi.redeemGooglePlayInventoryItems({
      *   "Purchases": [
      *     {
      *       "ProductId": "productId",
@@ -963,7 +963,7 @@ export default function getEconomyApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/inventory/inventory/redeemmicrosoftstoreinventoryitems Microsoft Documentation}
      * @example
-     * await economyClient.redeemMicrosoftStoreInventoryItems({});
+     * await economyApi.redeemMicrosoftStoreInventoryItems({});
      */
     redeemMicrosoftStoreInventoryItems (request: RedeemMicrosoftStoreInventoryItemsRequest) {
       return playfab.request<RedeemMicrosoftStoreInventoryItemsResponse>("/Inventory/RedeemMicrosoftStoreInventoryItems", {
@@ -977,7 +977,7 @@ export default function getEconomyApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/inventory/inventory/redeemnintendoeshopinventoryitems Microsoft Documentation}
      * @example
-     * await economyClient.redeemNintendoEShopInventoryItems({
+     * await economyApi.redeemNintendoEShopInventoryItems({
      *   "NintendoServiceAccountIdToken": "nsaIdToken"
      * });
      */
@@ -993,7 +993,7 @@ export default function getEconomyApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/inventory/inventory/redeemplaystationstoreinventoryitems Microsoft Documentation}
      * @example
-     * await economyClient.redeemPlayStationStoreInventoryItems({
+     * await economyApi.redeemPlayStationStoreInventoryItems({
      *   "AuthorizationCode": "authorizationCode",
      *   "RedirectUri": "orbis://games",
      *   "ServiceLabel": "0"
@@ -1011,7 +1011,7 @@ export default function getEconomyApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/inventory/inventory/redeemsteaminventoryitems Microsoft Documentation}
      * @example
-     * await economyClient.redeemSteamInventoryItems({});
+     * await economyApi.redeemSteamInventoryItems({});
      */
     redeemSteamInventoryItems (request: RedeemSteamInventoryItemsRequest) {
       return playfab.request<RedeemSteamInventoryItemsResponse>("/Inventory/RedeemSteamInventoryItems", {
@@ -1025,7 +1025,7 @@ export default function getEconomyApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/catalog/catalog/reportitem Microsoft Documentation}
      * @example
-     * await economyClient.reportItem({
+     * await economyApi.reportItem({
      *   "ConcernCategory": "Profanity",
      *   "Reason": "There was swearing in the description.",
      *   "Id": "dddddddd-dddd-dddd-dddd-dddddddddddd"
@@ -1043,7 +1043,7 @@ export default function getEconomyApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/catalog/catalog/reportitemreview Microsoft Documentation}
      * @example
-     * await economyClient.reportItemReview({
+     * await economyApi.reportItemReview({
      *   "ReviewId": "dddddddd-dddd-dddd-dddd-dddddddddddd",
      *   "ItemId": "eeeeeeee-eeee-eeee-eeee-eeeeeeeeeeee",
      *   "ConcernCategory": "OffensiveContent",
@@ -1064,7 +1064,7 @@ export default function getEconomyApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/catalog/catalog/reviewitem Microsoft Documentation}
      * @example
-     * await economyClient.reviewItem({
+     * await economyApi.reviewItem({
      *   "Review": {
      *     "ItemVersion": "2.4.1",
      *     "Title": "Best Game Ever",
@@ -1093,7 +1093,7 @@ export default function getEconomyApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/catalog/catalog/searchitems Microsoft Documentation}
      * @example
-     * await economyClient.searchItems({
+     * await economyApi.searchItems({
      *   "Search": "Pirates",
      *   "Filter": "tags/any(t:t eq 'desert') and contentType eq 'map'",
      *   "OrderBy": "lastModifiedDate asc",
@@ -1114,7 +1114,7 @@ export default function getEconomyApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/catalog/catalog/setitemmoderationstate Microsoft Documentation}
      * @example
-     * await economyClient.setItemModerationState({
+     * await economyApi.setItemModerationState({
      *   "Status": "AwaitingModeration",
      *   "Reason": "User reports over threshold",
      *   "Id": "dddddddd-dddd-dddd-dddd-dddddddddddd"
@@ -1132,7 +1132,7 @@ export default function getEconomyApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/catalog/catalog/submititemreviewvote Microsoft Documentation}
      * @example
-     * await economyClient.submitItemReviewVote({
+     * await economyApi.submitItemReviewVote({
      *   "ReviewId": "dddddddd-dddd-dddd-dddd-dddddddddddd",
      *   "ItemId": "eeeeeeee-eeee-eeee-eeee-eeeeeeeeeeee",
      *   "Vote": "Helpful"
@@ -1150,7 +1150,7 @@ export default function getEconomyApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/inventory/inventory/subtractinventoryitems Microsoft Documentation}
      * @example
-     * await economyClient.subtractInventoryItems({
+     * await economyApi.subtractInventoryItems({
      *   "Item": {
      *     "Id": "11111111-1111-1111-1111-111111111111"
      *   },
@@ -1171,7 +1171,7 @@ export default function getEconomyApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/catalog/catalog/takedownitemreviews Microsoft Documentation}
      * @example
-     * await economyClient.takedownItemReviews({
+     * await economyApi.takedownItemReviews({
      *   "Reviews": [
      *     {
      *       "ItemId": "00000000-0000-0000-0000-000000000003",
@@ -1197,7 +1197,7 @@ export default function getEconomyApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/inventory/inventory/transferinventoryitems Microsoft Documentation}
      * @example
-     * await economyClient.transferInventoryItems({
+     * await economyApi.transferInventoryItems({
      *   "GivingItem": {
      *     "Id": "11111111-1111-1111-1111-111111111111"
      *   },
@@ -1224,7 +1224,7 @@ export default function getEconomyApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/catalog/catalog/updatecatalogconfig Microsoft Documentation}
      * @example
-     * await economyClient.updateCatalogConfig({
+     * await economyApi.updateCatalogConfig({
      *   "Config": {
      *     "IsCatalogEnabled": true,
      *     "AdminEntities": [
@@ -1273,7 +1273,7 @@ export default function getEconomyApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/catalog/catalog/updatedraftitem Microsoft Documentation}
      * @example
-     * await economyClient.updateDraftItem({
+     * await economyApi.updateDraftItem({
      *   "Item": {
      *     "Id": "qqqqqqqq-qqqq-qqqq-qqqq-qqqqqqqqqqqq",
      *     "Type": "ugc",
@@ -1346,7 +1346,7 @@ export default function getEconomyApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/inventory/inventory/updateinventoryitems Microsoft Documentation}
      * @example
-     * await economyClient.updateInventoryItems({
+     * await economyApi.updateInventoryItems({
      *   "Item": {
      *     "Id": "11111111-1111-1111-1111-111111111111",
      *     "Amount": 3
@@ -1366,7 +1366,7 @@ export default function getEconomyApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/catalog/catalog/updateview Microsoft Documentation}
      * @example
-     * await economyClient.updateView({
+     * await economyApi.updateView({
      *   "View": {
      *     "Id": "dddddddd-dddd-dddd-dddd-dddddddddddd",
      *     "FriendlyId": "exampleView",

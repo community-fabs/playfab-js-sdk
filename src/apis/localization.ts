@@ -12,7 +12,7 @@ export default function getLocalizationApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/locale/localization/getlanguagelist Microsoft Documentation}
      * @example
-     * await localizationClient.getLanguageList({});
+     * await localizationApi.getLanguageList({});
      */
     getLanguageList (request: GetLanguageListRequest) {
       return playfab.request<GetLanguageListResponse>("/Locale/GetLanguageList", {

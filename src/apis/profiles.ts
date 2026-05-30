@@ -30,7 +30,7 @@ export default function getProfilesApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/profile/account-management/getglobalpolicy Microsoft Documentation}
      * @example
-     * await profilesClient.getGlobalPolicy({});
+     * await profilesApi.getGlobalPolicy({});
      */
     getGlobalPolicy (request: GetGlobalPolicyRequest) {
       return playfab.request<GetGlobalPolicyResponse>("/Profile/GetGlobalPolicy", {
@@ -44,7 +44,7 @@ export default function getProfilesApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/profile/account-management/getprofile Microsoft Documentation}
      * @example
-     * await profilesClient.getProfile({
+     * await profilesApi.getProfile({
      *   "IncludeStatistics": false,
      *   "Entity": {
      *     "Id": "1234567787392",
@@ -65,7 +65,7 @@ export default function getProfilesApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/profile/account-management/getprofiles Microsoft Documentation}
      * @example
-     * await profilesClient.getProfiles({
+     * await profilesApi.getProfiles({
      *   "IncludeStatistics": false,
      *   "Entities": [
      *     {
@@ -93,7 +93,7 @@ export default function getProfilesApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/profile/account-management/gettitleplayersfrommasterplayeraccountids Microsoft Documentation}
      * @example
-     * await profilesClient.getTitlePlayersFromMasterPlayerAccountIds({
+     * await profilesApi.getTitlePlayersFromMasterPlayerAccountIds({
      *   "MasterPlayerAccountIds": [
      *     "1233455677"
      *   ],
@@ -112,7 +112,7 @@ export default function getProfilesApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/profile/account-management/gettitleplayersfromxboxliveids Microsoft Documentation}
      * @example
-     * await profilesClient.getTitlePlayersFromXboxLiveIDs({
+     * await profilesApi.getTitlePlayersFromXboxLiveIDs({
      *   "XboxLiveIds": [
      *     "1233455677"
      *   ],
@@ -131,7 +131,7 @@ export default function getProfilesApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/profile/account-management/setavatarurl Microsoft Documentation}
      * @example
-     * await profilesClient.setAvatarUrl({
+     * await profilesApi.setAvatarUrl({
      *   "AvatarUrl": "https://test.com/image.png",
      *   "ProfileVersion": 123,
      *   "Entity": {
@@ -153,7 +153,7 @@ export default function getProfilesApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/profile/account-management/setdisplayname Microsoft Documentation}
      * @example
-     * await profilesClient.setDisplayName({
+     * await profilesApi.setDisplayName({
      *   "DisplayName": "My new display name",
      *   "ExpectedVersion": 123,
      *   "Entity": {
@@ -175,7 +175,7 @@ export default function getProfilesApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/profile/account-management/setglobalpolicy Microsoft Documentation}
      * @example
-     * await profilesClient.setGlobalPolicy({
+     * await profilesApi.setGlobalPolicy({
      *   "Permissions": [
      *     {
      *       "Resource": "pfrn:data--title_player_account!90901000/Profile/SomethingCool",
@@ -204,7 +204,7 @@ export default function getProfilesApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/profile/account-management/setprofilelanguage Microsoft Documentation}
      * @example
-     * await profilesClient.setProfileLanguage({
+     * await profilesApi.setProfileLanguage({
      *   "Language": "en",
      *   "ExpectedVersion": 123,
      *   "Entity": {
@@ -226,7 +226,7 @@ export default function getProfilesApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/profile/account-management/setprofilepolicy Microsoft Documentation}
      * @example
-     * await profilesClient.setProfilePolicy({
+     * await profilesApi.setProfilePolicy({
      *   "Statements": [
      *     {
      *       "Resource": "pfrn:data--*!*\/Profile/Files/avatar.png",

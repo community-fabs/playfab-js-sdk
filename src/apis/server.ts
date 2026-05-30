@@ -298,7 +298,7 @@ export default function getServerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/server/player-item-management/addcharactervirtualcurrency Microsoft Documentation}
      * @example
-     * await serverClient.addCharacterVirtualCurrency({
+     * await serverApi.addCharacterVirtualCurrency({
      *   "PlayFabId": "20394883",
      *   "CharacterId": "23424524523",
      *   "VirtualCurrency": "GC",
@@ -318,7 +318,7 @@ export default function getServerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/server/friend-list-management/addfriend Microsoft Documentation}
      * @example
-     * await serverClient.addFriend({
+     * await serverApi.addFriend({
      *   "PlayFabId": "10931252888739651331",
      *   "FriendPlayFabId": "20394883"
      * });
@@ -337,7 +337,7 @@ export default function getServerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/server/account-management/addgenericid Microsoft Documentation}
      * @example
-     * await serverClient.addGenericID({
+     * await serverApi.addGenericID({
      *   "GenericId": {
      *     "ServiceName": "BigBizSocial",
      *     "UserId": "1234567890"
@@ -356,7 +356,7 @@ export default function getServerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/server/account-management/addorupdatecontactemail Microsoft Documentation}
      * @example
-     * await serverClient.addOrUpdateContactEmail({
+     * await serverApi.addOrUpdateContactEmail({
      *   "PlayFabId": "A01DC15D8E12E230",
      *   "EmailAddress": "user@example.com"
      * });
@@ -373,7 +373,7 @@ export default function getServerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/server/playstream/addplayertag Microsoft Documentation}
      * @example
-     * await serverClient.addPlayerTag({
+     * await serverApi.addPlayerTag({
      *   "PlayFabId": "10931252888739651331",
      *   "TagName": "MostKilled"
      * });
@@ -393,7 +393,7 @@ export default function getServerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/server/shared-group-data/addsharedgroupmembers Microsoft Documentation}
      * @example
-     * await serverClient.addSharedGroupMembers({
+     * await serverApi.addSharedGroupMembers({
      *   "SharedGroupId": "Clan Data",
      *   "PlayFabIds": [
      *     "D984A64B832",
@@ -414,7 +414,7 @@ export default function getServerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/server/player-item-management/adduservirtualcurrency Microsoft Documentation}
      * @example
-     * await serverClient.addUserVirtualCurrency({
+     * await serverApi.addUserVirtualCurrency({
      *   "PlayFabId": "20394883",
      *   "VirtualCurrency": "GC",
      *   "Amount": 100
@@ -432,7 +432,7 @@ export default function getServerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/server/authentication/authenticatesessionticket Microsoft Documentation}
      * @example
-     * await serverClient.authenticateSessionTicket({
+     * await serverApi.authenticateSessionTicket({
      *   "SessionTicket": "4D2----8D11F4249A80000-7C64AB0A9F1D8D1A.CD803BF233CE76CC"
      * });
      */
@@ -448,7 +448,7 @@ export default function getServerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/server/platform-specific-methods/awardsteamachievement Microsoft Documentation}
      * @example
-     * await serverClient.awardSteamAchievement({
+     * await serverApi.awardSteamAchievement({
      *   "Achievements": [
      *     {
      *       "PlayFabId": "234974573892",
@@ -475,7 +475,7 @@ export default function getServerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/server/account-management/banusers Microsoft Documentation}
      * @example
-     * await serverClient.banUsers({
+     * await serverApi.banUsers({
      *   "Bans": [
      *     {
      *       "PlayFabId": "1679AF5CD04BD838",
@@ -504,7 +504,7 @@ export default function getServerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/server/player-item-management/consumeitem Microsoft Documentation}
      * @example
-     * await serverClient.consumeItem({
+     * await serverApi.consumeItem({
      *   "ItemInstanceId": "94585729",
      *   "ConsumeCount": 1
      * });
@@ -524,7 +524,7 @@ export default function getServerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/server/shared-group-data/createsharedgroup Microsoft Documentation}
      * @example
-     * await serverClient.createSharedGroup({
+     * await serverApi.createSharedGroup({
      *   "SharedGroupId": "Clan Data"
      * });
      */
@@ -540,7 +540,7 @@ export default function getServerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/server/characters/deletecharacterfromuser Microsoft Documentation}
      * @example
-     * await serverClient.deleteCharacterFromUser({
+     * await serverApi.deleteCharacterFromUser({
      *   "PlayFabId": "12345",
      *   "CharacterId": "98765432",
      *   "SaveCharacterInventory": false
@@ -558,7 +558,7 @@ export default function getServerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/server/account-management/deleteplayer Microsoft Documentation}
      * @example
-     * await serverClient.deletePlayer({
+     * await serverApi.deletePlayer({
      *   "PlayFabId": "A68C908B66C23C5"
      * });
      */
@@ -574,7 +574,7 @@ export default function getServerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/server/player-data-management/deleteplayercustomproperties Microsoft Documentation}
      * @example
-     * await serverClient.deletePlayerCustomProperties({
+     * await serverApi.deletePlayerCustomProperties({
      *   "PlayFabId": "2039475",
      *   "PropertyNames": [
      *     "level",
@@ -595,7 +595,7 @@ export default function getServerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/server/account-management/deletepushnotificationtemplate Microsoft Documentation}
      * @example
-     * await serverClient.deletePushNotificationTemplate({
+     * await serverApi.deletePushNotificationTemplate({
      *   "PushNotificationTemplateId": "6bc7dbf0-075a-46e9-8e84-35737a22c6a4"
      * });
      */
@@ -613,7 +613,7 @@ export default function getServerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/server/shared-group-data/deletesharedgroup Microsoft Documentation}
      * @example
-     * await serverClient.deleteSharedGroup({
+     * await serverApi.deleteSharedGroup({
      *   "SharedGroupId": "Clan Data"
      * });
      */
@@ -658,7 +658,7 @@ export default function getServerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/server/player-item-management/evaluaterandomresulttable Microsoft Documentation}
      * @example
-     * await serverClient.evaluateRandomResultTable({
+     * await serverApi.evaluateRandomResultTable({
      *   "TableId": "RareElementCard",
      *   "CatalogVersion": "1"
      * });
@@ -676,7 +676,7 @@ export default function getServerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/server/server-side-cloud-script/executecloudscript Microsoft Documentation}
      * @example
-     * await serverClient.executeCloudScript({
+     * await serverApi.executeCloudScript({
      *   "PlayFabId": "1337D00D",
      *   "FunctionName": "levelCompleted",
      *   "FunctionParameter": {
@@ -701,7 +701,7 @@ export default function getServerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/server/playstream/exportplayersinsegment Microsoft Documentation}
      * @example
-     * await serverClient.exportPlayersInSegment({
+     * await serverApi.exportPlayersInSegment({
      *   "SegmentId": "ABCDEF1234567890"
      * });
      */
@@ -732,7 +732,7 @@ export default function getServerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/server/playstream/getallsegments Microsoft Documentation}
      * @example
-     * await serverClient.getAllSegments({});
+     * await serverApi.getAllSegments({});
      */
     getAllSegments (request: GetAllSegmentsRequest) {
       return playfab.request<GetAllSegmentsResult>("/Server/GetAllSegments", {
@@ -747,7 +747,7 @@ export default function getServerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/server/characters/getalluserscharacters Microsoft Documentation}
      * @example
-     * await serverClient.getAllUsersCharacters({
+     * await serverApi.getAllUsersCharacters({
      *   "PlayFabId": "98333765432"
      * });
      */
@@ -764,7 +764,7 @@ export default function getServerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/server/title-wide-data-management/getcatalogitems Microsoft Documentation}
      * @example
-     * await serverClient.getCatalogItems({
+     * await serverApi.getCatalogItems({
      *   "CatalogVersion": "1"
      * });
      */
@@ -780,7 +780,7 @@ export default function getServerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/server/character-data/getcharacterdata Microsoft Documentation}
      * @example
-     * await serverClient.getCharacterData({
+     * await serverApi.getCharacterData({
      *   "PlayFabId": "2039475",
      *   "CharacterId": "98342357",
      *   "Keys": [
@@ -802,7 +802,7 @@ export default function getServerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/server/character-data/getcharacterinternaldata Microsoft Documentation}
      * @example
-     * await serverClient.getCharacterInternalData({
+     * await serverApi.getCharacterInternalData({
      *   "PlayFabId": "2039475",
      *   "CharacterId": "98342357",
      *   "Keys": [
@@ -825,7 +825,7 @@ export default function getServerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/server/player-item-management/getcharacterinventory Microsoft Documentation}
      * @example
-     * await serverClient.getCharacterInventory({
+     * await serverApi.getCharacterInventory({
      *   "PlayFabId": "204883457",
      *   "CharacterId": "9890723423",
      *   "CatalogVersion": "5"
@@ -843,7 +843,7 @@ export default function getServerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/server/characters/getcharacterleaderboard Microsoft Documentation}
      * @example
-     * await serverClient.getCharacterLeaderboard({
+     * await serverApi.getCharacterLeaderboard({
      *   "StatisticName": "Kills",
      *   "StartPosition": 0,
      *   "MaxResultsCount": 20
@@ -861,7 +861,7 @@ export default function getServerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/server/character-data/getcharacterreadonlydata Microsoft Documentation}
      * @example
-     * await serverClient.getCharacterReadOnlyData({
+     * await serverApi.getCharacterReadOnlyData({
      *   "PlayFabId": "2039475",
      *   "CharacterId": "98342357",
      *   "Keys": [
@@ -883,7 +883,7 @@ export default function getServerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/server/characters/getcharacterstatistics Microsoft Documentation}
      * @example
-     * await serverClient.getCharacterStatistics({
+     * await serverApi.getCharacterStatistics({
      *   "PlayFabId": "10931252888739651331",
      *   "CharacterId": "98765432"
      * });
@@ -905,7 +905,7 @@ export default function getServerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/server/content/getcontentdownloadurl Microsoft Documentation}
      * @example
-     * await serverClient.getContentDownloadUrl({
+     * await serverApi.getContentDownloadUrl({
      *   "Key": "images/sword_icon.png"
      * });
      */
@@ -922,7 +922,7 @@ export default function getServerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/server/player-data-management/getfriendleaderboard Microsoft Documentation}
      * @example
-     * await serverClient.getFriendLeaderboard({
+     * await serverApi.getFriendLeaderboard({
      *   "PlayFabId": "98092347523",
      *   "StatisticName": "Kills",
      *   "StartPosition": 1258,
@@ -943,7 +943,7 @@ export default function getServerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/server/friend-list-management/getfriendslist Microsoft Documentation}
      * @example
-     * await serverClient.getFriendsList({
+     * await serverApi.getFriendsList({
      *   "PlayFabId": "93798903892789754",
      *   "ExternalPlatformFriends": "All"
      * });
@@ -960,7 +960,7 @@ export default function getServerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/server/player-data-management/getleaderboard Microsoft Documentation}
      * @example
-     * await serverClient.getLeaderboard({
+     * await serverApi.getLeaderboard({
      *   "StatisticName": "Kills",
      *   "StartPosition": 0,
      *   "MaxResultsCount": 20
@@ -978,7 +978,7 @@ export default function getServerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/server/characters/getleaderboardaroundcharacter Microsoft Documentation}
      * @example
-     * await serverClient.getLeaderboardAroundCharacter({
+     * await serverApi.getLeaderboardAroundCharacter({
      *   "StatisticName": "Kills",
      *   "PlayFabId": "10931252888739651331",
      *   "CharacterId": "987343220",
@@ -997,7 +997,7 @@ export default function getServerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/server/player-data-management/getleaderboardarounduser Microsoft Documentation}
      * @example
-     * await serverClient.getLeaderboardAroundUser({
+     * await serverApi.getLeaderboardAroundUser({
      *   "StatisticName": "Kills",
      *   "PlayFabId": "10931252888739651331",
      *   "MaxResultsCount": 20
@@ -1015,7 +1015,7 @@ export default function getServerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/server/characters/getleaderboardforusercharacters Microsoft Documentation}
      * @example
-     * await serverClient.getLeaderboardForUserCharacters({
+     * await serverApi.getLeaderboardForUserCharacters({
      *   "StatisticName": "Kills",
      *   "PlayFabId": "10931252888739651331"
      * });
@@ -1033,7 +1033,7 @@ export default function getServerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/server/player-data-management/getplayercombinedinfo Microsoft Documentation}
      * @example
-     * await serverClient.getPlayerCombinedInfo({
+     * await serverApi.getPlayerCombinedInfo({
      *   "PlayFabId": "4027527BF22653D1",
      *   "InfoRequestParameters": {
      *     "GetUserAccountInfo": true,
@@ -1066,7 +1066,7 @@ export default function getServerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/server/player-data-management/getplayercustomproperty Microsoft Documentation}
      * @example
-     * await serverClient.getPlayerCustomProperty({
+     * await serverApi.getPlayerCustomProperty({
      *   "PlayFabId": "2039475",
      *   "PropertyName": "level"
      * });
@@ -1083,7 +1083,7 @@ export default function getServerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/server/account-management/getplayerprofile Microsoft Documentation}
      * @example
-     * await serverClient.getPlayerProfile({
+     * await serverApi.getPlayerProfile({
      *   "PlayFabId": "621EF20237534A44"
      * });
      */
@@ -1099,7 +1099,7 @@ export default function getServerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/server/playstream/getplayersegments Microsoft Documentation}
      * @example
-     * await serverClient.getPlayerSegments({
+     * await serverApi.getPlayerSegments({
      *   "PlayFabId": "1337AA00"
      * });
      */
@@ -1115,7 +1115,7 @@ export default function getServerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/server/player-data-management/getplayerstatistics Microsoft Documentation}
      * @example
-     * await serverClient.getPlayerStatistics({
+     * await serverApi.getPlayerStatistics({
      *   "PlayFabId": "621EF2023753444",
      *   "StatisticNames": [
      *     "Points",
@@ -1135,7 +1135,7 @@ export default function getServerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/server/player-data-management/getplayerstatisticversions Microsoft Documentation}
      * @example
-     * await serverClient.getPlayerStatisticVersions({
+     * await serverApi.getPlayerStatisticVersions({
      *   "StatisticName": "headshots"
      * });
      */
@@ -1151,7 +1151,7 @@ export default function getServerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/server/playstream/getplayertags Microsoft Documentation}
      * @example
-     * await serverClient.getPlayerTags({
+     * await serverApi.getPlayerTags({
      *   "PlayFabId": "10931252888739651331",
      *   "Namespace": "title.AAA"
      * });
@@ -1168,7 +1168,7 @@ export default function getServerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/server/account-management/getplayfabidsfrombattlenetaccountids Microsoft Documentation}
      * @example
-     * await serverClient.getPlayFabIDsFromBattleNetAccountIds({
+     * await serverApi.getPlayFabIDsFromBattleNetAccountIds({
      *   "BattleNetAccountIds": [
      *     "526f79204261747478",
      *     "526f79204261747479"
@@ -1187,7 +1187,7 @@ export default function getServerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/server/account-management/getplayfabidsfromfacebookids Microsoft Documentation}
      * @example
-     * await serverClient.getPlayFabIDsFromFacebookIDs({
+     * await serverApi.getPlayFabIDsFromFacebookIDs({
      *   "FacebookIDs": [
      *     "857498576495",
      *     "759374651209"
@@ -1206,7 +1206,7 @@ export default function getServerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/server/account-management/getplayfabidsfromfacebookinstantgamesids Microsoft Documentation}
      * @example
-     * await serverClient.getPlayFabIDsFromFacebookInstantGamesIds({
+     * await serverApi.getPlayFabIDsFromFacebookInstantGamesIds({
      *   "FacebookInstantGamesIds": [
      *     "1114685845316172",
      *     "1114685845316173"
@@ -1227,7 +1227,7 @@ export default function getServerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/server/account-management/getplayfabidsfromgenericids Microsoft Documentation}
      * @example
-     * await serverClient.getPlayFabIDsFromGenericIDs({
+     * await serverApi.getPlayFabIDsFromGenericIDs({
      *   "GenericIDs": [
      *     {
      *       "ServiceName": "BigBizSocial",
@@ -1252,7 +1252,7 @@ export default function getServerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/server/account-management/getplayfabidsfromnintendoserviceaccountids Microsoft Documentation}
      * @example
-     * await serverClient.getPlayFabIDsFromNintendoServiceAccountIds({
+     * await serverApi.getPlayFabIDsFromNintendoServiceAccountIds({
      *   "NintendoAccountIds": [
      *     "526f79204261747478",
      *     "526f79204261747479"
@@ -1271,7 +1271,7 @@ export default function getServerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/server/account-management/getplayfabidsfromnintendoswitchdeviceids Microsoft Documentation}
      * @example
-     * await serverClient.getPlayFabIDsFromNintendoSwitchDeviceIds({
+     * await serverApi.getPlayFabIDsFromNintendoSwitchDeviceIds({
      *   "NintendoSwitchDeviceIds": [
      *     "526f79204261747478",
      *     "526f79204261747479"
@@ -1292,7 +1292,7 @@ export default function getServerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/server/account-management/getplayfabidsfromopenidsubjectidentifiers Microsoft Documentation}
      * @example
-     * await serverClient.getPlayFabIDsFromOpenIdSubjectIdentifiers({
+     * await serverApi.getPlayFabIDsFromOpenIdSubjectIdentifiers({
      *   "OpenIdSubjectIdentifiers": [
      *     {
      *       "Issuer": "https://example.com",
@@ -1317,7 +1317,7 @@ export default function getServerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/server/account-management/getplayfabidsfrompsnaccountids Microsoft Documentation}
      * @example
-     * await serverClient.getPlayFabIDsFromPSNAccountIDs({
+     * await serverApi.getPlayFabIDsFromPSNAccountIDs({
      *   "PSNAccountIDs": [
      *     "857498576495",
      *     "759374651209"
@@ -1336,7 +1336,7 @@ export default function getServerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/server/account-management/getplayfabidsfrompsnonlineids Microsoft Documentation}
      * @example
-     * await serverClient.getPlayFabIDsFromPSNOnlineIDs({
+     * await serverApi.getPlayFabIDsFromPSNOnlineIDs({
      *   "PSNOnlineIDs": [
      *     "857555576495",
      *     "759345551209"
@@ -1356,7 +1356,7 @@ export default function getServerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/server/account-management/getplayfabidsfromsteamids Microsoft Documentation}
      * @example
-     * await serverClient.getPlayFabIDsFromSteamIDs({
+     * await serverApi.getPlayFabIDsFromSteamIDs({
      *   "SteamStringIDs": [
      *     "857498576495",
      *     "759374651209"
@@ -1376,7 +1376,7 @@ export default function getServerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/server/account-management/getplayfabidsfromsteamnames Microsoft Documentation}
      * @example
-     * await serverClient.getPlayFabIDsFromSteamNames({
+     * await serverApi.getPlayFabIDsFromSteamNames({
      *   "SteamNames": [
      *     "steamPersonaName1",
      *     "steamPersonaName2"
@@ -1397,7 +1397,7 @@ export default function getServerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/server/account-management/getplayfabidsfromtwitchids Microsoft Documentation}
      * @example
-     * await serverClient.getPlayFabIDsFromTwitchIDs({
+     * await serverApi.getPlayFabIDsFromTwitchIDs({
      *   "TwitchIds": [
      *     "127168541",
      *     "88315720"
@@ -1416,7 +1416,7 @@ export default function getServerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/server/account-management/getplayfabidsfromxboxliveids Microsoft Documentation}
      * @example
-     * await serverClient.getPlayFabIDsFromXboxLiveIDs({
+     * await serverApi.getPlayFabIDsFromXboxLiveIDs({
      *   "XboxLiveAccountIDs": [
      *     "857498576495",
      *     "759374651209"
@@ -1436,7 +1436,7 @@ export default function getServerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/server/title-wide-data-management/getpublisherdata Microsoft Documentation}
      * @example
-     * await serverClient.getPublisherData({
+     * await serverApi.getPublisherData({
      *   "Keys": [
      *     "color",
      *     "propertyA"
@@ -1457,7 +1457,7 @@ export default function getServerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/server/player-item-management/getrandomresulttables Microsoft Documentation}
      * @example
-     * await serverClient.getRandomResultTables({
+     * await serverApi.getRandomResultTables({
      *   "CatalogVersion": "1",
      *   "TableIDs": [
      *     "CommonElementCard",
@@ -1481,7 +1481,7 @@ export default function getServerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/server/playstream/getsegmentexport Microsoft Documentation}
      * @example
-     * await serverClient.getSegmentExport({
+     * await serverApi.getSegmentExport({
      *   "ExportId": "ABCDEF1234567890"
      * });
      */
@@ -1497,7 +1497,7 @@ export default function getServerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/server/playstream/getsegmentplayercount Microsoft Documentation}
      * @example
-     * await serverClient.getSegmentPlayerCount({
+     * await serverApi.getSegmentPlayerCount({
      *   "SegmentId": "1337AA00"
      * });
      */
@@ -1513,7 +1513,7 @@ export default function getServerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/server/account-management/getservercustomidsfromplayfabids Microsoft Documentation}
      * @example
-     * await serverClient.getServerCustomIDsFromPlayFabIDs({
+     * await serverApi.getServerCustomIDsFromPlayFabIDs({
      *   "PlayFabIDs": [
      *     "1232421311"
      *   ]
@@ -1533,7 +1533,7 @@ export default function getServerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/server/shared-group-data/getsharedgroupdata Microsoft Documentation}
      * @example
-     * await serverClient.getSharedGroupData({
+     * await serverApi.getSharedGroupData({
      *   "SharedGroupId": "Clan Data",
      *   "Keys": [
      *     "ClanKills",
@@ -1556,7 +1556,7 @@ export default function getServerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/server/title-wide-data-management/getstoreitems Microsoft Documentation}
      * @example
-     * await serverClient.getStoreItems({
+     * await serverApi.getStoreItems({
      *   "StoreId": "BonusStore",
      *   "PlayFabId": "20394883"
      * });
@@ -1573,7 +1573,7 @@ export default function getServerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/server/title-wide-data-management/gettime Microsoft Documentation}
      * @example
-     * await serverClient.getTime({});
+     * await serverApi.getTime({});
      */
     getTime (request: GetTimeRequest) {
       return playfab.request<GetTimeResult>("/Server/GetTime", {
@@ -1587,7 +1587,7 @@ export default function getServerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/server/title-wide-data-management/gettitledata Microsoft Documentation}
      * @example
-     * await serverClient.getTitleData({
+     * await serverApi.getTitleData({
      *   "Keys": [
      *     "color",
      *     "propertyA"
@@ -1606,7 +1606,7 @@ export default function getServerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/server/title-wide-data-management/gettitleinternaldata Microsoft Documentation}
      * @example
-     * await serverClient.getTitleInternalData({
+     * await serverApi.getTitleInternalData({
      *   "Keys": [
      *     "color",
      *     "propertyA"
@@ -1625,7 +1625,7 @@ export default function getServerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/server/title-wide-data-management/gettitlenews Microsoft Documentation}
      * @example
-     * await serverClient.getTitleNews({
+     * await serverApi.getTitleNews({
      *   "Count": 25
      * });
      */
@@ -1641,7 +1641,7 @@ export default function getServerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/server/account-management/getuseraccountinfo Microsoft Documentation}
      * @example
-     * await serverClient.getUserAccountInfo({
+     * await serverApi.getUserAccountInfo({
      *   "PlayFabId": "10931252888739651331"
      * });
      */
@@ -1657,7 +1657,7 @@ export default function getServerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/server/account-management/getuserbans Microsoft Documentation}
      * @example
-     * await serverClient.getUserBans({
+     * await serverApi.getUserBans({
      *   "PlayFabId": "1679AF5CD04BD838"
      * });
      */
@@ -1673,7 +1673,7 @@ export default function getServerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/server/player-data-management/getuserdata Microsoft Documentation}
      * @example
-     * await serverClient.getUserData({
+     * await serverApi.getUserData({
      *   "PlayFabId": "2039475",
      *   "Keys": [
      *     "preferences",
@@ -1694,7 +1694,7 @@ export default function getServerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/server/player-data-management/getuserinternaldata Microsoft Documentation}
      * @example
-     * await serverClient.getUserInternalData({
+     * await serverApi.getUserInternalData({
      *   "PlayFabId": "2039475",
      *   "Keys": [
      *     "preferences",
@@ -1716,7 +1716,7 @@ export default function getServerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/server/player-item-management/getuserinventory Microsoft Documentation}
      * @example
-     * await serverClient.getUserInventory({
+     * await serverApi.getUserInventory({
      *   "PlayFabId": "204883457"
      * });
      */
@@ -1732,7 +1732,7 @@ export default function getServerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/server/player-data-management/getuserpublisherdata Microsoft Documentation}
      * @example
-     * await serverClient.getUserPublisherData({
+     * await serverApi.getUserPublisherData({
      *   "PlayFabId": "2039475",
      *   "Keys": [
      *     "preferences",
@@ -1753,7 +1753,7 @@ export default function getServerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/server/player-data-management/getuserpublisherinternaldata Microsoft Documentation}
      * @example
-     * await serverClient.getUserPublisherInternalData({
+     * await serverApi.getUserPublisherInternalData({
      *   "PlayFabId": "2039475",
      *   "Keys": [
      *     "preferences",
@@ -1774,7 +1774,7 @@ export default function getServerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/server/player-data-management/getuserpublisherreadonlydata Microsoft Documentation}
      * @example
-     * await serverClient.getUserPublisherReadOnlyData({
+     * await serverApi.getUserPublisherReadOnlyData({
      *   "PlayFabId": "2039475",
      *   "Keys": [
      *     "preferences",
@@ -1795,7 +1795,7 @@ export default function getServerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/server/player-data-management/getuserreadonlydata Microsoft Documentation}
      * @example
-     * await serverClient.getUserReadOnlyData({
+     * await serverApi.getUserReadOnlyData({
      *   "PlayFabId": "2039475",
      *   "Keys": [
      *     "preferences",
@@ -1830,7 +1830,7 @@ export default function getServerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/server/characters/grantcharactertouser Microsoft Documentation}
      * @example
-     * await serverClient.grantCharacterToUser({
+     * await serverApi.grantCharacterToUser({
      *   "PlayFabId": "20394883567",
      *   "CharacterName": "FighterDude",
      *   "CharacterType": "Blue Warrior"
@@ -1849,7 +1849,7 @@ export default function getServerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/server/player-item-management/grantitemstocharacter Microsoft Documentation}
      * @example
-     * await serverClient.grantItemsToCharacter({
+     * await serverApi.grantItemsToCharacter({
      *   "CharacterId": "9876543268",
      *   "PlayFabId": "20394883",
      *   "Annotation": "Entered Level 2",
@@ -1872,7 +1872,7 @@ export default function getServerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/server/player-item-management/grantitemstouser Microsoft Documentation}
      * @example
-     * await serverClient.grantItemsToUser({
+     * await serverApi.grantItemsToUser({
      *   "PlayFabId": "20394883",
      *   "Annotation": "Entered Level 2",
      *   "ItemIds": [
@@ -1894,7 +1894,7 @@ export default function getServerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/server/player-item-management/grantitemstousers Microsoft Documentation}
      * @example
-     * await serverClient.grantItemsToUsers({
+     * await serverApi.grantItemsToUsers({
      *   "CatalogVersion": "5",
      *   "ItemGrants": [
      *     {
@@ -1926,7 +1926,7 @@ export default function getServerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/server/account-management/linkbattlenetaccount Microsoft Documentation}
      * @example
-     * await serverClient.linkBattleNetAccount({
+     * await serverApi.linkBattleNetAccount({
      *   "PlayFabId": "1234FA342",
      *   "IdentityToken": "eyJraWQi..."
      * });
@@ -1943,7 +1943,7 @@ export default function getServerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/server/account-management/linknintendoserviceaccount Microsoft Documentation}
      * @example
-     * await serverClient.linkNintendoServiceAccount({
+     * await serverApi.linkNintendoServiceAccount({
      *   "PlayFabId": "1234FA342",
      *   "IdentityToken": "eyJraWQi..."
      * });
@@ -1960,7 +1960,7 @@ export default function getServerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/server/account-management/linknintendoserviceaccountsubject Microsoft Documentation}
      * @example
-     * await serverClient.linkNintendoServiceAccountSubject({
+     * await serverApi.linkNintendoServiceAccountSubject({
      *   "PlayFabId": "1234FA342",
      *   "Subject": "8e7Eju4j9"
      * });
@@ -1977,7 +1977,7 @@ export default function getServerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/server/account-management/linknintendoswitchdeviceid Microsoft Documentation}
      * @example
-     * await serverClient.linkNintendoSwitchDeviceId({
+     * await serverApi.linkNintendoSwitchDeviceId({
      *   "PlayFabId": "1234FA342",
      *   "NintendoSwitchDeviceId": "526f79204261747479"
      * });
@@ -1994,7 +1994,7 @@ export default function getServerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/server/account-management/linkpsnaccount Microsoft Documentation}
      * @example
-     * await serverClient.linkPSNAccount({
+     * await serverApi.linkPSNAccount({
      *   "PlayFabId": "1234FA342",
      *   "AuthCode": "LKJDG7DDE",
      *   "RedirectUri": "orbis://games"
@@ -2012,7 +2012,7 @@ export default function getServerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/server/account-management/linkpsnid Microsoft Documentation}
      * @example
-     * await serverClient.linkPSNId({
+     * await serverApi.linkPSNId({
      *   "PlayFabId": "1234FA342",
      *   "PSNUserId": "LKJDG7DDE"
      * });
@@ -2029,7 +2029,7 @@ export default function getServerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/server/account-management/linkservercustomid Microsoft Documentation}
      * @example
-     * await serverClient.linkServerCustomId({
+     * await serverApi.linkServerCustomId({
      *   "PlayFabId": "123412341234",
      *   "ServerCustomId": "67AB-5397-CC54-EA31"
      * });
@@ -2046,7 +2046,7 @@ export default function getServerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/server/account-management/linksteamid Microsoft Documentation}
      * @example
-     * await serverClient.linkSteamId({
+     * await serverApi.linkSteamId({
      *   "SteamId": "22223333",
      *   "PlayFabId": "5a446c83645201"
      * });
@@ -2063,7 +2063,7 @@ export default function getServerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/server/account-management/linktwitchaccount Microsoft Documentation}
      * @example
-     * await serverClient.linkTwitchAccount({
+     * await serverApi.linkTwitchAccount({
      *   "PlayFabId": "1234FA342",
      *   "AccessToken": "twitch-access-token",
      *   "ForceLink": false
@@ -2081,7 +2081,7 @@ export default function getServerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/server/account-management/linkxboxaccount Microsoft Documentation}
      * @example
-     * await serverClient.linkXboxAccount({
+     * await serverApi.linkXboxAccount({
      *   "XboxToken": "XBL3.0 x=1981989841;akljdlkafdknad",
      *   "PlayFabId": "5a446c83645201"
      * });
@@ -2098,7 +2098,7 @@ export default function getServerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/server/account-management/linkxboxid Microsoft Documentation}
      * @example
-     * await serverClient.linkXboxId({
+     * await serverApi.linkXboxId({
      *   "XboxId": "12344553",
      *   "Sandbox": "RETAIL",
      *   "PlayFabId": "5A446C83645201",
@@ -2117,7 +2117,7 @@ export default function getServerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/server/player-data-management/listplayercustomproperties Microsoft Documentation}
      * @example
-     * await serverClient.listPlayerCustomProperties({
+     * await serverApi.listPlayerCustomProperties({
      *   "PlayFabId": "2039475"
      * });
      */
@@ -2147,7 +2147,7 @@ export default function getServerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/server/authentication/loginwithandroiddeviceid Microsoft Documentation}
      * @example
-     * await serverClient.loginWithAndroidDeviceID({
+     * await serverApi.loginWithAndroidDeviceID({
      *   "AndroidDeviceId": "526f79204261747479",
      *   "OS": "5.0",
      *   "AndroidDevice": "Nexus 6",
@@ -2166,7 +2166,7 @@ export default function getServerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/server/authentication/loginwithbattlenet Microsoft Documentation}
      * @example
-     * await serverClient.loginWithBattleNet({
+     * await serverApi.loginWithBattleNet({
      *   "IdentityToken": "eyJraWQi..."
      * });
      */
@@ -2183,7 +2183,7 @@ export default function getServerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/server/authentication/loginwithcustomid Microsoft Documentation}
      * @example
-     * await serverClient.loginWithCustomID({
+     * await serverApi.loginWithCustomID({
      *   "CustomId": "67AB-5397-CC54-EA31",
      *   "CreateAccount": false
      * });
@@ -2201,7 +2201,7 @@ export default function getServerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/server/authentication/loginwithiosdeviceid Microsoft Documentation}
      * @example
-     * await serverClient.loginWithIOSDeviceID({
+     * await serverApi.loginWithIOSDeviceID({
      *   "DeviceId": "29848d9bh8900a0b003",
      *   "OS": "7.11",
      *   "DeviceModel": "Iphone 5s",
@@ -2221,7 +2221,7 @@ export default function getServerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/server/authentication/loginwithpsn Microsoft Documentation}
      * @example
-     * await serverClient.loginWithPSN({
+     * await serverApi.loginWithPSN({
      *   "AuthCode": "LKJ6D896D",
      *   "RedirectUri": "orbis://games",
      *   "CreateAccount": false
@@ -2240,7 +2240,7 @@ export default function getServerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/server/authentication/loginwithservercustomid Microsoft Documentation}
      * @example
-     * await serverClient.loginWithServerCustomId({
+     * await serverApi.loginWithServerCustomId({
      *   "ServerCustomId": "asdalsdkjar09u23ijf",
      *   "CreateAccount": true
      * });
@@ -2258,7 +2258,7 @@ export default function getServerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/server/authentication/loginwithsteamid Microsoft Documentation}
      * @example
-     * await serverClient.loginWithSteamId({
+     * await serverApi.loginWithSteamId({
      *   "SteamId": "12344553",
      *   "CreateAccount": false
      * });
@@ -2275,7 +2275,7 @@ export default function getServerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/server/authentication/loginwithtwitch Microsoft Documentation}
      * @example
-     * await serverClient.loginWithTwitch({
+     * await serverApi.loginWithTwitch({
      *   "PlayFabId": "1234FA342",
      *   "AccessToken": "twitch-access-token",
      *   "CreateAccount": true
@@ -2294,7 +2294,7 @@ export default function getServerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/server/authentication/loginwithxbox Microsoft Documentation}
      * @example
-     * await serverClient.loginWithXbox({
+     * await serverApi.loginWithXbox({
      *   "XboxToken": "XBL3.0 x=1981989841;akljdlkafdknad",
      *   "CreateAccount": false
      * });
@@ -2312,7 +2312,7 @@ export default function getServerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/server/authentication/loginwithxboxid Microsoft Documentation}
      * @example
-     * await serverClient.loginWithXboxId({
+     * await serverApi.loginWithXboxId({
      *   "XboxId": "12344553",
      *   "Sandbox": "RETAIL",
      *   "CreateAccount": false
@@ -2331,7 +2331,7 @@ export default function getServerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/server/player-item-management/modifyitemuses Microsoft Documentation}
      * @example
-     * await serverClient.modifyItemUses({
+     * await serverApi.modifyItemUses({
      *   "PlayFabId": "20394883",
      *   "ItemInstanceId": "94585729",
      *   "UsesToAdd": 1
@@ -2350,7 +2350,7 @@ export default function getServerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/server/player-item-management/moveitemtocharacterfromcharacter Microsoft Documentation}
      * @example
-     * await serverClient.moveItemToCharacterFromCharacter({
+     * await serverApi.moveItemToCharacterFromCharacter({
      *   "PlayFabId": "234234897234",
      *   "GivingCharacterId": "98092347523",
      *   "ReceivingCharacterId": "6323489712",
@@ -2370,7 +2370,7 @@ export default function getServerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/server/player-item-management/moveitemtocharacterfromuser Microsoft Documentation}
      * @example
-     * await serverClient.moveItemToCharacterFromUser({
+     * await serverApi.moveItemToCharacterFromUser({
      *   "PlayFabId": "234234897234",
      *   "CharacterId": "98092347523",
      *   "ItemInstanceId": "701231299999"
@@ -2389,7 +2389,7 @@ export default function getServerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/server/player-item-management/moveitemtouserfromcharacter Microsoft Documentation}
      * @example
-     * await serverClient.moveItemToUserFromCharacter({
+     * await serverApi.moveItemToUserFromCharacter({
      *   "PlayFabId": "234234897234",
      *   "CharacterId": "98092347523",
      *   "ItemInstanceId": "701231299999"
@@ -2422,7 +2422,7 @@ export default function getServerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/server/player-item-management/redeemcoupon Microsoft Documentation}
      * @example
-     * await serverClient.redeemCoupon({
+     * await serverApi.redeemCoupon({
      *   "CouponCode": "123-1234-123",
      *   "CatalogVersion": "5"
      * });
@@ -2478,7 +2478,7 @@ export default function getServerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/server/friend-list-management/removefriend Microsoft Documentation}
      * @example
-     * await serverClient.removeFriend({
+     * await serverApi.removeFriend({
      *   "FriendPlayFabId": "29837799",
      *   "PlayFabId": "1a46086aed40f142"
      * });
@@ -2495,7 +2495,7 @@ export default function getServerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/server/account-management/removegenericid Microsoft Documentation}
      * @example
-     * await serverClient.removeGenericID({
+     * await serverApi.removeGenericID({
      *   "GenericId": {
      *     "ServiceName": "BigBizSocial",
      *     "UserId": "1234567890"
@@ -2514,7 +2514,7 @@ export default function getServerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/server/playstream/removeplayertag Microsoft Documentation}
      * @example
-     * await serverClient.removePlayerTag({
+     * await serverApi.removePlayerTag({
      *   "PlayFabId": "10931252888739651331",
      *   "TagName": "MostKilled"
      * });
@@ -2534,7 +2534,7 @@ export default function getServerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/server/shared-group-data/removesharedgroupmembers Microsoft Documentation}
      * @example
-     * await serverClient.removeSharedGroupMembers({
+     * await serverApi.removeSharedGroupMembers({
      *   "SharedGroupId": "Clan Data",
      *   "PlayFabIds": [
      *     "D984A64B832",
@@ -2555,7 +2555,7 @@ export default function getServerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/server/player-item-management/reportplayer Microsoft Documentation}
      * @example
-     * await serverClient.reportPlayer({
+     * await serverApi.reportPlayer({
      *   "ReporterId": "9ddafe27d6d445da",
      *   "ReporteeId": "1a46086aed40f142",
      *   "Comment": "cheating"
@@ -2573,7 +2573,7 @@ export default function getServerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/server/account-management/revokeallbansforuser Microsoft Documentation}
      * @example
-     * await serverClient.revokeAllBansForUser({
+     * await serverApi.revokeAllBansForUser({
      *   "PlayFabId": "1679AF5CD04BD838"
      * });
      */
@@ -2589,7 +2589,7 @@ export default function getServerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/server/account-management/revokebans Microsoft Documentation}
      * @example
-     * await serverClient.revokeBans({
+     * await serverApi.revokeBans({
      *   "BanIds": [
      *     "E0B5FF89542D413C",
      *     "EF43FF89542G1546"
@@ -2609,7 +2609,7 @@ export default function getServerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/server/player-item-management/revokeinventoryitem Microsoft Documentation}
      * @example
-     * await serverClient.revokeInventoryItem({
+     * await serverApi.revokeInventoryItem({
      *   "PlayFabId": "203945882",
      *   "ItemInstanceId": "2048583045"
      * });
@@ -2627,7 +2627,7 @@ export default function getServerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/server/player-item-management/revokeinventoryitems Microsoft Documentation}
      * @example
-     * await serverClient.revokeInventoryItems({
+     * await serverApi.revokeInventoryItems({
      *   "Items": [
      *     {
      *       "PlayFabId": "203945882",
@@ -2648,7 +2648,7 @@ export default function getServerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/server/account-management/savepushnotificationtemplate Microsoft Documentation}
      * @example
-     * await serverClient.savePushNotificationTemplate({
+     * await serverApi.savePushNotificationTemplate({
      *   "Id": "6bc7dbf0-075a-46e9-8e84-35737a22c6a4",
      *   "Name": "F8763A987E",
      *   "AndroidPayload": "{       notification:      {          body: \"Some Message\",          title: \"Subject\",          body_loc_key: \"someLocKey\"     } }",
@@ -2678,7 +2678,7 @@ export default function getServerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/server/account-management/sendcustomaccountrecoveryemail Microsoft Documentation}
      * @example
-     * await serverClient.sendCustomAccountRecoveryEmail({
+     * await serverApi.sendCustomAccountRecoveryEmail({
      *   "EmailTemplateId": "D53AB15D8F12E330",
      *   "Email": "Me@here.com"
      * });
@@ -2695,7 +2695,7 @@ export default function getServerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/server/account-management/sendemailfromtemplate Microsoft Documentation}
      * @example
-     * await serverClient.sendEmailFromTemplate({
+     * await serverApi.sendEmailFromTemplate({
      *   "EmailTemplateId": "B53CA15D92D2E331",
      *   "PlayFabId": "A01DC15D8E12E230"
      * });
@@ -2713,7 +2713,7 @@ export default function getServerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/server/account-management/sendpushnotification Microsoft Documentation}
      * @example
-     * await serverClient.sendPushNotification({
+     * await serverApi.sendPushNotification({
      *   "Recipient": "F8763A987E",
      *   "Message": "You have been attacked! Go defend your base!"
      * });
@@ -2731,7 +2731,7 @@ export default function getServerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/server/account-management/sendpushnotificationfromtemplate Microsoft Documentation}
      * @example
-     * await serverClient.sendPushNotificationFromTemplate({
+     * await serverApi.sendPushNotificationFromTemplate({
      *   "Recipient": "F8763A987E",
      *   "PushNotificationTemplateId": "6bc7dbf0-075a-46e9-8e84-35737a22c6a4"
      * });
@@ -2748,7 +2748,7 @@ export default function getServerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/server/friend-list-management/setfriendtags Microsoft Documentation}
      * @example
-     * await serverClient.setFriendTags({
+     * await serverApi.setFriendTags({
      *   "PlayFabId": "ABCDEF123456",
      *   "FriendPlayFabId": "298ABC37799",
      *   "Tags": [
@@ -2809,7 +2809,7 @@ export default function getServerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/server/authentication/setplayersecret Microsoft Documentation}
      * @example
-     * await serverClient.setPlayerSecret({
+     * await serverApi.setPlayerSecret({
      *   "PlayerSecret": "ExampleSecret",
      *   "PlayFabId": "ABCD1234"
      * });
@@ -2826,7 +2826,7 @@ export default function getServerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/server/title-wide-data-management/setpublisherdata Microsoft Documentation}
      * @example
-     * await serverClient.setPublisherData({
+     * await serverApi.setPublisherData({
      *   "Key": "Running Speed",
      *   "Value": "1.03"
      * });
@@ -2843,7 +2843,7 @@ export default function getServerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/server/title-wide-data-management/settitledata Microsoft Documentation}
      * @example
-     * await serverClient.setTitleData({
+     * await serverApi.setTitleData({
      *   "Key": "Running Speed",
      *   "Value": "1.03"
      * });
@@ -2860,7 +2860,7 @@ export default function getServerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/server/title-wide-data-management/settitleinternaldata Microsoft Documentation}
      * @example
-     * await serverClient.setTitleInternalData({
+     * await serverApi.setTitleInternalData({
      *   "Key": "Running Speed",
      *   "Value": "1.03"
      * });
@@ -2879,7 +2879,7 @@ export default function getServerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/server/player-item-management/subtractcharactervirtualcurrency Microsoft Documentation}
      * @example
-     * await serverClient.subtractCharacterVirtualCurrency({
+     * await serverApi.subtractCharacterVirtualCurrency({
      *   "PlayFabId": "20394883",
      *   "CharacterId": "23424524523",
      *   "VirtualCurrency": "GC",
@@ -2900,7 +2900,7 @@ export default function getServerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/server/player-item-management/subtractuservirtualcurrency Microsoft Documentation}
      * @example
-     * await serverClient.subtractUserVirtualCurrency({
+     * await serverApi.subtractUserVirtualCurrency({
      *   "PlayFabId": "20394883",
      *   "VirtualCurrency": "GC",
      *   "Amount": 100
@@ -2918,7 +2918,7 @@ export default function getServerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/server/account-management/unlinkapple Microsoft Documentation}
      * @example
-     * await serverClient.unlinkApple({
+     * await serverApi.unlinkApple({
      *   "PlayFabId": "1234FA342"
      * });
      */
@@ -2934,7 +2934,7 @@ export default function getServerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/server/account-management/unlinkbattlenetaccount Microsoft Documentation}
      * @example
-     * await serverClient.unlinkBattleNetAccount({
+     * await serverApi.unlinkBattleNetAccount({
      *   "PlayFabId": "1234FA342"
      * });
      */
@@ -2950,7 +2950,7 @@ export default function getServerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/server/account-management/unlinkfacebookaccount Microsoft Documentation}
      * @example
-     * await serverClient.unlinkFacebookAccount({
+     * await serverApi.unlinkFacebookAccount({
      *   "PlayFabId": "1234FA342"
      * });
      */
@@ -2966,7 +2966,7 @@ export default function getServerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/server/account-management/unlinkfacebookinstantgamesid Microsoft Documentation}
      * @example
-     * await serverClient.unlinkFacebookInstantGamesId({
+     * await serverApi.unlinkFacebookInstantGamesId({
      *   "PlayFabId": "1234FA342",
      *   "FacebookInstantGamesId": "123456789012345"
      * });
@@ -2983,7 +2983,7 @@ export default function getServerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/server/account-management/unlinkgamecenteraccount Microsoft Documentation}
      * @example
-     * await serverClient.unlinkGameCenterAccount({
+     * await serverApi.unlinkGameCenterAccount({
      *   "PlayFabId": "1234FA342"
      * });
      */
@@ -2999,7 +2999,7 @@ export default function getServerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/server/account-management/unlinknintendoserviceaccount Microsoft Documentation}
      * @example
-     * await serverClient.unlinkNintendoServiceAccount({
+     * await serverApi.unlinkNintendoServiceAccount({
      *   "PlayFabId": "1234FA342"
      * });
      */
@@ -3015,7 +3015,7 @@ export default function getServerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/server/account-management/unlinknintendoswitchdeviceid Microsoft Documentation}
      * @example
-     * await serverClient.unlinkNintendoSwitchDeviceId({
+     * await serverApi.unlinkNintendoSwitchDeviceId({
      *   "PlayFabId": "1234FA342",
      *   "NintendoSwitchDeviceId": "526f79204261747479"
      * });
@@ -3032,7 +3032,7 @@ export default function getServerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/server/account-management/unlinkpsnaccount Microsoft Documentation}
      * @example
-     * await serverClient.unlinkPSNAccount({
+     * await serverApi.unlinkPSNAccount({
      *   "PlayFabId": "1234FA342"
      * });
      */
@@ -3048,7 +3048,7 @@ export default function getServerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/server/account-management/unlinkservercustomid Microsoft Documentation}
      * @example
-     * await serverClient.unlinkServerCustomId({
+     * await serverApi.unlinkServerCustomId({
      *   "PlayFabId": "123412341234",
      *   "ServerCustomId": "67AB-5397-CC54-EA31"
      * });
@@ -3065,7 +3065,7 @@ export default function getServerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/server/account-management/unlinksteamid Microsoft Documentation}
      * @example
-     * await serverClient.unlinkSteamId({
+     * await serverApi.unlinkSteamId({
      *   "PlayFabId": "5a446c83645201"
      * });
      */
@@ -3081,7 +3081,7 @@ export default function getServerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/server/account-management/unlinktwitchaccount Microsoft Documentation}
      * @example
-     * await serverClient.unlinkTwitchAccount({
+     * await serverApi.unlinkTwitchAccount({
      *   "PlayFabId": "1234FA342"
      * });
      */
@@ -3097,7 +3097,7 @@ export default function getServerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/server/account-management/unlinkxboxaccount Microsoft Documentation}
      * @example
-     * await serverClient.unlinkXboxAccount({
+     * await serverApi.unlinkXboxAccount({
      *   "PlayFabId": "5a446c83645201"
      * });
      */
@@ -3116,7 +3116,7 @@ export default function getServerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/server/player-item-management/unlockcontainerinstance Microsoft Documentation}
      * @example
-     * await serverClient.unlockContainerInstance({
+     * await serverApi.unlockContainerInstance({
      *   "PlayFabId": "20394883",
      *   "ContainerItemInstanceId": "123456788",
      *   "KeyItemInstanceId": "123456789"
@@ -3138,7 +3138,7 @@ export default function getServerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/server/player-item-management/unlockcontaineritem Microsoft Documentation}
      * @example
-     * await serverClient.unlockContainerItem({
+     * await serverApi.unlockContainerItem({
      *   "PlayFabId": "20394883",
      *   "ContainerItemId": "crate block 1"
      * });
@@ -3155,7 +3155,7 @@ export default function getServerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/server/account-management/updateavatarurl Microsoft Documentation}
      * @example
-     * await serverClient.updateAvatarUrl({
+     * await serverApi.updateAvatarUrl({
      *   "PlayFabId": "22ca65837b158fab",
      *   "ImageUrl": "https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50"
      * });
@@ -3172,7 +3172,7 @@ export default function getServerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/server/account-management/updatebans Microsoft Documentation}
      * @example
-     * await serverClient.updateBans({
+     * await serverApi.updateBans({
      *   "Bans": [
      *     {
      *       "BanId": "E0B5FF89542D413C",
@@ -3199,7 +3199,7 @@ export default function getServerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/server/character-data/updatecharacterdata Microsoft Documentation}
      * @example
-     * await serverClient.updateCharacterData({
+     * await serverApi.updateCharacterData({
      *   "PlayFabId": "2039475",
      *   "CharacterId": "98342357",
      *   "Data": {
@@ -3223,7 +3223,7 @@ export default function getServerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/server/character-data/updatecharacterinternaldata Microsoft Documentation}
      * @example
-     * await serverClient.updateCharacterInternalData({
+     * await serverApi.updateCharacterInternalData({
      *   "PlayFabId": "2039475",
      *   "CharacterId": "98342357",
      *   "Data": {
@@ -3247,7 +3247,7 @@ export default function getServerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/server/character-data/updatecharacterreadonlydata Microsoft Documentation}
      * @example
-     * await serverClient.updateCharacterReadOnlyData({
+     * await serverApi.updateCharacterReadOnlyData({
      *   "PlayFabId": "2039475",
      *   "CharacterId": "98342357",
      *   "Data": {
@@ -3271,7 +3271,7 @@ export default function getServerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/server/characters/updatecharacterstatistics Microsoft Documentation}
      * @example
-     * await serverClient.updateCharacterStatistics({
+     * await serverApi.updateCharacterStatistics({
      *   "PlayFabId": "10931252888739651331",
      *   "CharacterId": "98765432",
      *   "CharacterStatistics": {
@@ -3292,7 +3292,7 @@ export default function getServerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/server/player-data-management/updateplayercustomproperties Microsoft Documentation}
      * @example
-     * await serverClient.updatePlayerCustomProperties({
+     * await serverApi.updatePlayerCustomProperties({
      *   "PlayFabId": "2039475",
      *   "Properties": [
      *     {
@@ -3319,7 +3319,7 @@ export default function getServerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/server/player-data-management/updateplayerstatistics Microsoft Documentation}
      * @example
-     * await serverClient.updatePlayerStatistics({
+     * await serverApi.updatePlayerStatistics({
      *   "PlayFabId": "10931252888739651331",
      *   "Statistics": [
      *     {
@@ -3355,7 +3355,7 @@ export default function getServerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/server/shared-group-data/updatesharedgroupdata Microsoft Documentation}
      * @example
-     * await serverClient.updateSharedGroupData({
+     * await serverApi.updateSharedGroupData({
      *   "SharedGroupId": "Clan Data",
      *   "Data": {
      *     "ClanKills": "34",
@@ -3376,7 +3376,7 @@ export default function getServerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/server/player-data-management/updateuserdata Microsoft Documentation}
      * @example
-     * await serverClient.updateUserData({
+     * await serverApi.updateUserData({
      *   "PlayFabId": "2039475",
      *   "Data": {
      *     "Class": "Fighter",
@@ -3399,7 +3399,7 @@ export default function getServerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/server/player-data-management/updateuserinternaldata Microsoft Documentation}
      * @example
-     * await serverClient.updateUserInternalData({
+     * await serverApi.updateUserInternalData({
      *   "PlayFabId": "2039475",
      *   "Data": {
      *     "Class": "Fighter",
@@ -3422,7 +3422,7 @@ export default function getServerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/server/player-item-management/updateuserinventoryitemcustomdata Microsoft Documentation}
      * @example
-     * await serverClient.updateUserInventoryItemCustomData({
+     * await serverApi.updateUserInventoryItemCustomData({
      *   "PlayFabId": "204883457",
      *   "CharacterId": "9890723423",
      *   "ItemInstanceId": "88331144",
@@ -3444,7 +3444,7 @@ export default function getServerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/server/player-data-management/updateuserpublisherdata Microsoft Documentation}
      * @example
-     * await serverClient.updateUserPublisherData({
+     * await serverApi.updateUserPublisherData({
      *   "PlayFabId": "2039475",
      *   "Data": {
      *     "Class": "Fighter",
@@ -3467,7 +3467,7 @@ export default function getServerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/server/player-data-management/updateuserpublisherinternaldata Microsoft Documentation}
      * @example
-     * await serverClient.updateUserPublisherInternalData({
+     * await serverApi.updateUserPublisherInternalData({
      *   "PlayFabId": "2039475",
      *   "Data": {
      *     "Class": "Fighter",
@@ -3489,7 +3489,7 @@ export default function getServerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/server/player-data-management/updateuserpublisherreadonlydata Microsoft Documentation}
      * @example
-     * await serverClient.updateUserPublisherReadOnlyData({
+     * await serverApi.updateUserPublisherReadOnlyData({
      *   "PlayFabId": "2039475",
      *   "Data": {
      *     "Class": "Fighter",
@@ -3512,7 +3512,7 @@ export default function getServerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/server/player-data-management/updateuserreadonlydata Microsoft Documentation}
      * @example
-     * await serverClient.updateUserReadOnlyData({
+     * await serverApi.updateUserReadOnlyData({
      *   "PlayFabId": "2039475",
      *   "Data": {
      *     "Class": "Fighter",
@@ -3549,7 +3549,7 @@ export default function getServerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/server/analytics/writecharacterevent Microsoft Documentation}
      * @example
-     * await serverClient.writeCharacterEvent({
+     * await serverApi.writeCharacterEvent({
      *   "PlayFabId": "3947655299CB786",
      *   "CharacterId": "E161CB4B7F6C34B",
      *   "EventName": "character_defeated_enemy",
@@ -3576,7 +3576,7 @@ export default function getServerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/server/analytics/writeplayerevent Microsoft Documentation}
      * @example
-     * await serverClient.writePlayerEvent({
+     * await serverApi.writePlayerEvent({
      *   "PlayFabId": "3947655299CB786",
      *   "EventName": "player_defeated_enemy",
      *   "Timestamp": "2016-03-07T00:00:00Z",
@@ -3602,7 +3602,7 @@ export default function getServerApi(playfab: PlayfabClient) {
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/server/analytics/writetitleevent Microsoft Documentation}
      * @example
-     * await serverClient.writeTitleEvent({
+     * await serverApi.writeTitleEvent({
      *   "EventName": "client_update_submitted",
      *   "Timestamp": "2016-03-07T00:00:00Z",
      *   "Body": {
