@@ -63,7 +63,7 @@ import type {
 } from "@/types/addon";
 import type { PlayfabClient } from "@/core";
 
-export default function createAddonClient(playfab: PlayfabClient) {
+export default function getAddonApi(playfab: PlayfabClient) {
   return {
     /**
      * Creates the Apple addon on a title, or updates it if it already exists.

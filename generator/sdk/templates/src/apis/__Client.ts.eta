@@ -15,7 +15,7 @@ import { ErrorMessages } from "@/constants";
 <% } %>
 import type { PlayfabClient } from "@/core";
 
-export default function create<%= it.doc.name %>Client(playfab: PlayfabClient) {
+export default function <%= it.doc.functionName %>(playfab: PlayfabClient) {
   return {
 <% if (it.usesSessionToken) { %>
     isClientLoggedIn () {

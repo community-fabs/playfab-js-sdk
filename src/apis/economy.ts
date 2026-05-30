@@ -119,7 +119,7 @@ import type {
 } from "@/types/economy";
 import type { PlayfabClient } from "@/core";
 
-export default function createEconomyClient(playfab: PlayfabClient) {
+export default function getEconomyApi(playfab: PlayfabClient) {
   return {
     /**
      * Add inventory items. Up to 10,000 stacks of items can be added to a single inventory collection. Stack size is uncapped.

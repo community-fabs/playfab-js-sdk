@@ -232,7 +232,7 @@ import type {
 } from "@/types/admin";
 import type { PlayfabClient } from "@/core";
 
-export default function createAdminClient(playfab: PlayfabClient) {
+export default function getAdminApi(playfab: PlayfabClient) {
   return {
     /**
      * Abort an ongoing task instance.

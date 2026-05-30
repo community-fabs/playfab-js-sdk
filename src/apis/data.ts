@@ -17,7 +17,7 @@ import type {
 } from "@/types/data";
 import type { PlayfabClient } from "@/core";
 
-export default function createDataClient(playfab: PlayfabClient) {
+export default function getDataApi(playfab: PlayfabClient) {
   return {
     /**
      * Abort pending file uploads to an entity's profile.

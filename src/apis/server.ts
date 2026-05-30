@@ -290,7 +290,7 @@ import type {
 } from "@/types/server";
 import type { PlayfabClient } from "@/core";
 
-export default function createServerClient(playfab: PlayfabClient) {
+export default function getServerApi(playfab: PlayfabClient) {
   return {
     /**
      * _NOTE: This is a Legacy Economy API, and is in bugfix-only mode. All new Economy features are being developed only for

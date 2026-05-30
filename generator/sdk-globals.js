@@ -38,7 +38,7 @@ async function getPlayFabData() {
   .map(doc => ({
     ...doc,
     exportName: lowerFirst(doc.name),
-    functionName: `create${doc.name}Client`
+    functionName: `get${doc.name}Api`
   }));
 
   return {

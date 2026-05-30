@@ -17,7 +17,7 @@ import type {
 } from "@/types/matchmaker";
 import type { PlayfabClient } from "@/core";
 
-export default function createMatchmakerClient(playfab: PlayfabClient) {
+export default function getMatchmakerApi(playfab: PlayfabClient) {
   return {
     /**
      * Validates a user with the PlayFab service

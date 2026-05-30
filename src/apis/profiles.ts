@@ -23,7 +23,7 @@ import type {
 } from "@/types/profiles";
 import type { PlayfabClient } from "@/core";
 
-export default function createProfilesClient(playfab: PlayfabClient) {
+export default function getProfilesApi(playfab: PlayfabClient) {
   return {
     /**
      * Gets the global title access policy

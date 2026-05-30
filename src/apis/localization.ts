@@ -5,7 +5,7 @@ import type {
 } from "@/types/localization";
 import type { PlayfabClient } from "@/core";
 
-export default function createLocalizationClient(playfab: PlayfabClient) {
+export default function getLocalizationApi(playfab: PlayfabClient) {
   return {
     /**
      * Retrieves the list of allowed languages, only accessible by title entities

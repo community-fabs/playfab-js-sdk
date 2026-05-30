@@ -43,7 +43,7 @@ import type {
 } from "@/types/groups";
 import type { PlayfabClient } from "@/core";
 
-export default function createGroupsClient(playfab: PlayfabClient) {
+export default function getGroupsApi(playfab: PlayfabClient) {
   return {
     /**
      * Accepts an outstanding invitation to to join a group

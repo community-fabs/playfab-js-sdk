@@ -11,7 +11,7 @@ import type {
 } from "@/types/authentication";
 import type { PlayfabClient } from "@/core";
 
-export default function createAuthenticationClient(playfab: PlayfabClient) {
+export default function getAuthenticationApi(playfab: PlayfabClient) {
   return {
     /**
      * Create a game_server entity token and return a new or existing game_server entity.

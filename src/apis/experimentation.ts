@@ -24,7 +24,7 @@ import type {
 } from "@/types/experimentation";
 import type { PlayfabClient } from "@/core";
 
-export default function createExperimentationClient(playfab: PlayfabClient) {
+export default function getExperimentationApi(playfab: PlayfabClient) {
   return {
     /**
      * Creates a new experiment exclusion group for a title.

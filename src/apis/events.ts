@@ -33,7 +33,7 @@ import type {
 } from "@/types/events";
 import type { PlayfabClient } from "@/core";
 
-export default function createEventsClient(playfab: PlayfabClient) {
+export default function getEventsApi(playfab: PlayfabClient) {
   return {
     /**
      * Creates a new telemetry key for the title.

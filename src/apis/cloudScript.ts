@@ -23,7 +23,7 @@ import type {
 } from "@/types/cloudScript";
 import type { PlayfabClient } from "@/core";
 
-export default function createCloudScriptClient(playfab: PlayfabClient) {
+export default function getCloudScriptApi(playfab: PlayfabClient) {
   return {
     /**
      * Cloud Script is one of PlayFab's most versatile features. It allows client code to request execution of any kind of

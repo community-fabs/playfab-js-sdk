@@ -41,7 +41,7 @@ import type {
 } from "@/types/progression";
 import type { PlayfabClient } from "@/core";
 
-export default function createProgressionClient(playfab: PlayfabClient) {
+export default function getProgressionApi(playfab: PlayfabClient) {
   return {
     /**
      * Creates a new leaderboard definition.

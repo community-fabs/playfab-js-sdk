@@ -13,7 +13,7 @@ import type {
 } from "@/types/insights";
 import type { PlayfabClient } from "@/core";
 
-export default function createInsightsClient(playfab: PlayfabClient) {
+export default function getInsightsApi(playfab: PlayfabClient) {
   return {
     /**
      * Gets the current values for the Insights performance and data storage retention, list of pending operations, and the

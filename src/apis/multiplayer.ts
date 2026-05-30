@@ -200,7 +200,7 @@ import type {
 } from "@/types/multiplayer";
 import type { PlayfabClient } from "@/core";
 
-export default function createMultiplayerClient(playfab: PlayfabClient) {
+export default function getMultiplayerApi(playfab: PlayfabClient) {
   return {
     /**
      * Cancel all active tickets the player is a member of in a given queue.

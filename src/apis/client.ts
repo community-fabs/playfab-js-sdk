@@ -333,7 +333,7 @@ import type {
 import { ErrorMessages } from "@/constants";
 import type { PlayfabClient } from "@/core";
 
-export default function createClientClient(playfab: PlayfabClient) {
+export default function getClientApi(playfab: PlayfabClient) {
   return {
     isClientLoggedIn () {
       return playfab.sessionTicket != null && playfab.sessionTicket.length > 0;
