@@ -98,7 +98,9 @@ export function initializePlayFab(config: PlayfabConfig): PlayfabClient {
       const runner = compose(middleware);
       const result = await runner(ctx);
 
-      if (!result.response.ok) {
+      if (result.data?.error && result.data?.errorMessage) {
+        throw new Error(`${result.data.error} - ${result.data.errorMessage}`);
+      } else if (!result.response.ok) {
         throw new Error(`HTTP ${result.response.status}`);
       }
 
