@@ -198,7 +198,7 @@ import type {
   UpdateScenarioConfigurationResponse,
   UploadMatchResultResponse,
 } from "@/types/multiplayer";
-import type { PlayfabClient } from "@/common";
+import type { PlayfabClient } from "@/core";
 
 export default function createMultiplayerClient(playfab: PlayfabClient) {
   return {

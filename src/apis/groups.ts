@@ -41,7 +41,7 @@ import type {
   UpdateGroupResponse,
   UpdateGroupRoleResponse,
 } from "@/types/groups";
-import type { PlayfabClient } from "@/common";
+import type { PlayfabClient } from "@/core";
 
 export default function createGroupsClient(playfab: PlayfabClient) {
   return {

@@ -31,7 +31,7 @@ import type {
   SetTelemetryKeyActiveResponse,
   WriteEventsResponse,
 } from "@/types/events";
-import type { PlayfabClient } from "@/common";
+import type { PlayfabClient } from "@/core";
 
 export default function createEventsClient(playfab: PlayfabClient) {
   return {

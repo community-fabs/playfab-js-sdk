@@ -6,7 +6,7 @@ import {
   mockFetchResponse
 } from "./fetchUtils";
 import { generatePlayFabResponse } from "./utils";
-import { initializePlayFab, type PlayfabClient } from "@/common";
+import { initializePlayFab, type PlayfabClient } from "@/core";
 
 mockFetch();
 

@@ -39,7 +39,7 @@ import type {
   ListStatisticDefinitionsResponse,
   UpdateStatisticsResponse,
 } from "@/types/progression";
-import type { PlayfabClient } from "@/common";
+import type { PlayfabClient } from "@/core";
 
 export default function createProgressionClient(playfab: PlayfabClient) {
   return {

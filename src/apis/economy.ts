@@ -117,7 +117,7 @@ import type {
   UpdateInventoryItemsResponse,
   UpdateViewResponse,
 } from "@/types/economy";
-import type { PlayfabClient } from "@/common";
+import type { PlayfabClient } from "@/core";
 
 export default function createEconomyClient(playfab: PlayfabClient) {
   return {

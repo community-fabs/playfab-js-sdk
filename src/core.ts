@@ -34,7 +34,7 @@ export interface PlayfabClient {
 
   request<T = any>(path: string, options?: RequestOptions): Promise<T>;
 
-  use(mw: Middleware): PlayfabClient;
+  with(mw: Middleware): PlayfabClient;
 
   getAuthInfo(request: any, authKey: AuthType): {
     header: string;
@@ -114,7 +114,7 @@ export function initializePlayFab(config: PlayfabConfig): PlayfabClient {
       return result.data.data as T;
     },
 
-    use(mw: Middleware) {
+    with(mw: Middleware) {
       middleware.push(mw);
       return client;
     },

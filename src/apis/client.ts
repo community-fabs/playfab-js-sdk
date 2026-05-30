@@ -331,7 +331,7 @@ import type {
   WriteEventResponse,
 } from "@/types/client";
 import { ErrorMessages } from "@/constants";
-import type { PlayfabClient } from "@/common";
+import type { PlayfabClient } from "@/core";
 
 export default function createClientClient(playfab: PlayfabClient) {
   return {

@@ -21,7 +21,7 @@ import type {
   SetProfileLanguageResponse,
   SetEntityProfilePolicyResponse,
 } from "@/types/profiles";
-import type { PlayfabClient } from "@/common";
+import type { PlayfabClient } from "@/core";
 
 export default function createProfilesClient(playfab: PlayfabClient) {
   return {

@@ -15,7 +15,7 @@ import type {
   StartGameResponse,
   UserInfoResponse,
 } from "@/types/matchmaker";
-import type { PlayfabClient } from "@/common";
+import type { PlayfabClient } from "@/core";
 
 export default function createMatchmakerClient(playfab: PlayfabClient) {
   return {

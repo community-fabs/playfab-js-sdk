@@ -3,7 +3,7 @@ import type {
   GetLanguageListRequest,
   GetLanguageListResponse,
 } from "@/types/localization";
-import type { PlayfabClient } from "@/common";
+import type { PlayfabClient } from "@/core";
 
 export default function createLocalizationClient(playfab: PlayfabClient) {
   return {

@@ -21,7 +21,7 @@ import type {
   ListQueuedFunctionsResult,
   EmptyResult,
 } from "@/types/cloudScript";
-import type { PlayfabClient } from "@/common";
+import type { PlayfabClient } from "@/core";
 
 export default function createCloudScriptClient(playfab: PlayfabClient) {
   return {

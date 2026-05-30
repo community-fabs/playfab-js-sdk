@@ -22,7 +22,7 @@ import type {
   GetLatestScorecardResult,
   GetTreatmentAssignmentResult,
 } from "@/types/experimentation";
-import type { PlayfabClient } from "@/common";
+import type { PlayfabClient } from "@/core";
 
 export default function createExperimentationClient(playfab: PlayfabClient) {
   return {

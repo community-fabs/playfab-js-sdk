@@ -288,7 +288,7 @@ import type {
   UpdateUserStatisticsResult,
   WriteEventResponse,
 } from "@/types/server";
-import type { PlayfabClient } from "@/common";
+import type { PlayfabClient } from "@/core";
 
 export default function createServerClient(playfab: PlayfabClient) {
   return {

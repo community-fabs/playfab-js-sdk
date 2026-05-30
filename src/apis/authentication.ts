@@ -9,7 +9,7 @@ import type {
   GetEntityTokenResponse,
   ValidateEntityTokenResponse,
 } from "@/types/authentication";
-import type { PlayfabClient } from "@/common";
+import type { PlayfabClient } from "@/core";
 
 export default function createAuthenticationClient(playfab: PlayfabClient) {
   return {

@@ -13,7 +13,7 @@ import type {
 <% if (it.doc.calls.some(api => api.result === 'LoginResult' || api.request === 'RegisterPlayFabUserRequest')) { %>
 import { ErrorMessages } from "@/constants";
 <% } %>
-import type { PlayfabClient } from "@/common";
+import type { PlayfabClient } from "@/core";
 
 export default function create<%= it.doc.name %>Client(playfab: PlayfabClient) {
   return {

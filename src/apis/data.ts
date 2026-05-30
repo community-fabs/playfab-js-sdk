@@ -15,7 +15,7 @@ import type {
   InitiateFileUploadsResponse,
   SetObjectsResponse,
 } from "@/types/data";
-import type { PlayfabClient } from "@/common";
+import type { PlayfabClient } from "@/core";
 
 export default function createDataClient(playfab: PlayfabClient) {
   return {

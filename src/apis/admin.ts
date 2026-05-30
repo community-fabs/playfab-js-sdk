@@ -230,7 +230,7 @@ import type {
   UpdateUserTitleDisplayNameResult,
   ValidateApiPolicyResponse,
 } from "@/types/admin";
-import type { PlayfabClient } from "@/common";
+import type { PlayfabClient } from "@/core";
 
 export default function createAdminClient(playfab: PlayfabClient) {
   return {

@@ -11,7 +11,7 @@ import type {
   InsightsGetPendingOperationsResponse,
   InsightsOperationResponse,
 } from "@/types/insights";
-import type { PlayfabClient } from "@/common";
+import type { PlayfabClient } from "@/core";
 
 export default function createInsightsClient(playfab: PlayfabClient) {
   return {
