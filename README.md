@@ -4,7 +4,7 @@
 
 Unofficial JavaScript SDK for the various PlayFab API suites.
 
-> ⚠️ This SDK is auto-generated using the same resources the PlayFab team uses, but is not officially endorsed or supported by them in any way, shape, or form.
+> This SDK is auto-generated using the same resources the PlayFab team uses, but this project is not affiliated with or endorsed by PlayFab.
 
 ## 2. NPM support:
 
@@ -14,13 +14,13 @@ You may install the SDK with npm by running:
 
 ## 3. Features
 
-- The SDK generator itself was rewritten using `eta` for templating (significantly reduces generation times) and now resides in the same repo as the SDK itself
-- Additional API documentation and usage instructions are provided
-- All calls use Promises
+- The SDK generator itself was written using `eta` for templating and resides in the same repo as the SDK itself
+- API documentation, sample requests, and usage instructions are provided
+- All API calls use Promises and are `await`able
 - Switched from CommonJS to ES Modules
 - Tree-shakeable
 - Dependency-free
-- Support for custom request middleware (retries, logging, adding headers, etc)
+- Support for [custom request middleware](https://community-fabs.github.io/sdks/js/middleware) (retries, logging, adding headers, etc)
 
 ## 3. Usage
 ### Basic example
@@ -39,7 +39,7 @@ await clientApi.loginWithCustomID({
 });
 ```
 
-### Example logging middleware
+### Example with logging middleware
 ```typescript
 import { initializePlayFab, type RequestMiddleware } from '@community-fabs/playfab-sdk/core';
 
@@ -60,33 +60,7 @@ const playfab = initializePlayFab({
 // Then pass the `playfab` object to the desired API functions like normal
 ```
 
-### Example retry middleware
-```typescript
-import { initializePlayFab, type RequestMiddleware } from '@community-fabs/playfab-sdk/core';
-
-function retryMiddleware(retries = 2): RequestMiddleware {
-  return async (req, next) => {
-    let lastError: unknown;
-
-    for (let i = 0; i <= retries; i++) {
-      try {
-        return await next(req);
-      } catch (err) {
-        lastError = err;
-      }
-    }
-
-    throw lastError;
-  };
-}
-
-const playfab = initializePlayFab({
-  titleId: 'YOUR_TITLE_ID',
-  developerSecretKey: 'YOUR_DEV_SECRET_KEY',
-}).with(retryMiddleware(3));
-
-// Then pass the `playfab` object to the desired API functions like normal
-```
+More information on middleware can be found [here](https://community-fabs.github.io/sdks/js/middleware).
 
 ## 5. Acknowledgements
 
