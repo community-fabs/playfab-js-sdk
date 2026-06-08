@@ -2679,6 +2679,19 @@ export interface GetPlayFabIDsFromPSNOnlineIDsResult extends IPlayFabResultCommo
   Data?: PSNOnlinePlayFabIdPair[];
 }
 
+export interface GetPlayFabIDsFromServerCustomIDsRequest extends IPlayFabRequestCommon {
+  /**
+   * Array of unique server custom player identifiers for which the title needs to get PlayFab identifiers. Cannot contain
+   * more than 25 identifiers.
+   */
+  ServerCustomIds: string[];
+}
+
+export interface GetPlayFabIDsFromServerCustomIDsResult extends IPlayFabResultCommon {
+  /** Mapping of server custom identifiers to PlayFab identifiers. */
+  Data?: ServerCustomIDPlayFabIDPair[];
+}
+
 export interface GetPlayFabIDsFromSteamIDsRequest extends IPlayFabRequestCommon {
   /**
    * Deprecated: Please use SteamStringIDs
@@ -3489,7 +3502,7 @@ export interface LoginWithServerCustomIdRequest extends IPlayFabRequestCommon {
    * @deprecated Do not use
    */
   LoginTitlePlayerAccountEntity?: boolean;
-  /** Player secret that is used to verify API request signatures (Enterprise Only). */
+  /** Player secret that is used to verify API request signatures. */
   PlayerSecret?: string;
   /** The backend server identifier for this player. */
   ServerCustomId: string;
@@ -4286,7 +4299,7 @@ export interface SetGameServerInstanceTagsResult extends IPlayFabResultCommon {
 }
 
 export interface SetPlayerSecretRequest extends IPlayFabRequestCommon {
-  /** Player secret that is used to verify API request signatures (Enterprise Only). */
+  /** Player secret that is used to verify API request signatures. */
   PlayerSecret?: string;
   /** Unique PlayFab assigned ID of the user on whom the operation will be performed. */
   PlayFabId: string;

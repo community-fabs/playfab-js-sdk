@@ -4650,7 +4650,7 @@ export interface SetMembershipOverrideResult extends IPlayFabResultCommon {
 }
 
 export interface SetPlayerSecretRequest extends IPlayFabRequestCommon {
-  /** Player secret that is used to verify API request signatures (Enterprise Only). */
+  /** Player secret that is used to verify API request signatures. */
   PlayerSecret?: string;
   /** Unique PlayFab assigned ID of the user on whom the operation will be performed. */
   PlayFabId: string;

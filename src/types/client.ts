@@ -2809,7 +2809,7 @@ export interface LoginWithAndroidDeviceIDRequest extends IPlayFabRequestCommon {
   CreateAccount?: boolean;
   /** The optional custom tags associated with the request (e.g. build number, external trace identifiers, etc.). */
   CustomTags?: Record<string, string | null>;
-  /** Base64 encoded body that is encrypted with the Title&#39;s public RSA key (Enterprise Only). */
+  /** Base64 encoded body that is encrypted with the Title&#39;s public RSA key. */
   EncryptedRequest?: string;
   /** Flags for which pieces of info to return for the user. */
   InfoRequestParameters?: GetPlayerCombinedInfoRequestParams;
@@ -2820,7 +2820,7 @@ export interface LoginWithAndroidDeviceIDRequest extends IPlayFabRequestCommon {
   LoginTitlePlayerAccountEntity?: boolean;
   /** Specific Operating System version for the user&#39;s device. */
   OS?: string;
-  /** Player secret that is used to verify API request signatures (Enterprise Only). */
+  /** Player secret that is used to verify API request signatures. */
   PlayerSecret?: string;
   /**
    * Unique identifier for the title, found in the Settings &gt; Game Properties section of the PlayFab developer site when a
@@ -2834,7 +2834,7 @@ export interface LoginWithAppleRequest extends IPlayFabRequestCommon {
   CreateAccount?: boolean;
   /** The optional custom tags associated with the request (e.g. build number, external trace identifiers, etc.). */
   CustomTags?: Record<string, string | null>;
-  /** Base64 encoded body that is encrypted with the Title&#39;s public RSA key (Enterprise Only). */
+  /** Base64 encoded body that is encrypted with the Title&#39;s public RSA key. */
   EncryptedRequest?: string;
   /**
    * The JSON Web token (JWT) returned by Apple after login. Represented as the identityToken field in the authorization
@@ -2849,7 +2849,7 @@ export interface LoginWithAppleRequest extends IPlayFabRequestCommon {
    * @deprecated Do not use
    */
   LoginTitlePlayerAccountEntity?: boolean;
-  /** Player secret that is used to verify API request signatures (Enterprise Only). */
+  /** Player secret that is used to verify API request signatures. */
   PlayerSecret?: string;
   /**
    * Unique identifier for the title, found in the Settings &gt; Game Properties section of the PlayFab developer site when a
@@ -2863,7 +2863,7 @@ export interface LoginWithBattleNetRequest extends IPlayFabRequestCommon {
   CreateAccount?: boolean;
   /** The optional custom tags associated with the request (e.g. build number, external trace identifiers, etc.). */
   CustomTags?: Record<string, string | null>;
-  /** Base64 encoded body that is encrypted with the Title&#39;s public RSA key (Enterprise Only). */
+  /** Base64 encoded body that is encrypted with the Title&#39;s public RSA key. */
   EncryptedRequest?: string;
   /** The JSON Web Token (JWT) returned by Battle.net after login */
   IdentityToken: string;
@@ -2874,7 +2874,7 @@ export interface LoginWithBattleNetRequest extends IPlayFabRequestCommon {
    * @deprecated Do not use
    */
   LoginTitlePlayerAccountEntity?: boolean;
-  /** Player secret that is used to verify API request signatures (Enterprise Only). */
+  /** Player secret that is used to verify API request signatures. */
   PlayerSecret?: string;
   /**
    * Unique identifier for the title, found in the Settings &gt; Game Properties section of the PlayFab developer site when a
@@ -2890,7 +2890,7 @@ export interface LoginWithCustomIDRequest extends IPlayFabRequestCommon {
   CustomId?: string;
   /** The optional custom tags associated with the request (e.g. build number, external trace identifiers, etc.). */
   CustomTags?: Record<string, string | null>;
-  /** Base64 encoded body that is encrypted with the Title&#39;s public RSA key (Enterprise Only). */
+  /** Base64 encoded body that is encrypted with the Title&#39;s public RSA key. */
   EncryptedRequest?: string;
   /** Flags for which pieces of info to return for the user. */
   InfoRequestParameters?: GetPlayerCombinedInfoRequestParams;
@@ -2899,7 +2899,7 @@ export interface LoginWithCustomIDRequest extends IPlayFabRequestCommon {
    * @deprecated Do not use
    */
   LoginTitlePlayerAccountEntity?: boolean;
-  /** Player secret that is used to verify API request signatures (Enterprise Only). */
+  /** Player secret that is used to verify API request signatures. */
   PlayerSecret?: string;
   /**
    * Unique identifier for the title, found in the Settings &gt; Game Properties section of the PlayFab developer site when a
@@ -2934,7 +2934,7 @@ export interface LoginWithFacebookInstantGamesIdRequest extends IPlayFabRequestC
   CreateAccount?: boolean;
   /** The optional custom tags associated with the request (e.g. build number, external trace identifiers, etc.). */
   CustomTags?: Record<string, string | null>;
-  /** Base64 encoded body that is encrypted with the Title&#39;s public RSA key (Enterprise Only). */
+  /** Base64 encoded body that is encrypted with the Title&#39;s public RSA key. */
   EncryptedRequest?: string;
   /** Facebook Instant Games signature for the user. */
   FacebookInstantGamesSignature: string;
@@ -2945,7 +2945,7 @@ export interface LoginWithFacebookInstantGamesIdRequest extends IPlayFabRequestC
    * @deprecated Do not use
    */
   LoginTitlePlayerAccountEntity?: boolean;
-  /** Player secret that is used to verify API request signatures (Enterprise Only). */
+  /** Player secret that is used to verify API request signatures. */
   PlayerSecret?: string;
   /**
    * Unique identifier for the title, found in the Settings &gt; Game Properties section of the PlayFab developer site when a
@@ -2963,7 +2963,7 @@ export interface LoginWithFacebookRequest extends IPlayFabRequestCommon {
   CreateAccount?: boolean;
   /** The optional custom tags associated with the request (e.g. build number, external trace identifiers, etc.). */
   CustomTags?: Record<string, string | null>;
-  /** Base64 encoded body that is encrypted with the Title&#39;s public RSA key (Enterprise Only). */
+  /** Base64 encoded body that is encrypted with the Title&#39;s public RSA key. */
   EncryptedRequest?: string;
   /** Flags for which pieces of info to return for the user. */
   InfoRequestParameters?: GetPlayerCombinedInfoRequestParams;
@@ -2972,7 +2972,7 @@ export interface LoginWithFacebookRequest extends IPlayFabRequestCommon {
    * @deprecated Do not use
    */
   LoginTitlePlayerAccountEntity?: boolean;
-  /** Player secret that is used to verify API request signatures (Enterprise Only). */
+  /** Player secret that is used to verify API request signatures. */
   PlayerSecret?: string;
   /**
    * Unique identifier for the title, found in the Settings &gt; Game Properties section of the PlayFab developer site when a
@@ -2986,7 +2986,7 @@ export interface LoginWithGameCenterRequest extends IPlayFabRequestCommon {
   CreateAccount?: boolean;
   /** The optional custom tags associated with the request (e.g. build number, external trace identifiers, etc.). */
   CustomTags?: Record<string, string | null>;
-  /** Base64 encoded body that is encrypted with the Title&#39;s public RSA key (Enterprise Only). */
+  /** Base64 encoded body that is encrypted with the Title&#39;s public RSA key. */
   EncryptedRequest?: string;
   /** Flags for which pieces of info to return for the user. */
   InfoRequestParameters?: GetPlayerCombinedInfoRequestParams;
@@ -2997,7 +2997,7 @@ export interface LoginWithGameCenterRequest extends IPlayFabRequestCommon {
   LoginTitlePlayerAccountEntity?: boolean;
   /** Unique Game Center player id. */
   PlayerId?: string;
-  /** Player secret that is used to verify API request signatures (Enterprise Only). */
+  /** Player secret that is used to verify API request signatures. */
   PlayerSecret?: string;
   /** The URL for the public encryption key that will be used to verify the signature. */
   PublicKeyUrl?: string;
@@ -3027,7 +3027,7 @@ export interface LoginWithGoogleAccountRequest extends IPlayFabRequestCommon {
   CreateAccount?: boolean;
   /** The optional custom tags associated with the request (e.g. build number, external trace identifiers, etc.). */
   CustomTags?: Record<string, string | null>;
-  /** Base64 encoded body that is encrypted with the Title&#39;s public RSA key (Enterprise Only). */
+  /** Base64 encoded body that is encrypted with the Title&#39;s public RSA key. */
   EncryptedRequest?: string;
   /** Flags for which pieces of info to return for the user. */
   InfoRequestParameters?: GetPlayerCombinedInfoRequestParams;
@@ -3036,7 +3036,7 @@ export interface LoginWithGoogleAccountRequest extends IPlayFabRequestCommon {
    * @deprecated Do not use
    */
   LoginTitlePlayerAccountEntity?: boolean;
-  /** Player secret that is used to verify API request signatures (Enterprise Only). */
+  /** Player secret that is used to verify API request signatures. */
   PlayerSecret?: string;
   /**
    * Deprecated - Do not use
@@ -3062,7 +3062,7 @@ export interface LoginWithGooglePlayGamesServicesRequest extends IPlayFabRequest
   CreateAccount?: boolean;
   /** The optional custom tags associated with the request (e.g. build number, external trace identifiers, etc.). */
   CustomTags?: Record<string, string | null>;
-  /** Base64 encoded body that is encrypted with the Title&#39;s public RSA key (Enterprise Only). */
+  /** Base64 encoded body that is encrypted with the Title&#39;s public RSA key. */
   EncryptedRequest?: string;
   /** Flags for which pieces of info to return for the user. */
   InfoRequestParameters?: GetPlayerCombinedInfoRequestParams;
@@ -3071,7 +3071,7 @@ export interface LoginWithGooglePlayGamesServicesRequest extends IPlayFabRequest
    * @deprecated Do not use
    */
   LoginTitlePlayerAccountEntity?: boolean;
-  /** Player secret that is used to verify API request signatures (Enterprise Only). */
+  /** Player secret that is used to verify API request signatures. */
   PlayerSecret?: string;
   /**
    * OAuth 2.0 server authentication code obtained on the client by calling the requestServerSideAccess()
@@ -3094,7 +3094,7 @@ export interface LoginWithIOSDeviceIDRequest extends IPlayFabRequestCommon {
   DeviceId?: string;
   /** Specific model of the user&#39;s device. */
   DeviceModel?: string;
-  /** Base64 encoded body that is encrypted with the Title&#39;s public RSA key (Enterprise Only). */
+  /** Base64 encoded body that is encrypted with the Title&#39;s public RSA key. */
   EncryptedRequest?: string;
   /** Flags for which pieces of info to return for the user. */
   InfoRequestParameters?: GetPlayerCombinedInfoRequestParams;
@@ -3105,7 +3105,7 @@ export interface LoginWithIOSDeviceIDRequest extends IPlayFabRequestCommon {
   LoginTitlePlayerAccountEntity?: boolean;
   /** Specific Operating System version for the user&#39;s device. */
   OS?: string;
-  /** Player secret that is used to verify API request signatures (Enterprise Only). */
+  /** Player secret that is used to verify API request signatures. */
   PlayerSecret?: string;
   /**
    * Unique identifier for the title, found in the Settings &gt; Game Properties section of the PlayFab developer site when a
@@ -3121,7 +3121,7 @@ export interface LoginWithKongregateRequest extends IPlayFabRequestCommon {
   CreateAccount?: boolean;
   /** The optional custom tags associated with the request (e.g. build number, external trace identifiers, etc.). */
   CustomTags?: Record<string, string | null>;
-  /** Base64 encoded body that is encrypted with the Title&#39;s public RSA key (Enterprise Only). */
+  /** Base64 encoded body that is encrypted with the Title&#39;s public RSA key. */
   EncryptedRequest?: string;
   /** Flags for which pieces of info to return for the user. */
   InfoRequestParameters?: GetPlayerCombinedInfoRequestParams;
@@ -3132,7 +3132,7 @@ export interface LoginWithKongregateRequest extends IPlayFabRequestCommon {
    * @deprecated Do not use
    */
   LoginTitlePlayerAccountEntity?: boolean;
-  /** Player secret that is used to verify API request signatures (Enterprise Only). */
+  /** Player secret that is used to verify API request signatures. */
   PlayerSecret?: string;
   /**
    * Unique identifier for the title, found in the Settings &gt; Game Properties section of the PlayFab developer site when a
@@ -3146,7 +3146,7 @@ export interface LoginWithNintendoServiceAccountRequest extends IPlayFabRequestC
   CreateAccount?: boolean;
   /** The optional custom tags associated with the request (e.g. build number, external trace identifiers, etc.). */
   CustomTags?: Record<string, string | null>;
-  /** Base64 encoded body that is encrypted with the Title&#39;s public RSA key (Enterprise Only). */
+  /** Base64 encoded body that is encrypted with the Title&#39;s public RSA key. */
   EncryptedRequest?: string;
   /** The JSON Web token (JWT) returned by Nintendo after login. */
   IdentityToken: string;
@@ -3157,7 +3157,7 @@ export interface LoginWithNintendoServiceAccountRequest extends IPlayFabRequestC
    * @deprecated Do not use
    */
   LoginTitlePlayerAccountEntity?: boolean;
-  /** Player secret that is used to verify API request signatures (Enterprise Only). */
+  /** Player secret that is used to verify API request signatures. */
   PlayerSecret?: string;
   /**
    * Unique identifier for the title, found in the Settings &gt; Game Properties section of the PlayFab developer site when a
@@ -3171,7 +3171,7 @@ export interface LoginWithNintendoSwitchDeviceIdRequest extends IPlayFabRequestC
   CreateAccount?: boolean;
   /** The optional custom tags associated with the request (e.g. build number, external trace identifiers, etc.). */
   CustomTags?: Record<string, string | null>;
-  /** Base64 encoded body that is encrypted with the Title&#39;s public RSA key (Enterprise Only). */
+  /** Base64 encoded body that is encrypted with the Title&#39;s public RSA key. */
   EncryptedRequest?: string;
   /** Flags for which pieces of info to return for the user. */
   InfoRequestParameters?: GetPlayerCombinedInfoRequestParams;
@@ -3182,7 +3182,7 @@ export interface LoginWithNintendoSwitchDeviceIdRequest extends IPlayFabRequestC
   LoginTitlePlayerAccountEntity?: boolean;
   /** Nintendo Switch unique identifier for the user&#39;s device. */
   NintendoSwitchDeviceId?: string;
-  /** Player secret that is used to verify API request signatures (Enterprise Only). */
+  /** Player secret that is used to verify API request signatures. */
   PlayerSecret?: string;
   /**
    * Unique identifier for the title, found in the Settings &gt; Game Properties section of the PlayFab developer site when a
@@ -3198,7 +3198,7 @@ export interface LoginWithOpenIdConnectRequest extends IPlayFabRequestCommon {
   CreateAccount?: boolean;
   /** The optional custom tags associated with the request (e.g. build number, external trace identifiers, etc.). */
   CustomTags?: Record<string, string | null>;
-  /** Base64 encoded body that is encrypted with the Title&#39;s public RSA key (Enterprise Only). */
+  /** Base64 encoded body that is encrypted with the Title&#39;s public RSA key. */
   EncryptedRequest?: string;
   /**
    * The JSON Web token (JWT) returned by the identity provider after login. Represented as the id_token field in the
@@ -3212,7 +3212,7 @@ export interface LoginWithOpenIdConnectRequest extends IPlayFabRequestCommon {
    * @deprecated Do not use
    */
   LoginTitlePlayerAccountEntity?: boolean;
-  /** Player secret that is used to verify API request signatures (Enterprise Only). */
+  /** Player secret that is used to verify API request signatures. */
   PlayerSecret?: string;
   /**
    * Unique identifier for the title, found in the Settings &gt; Game Properties section of the PlayFab developer site when a
@@ -3249,7 +3249,7 @@ export interface LoginWithPSNRequest extends IPlayFabRequestCommon {
   CreateAccount?: boolean;
   /** The optional custom tags associated with the request (e.g. build number, external trace identifiers, etc.). */
   CustomTags?: Record<string, string | null>;
-  /** Base64 encoded body that is encrypted with the Title&#39;s public RSA key (Enterprise Only). */
+  /** Base64 encoded body that is encrypted with the Title&#39;s public RSA key. */
   EncryptedRequest?: string;
   /** Flags for which pieces of info to return for the user. */
   InfoRequestParameters?: GetPlayerCombinedInfoRequestParams;
@@ -3260,7 +3260,7 @@ export interface LoginWithPSNRequest extends IPlayFabRequestCommon {
    * @deprecated Do not use
    */
   LoginTitlePlayerAccountEntity?: boolean;
-  /** Player secret that is used to verify API request signatures (Enterprise Only). */
+  /** Player secret that is used to verify API request signatures. */
   PlayerSecret?: string;
   /** Redirect URI supplied to PlayStation :tm: Network when requesting an auth code */
   RedirectUri?: string;
@@ -3276,7 +3276,7 @@ export interface LoginWithSteamRequest extends IPlayFabRequestCommon {
   CreateAccount?: boolean;
   /** The optional custom tags associated with the request (e.g. build number, external trace identifiers, etc.). */
   CustomTags?: Record<string, string | null>;
-  /** Base64 encoded body that is encrypted with the Title&#39;s public RSA key (Enterprise Only). */
+  /** Base64 encoded body that is encrypted with the Title&#39;s public RSA key. */
   EncryptedRequest?: string;
   /** Flags for which pieces of info to return for the user. */
   InfoRequestParameters?: GetPlayerCombinedInfoRequestParams;
@@ -3285,7 +3285,7 @@ export interface LoginWithSteamRequest extends IPlayFabRequestCommon {
    * @deprecated Do not use
    */
   LoginTitlePlayerAccountEntity?: boolean;
-  /** Player secret that is used to verify API request signatures (Enterprise Only). */
+  /** Player secret that is used to verify API request signatures. */
   PlayerSecret?: string;
   /**
    * Authentication token for the user, returned as a byte array from Steam, and converted to a string (for example, the byte
@@ -3311,7 +3311,7 @@ export interface LoginWithTwitchRequest extends IPlayFabRequestCommon {
   CreateAccount?: boolean;
   /** The optional custom tags associated with the request (e.g. build number, external trace identifiers, etc.). */
   CustomTags?: Record<string, string | null>;
-  /** Base64 encoded body that is encrypted with the Title&#39;s public RSA key (Enterprise Only). */
+  /** Base64 encoded body that is encrypted with the Title&#39;s public RSA key. */
   EncryptedRequest?: string;
   /** Flags for which pieces of info to return for the user. */
   InfoRequestParameters?: GetPlayerCombinedInfoRequestParams;
@@ -3320,7 +3320,7 @@ export interface LoginWithTwitchRequest extends IPlayFabRequestCommon {
    * @deprecated Do not use
    */
   LoginTitlePlayerAccountEntity?: boolean;
-  /** Player secret that is used to verify API request signatures (Enterprise Only). */
+  /** Player secret that is used to verify API request signatures. */
   PlayerSecret?: string;
   /**
    * Unique identifier for the title, found in the Settings &gt; Game Properties section of the PlayFab developer site when a
@@ -3334,7 +3334,7 @@ export interface LoginWithXboxRequest extends IPlayFabRequestCommon {
   CreateAccount?: boolean;
   /** The optional custom tags associated with the request (e.g. build number, external trace identifiers, etc.). */
   CustomTags?: Record<string, string | null>;
-  /** Base64 encoded body that is encrypted with the Title&#39;s public RSA key (Enterprise Only). */
+  /** Base64 encoded body that is encrypted with the Title&#39;s public RSA key. */
   EncryptedRequest?: string;
   /** Flags for which pieces of info to return for the user. */
   InfoRequestParameters?: GetPlayerCombinedInfoRequestParams;
@@ -3343,7 +3343,7 @@ export interface LoginWithXboxRequest extends IPlayFabRequestCommon {
    * @deprecated Do not use
    */
   LoginTitlePlayerAccountEntity?: boolean;
-  /** Player secret that is used to verify API request signatures (Enterprise Only). */
+  /** Player secret that is used to verify API request signatures. */
   PlayerSecret?: string;
   /**
    * Unique identifier for the title, found in the Settings &gt; Game Properties section of the PlayFab developer site when a
@@ -3822,7 +3822,7 @@ export interface RegisterPlayFabUserRequest extends IPlayFabRequestCommon {
   DisplayName?: string;
   /** User email address attached to their account */
   Email?: string;
-  /** Base64 encoded body that is encrypted with the Title&#39;s public RSA key (Enterprise Only). */
+  /** Base64 encoded body that is encrypted with the Title&#39;s public RSA key. */
   EncryptedRequest?: string;
   /** Flags for which pieces of info to return for the user. */
   InfoRequestParameters?: GetPlayerCombinedInfoRequestParams;
@@ -3839,7 +3839,7 @@ export interface RegisterPlayFabUserRequest extends IPlayFabRequestCommon {
   Origination?: string;
   /** Password for the PlayFab account (6-100 characters) */
   Password?: string;
-  /** Player secret that is used to verify API request signatures (Enterprise Only). */
+  /** Player secret that is used to verify API request signatures. */
   PlayerSecret?: string;
   /**
    * An optional parameter that specifies whether both the username and email parameters are required. If true, both
@@ -4052,9 +4052,9 @@ export interface SetFriendTagsResult extends IPlayFabResultCommon {
 }
 
 export interface SetPlayerSecretRequest extends IPlayFabRequestCommon {
-  /** Base64 encoded body that is encrypted with the Title&#39;s public RSA key (Enterprise Only). */
+  /** Base64 encoded body that is encrypted with the Title&#39;s public RSA key. */
   EncryptedRequest?: string;
-  /** Player secret that is used to verify API request signatures (Enterprise Only). */
+  /** Player secret that is used to verify API request signatures. */
   PlayerSecret?: string;
 }
 

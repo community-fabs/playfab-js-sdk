@@ -54,6 +54,7 @@ import type {
   GetPlayFabIDsFromOpenIdsRequest,
   GetPlayFabIDsFromPSNAccountIDsRequest,
   GetPlayFabIDsFromPSNOnlineIDsRequest,
+  GetPlayFabIDsFromServerCustomIDsRequest,
   GetPlayFabIDsFromSteamIDsRequest,
   GetPlayFabIDsFromSteamNamesRequest,
   GetPlayFabIDsFromTwitchIDsRequest,
@@ -210,6 +211,7 @@ import type {
   GetPlayFabIDsFromOpenIdsResult,
   GetPlayFabIDsFromPSNAccountIDsResult,
   GetPlayFabIDsFromPSNOnlineIDsResult,
+  GetPlayFabIDsFromServerCustomIDsResult,
   GetPlayFabIDsFromSteamIDsResult,
   GetPlayFabIDsFromSteamNamesResult,
   GetPlayFabIDsFromTwitchIDsResult,
@@ -1345,6 +1347,24 @@ export default function getServerApi(playfab: PlayfabClient) {
      */
     getPlayFabIDsFromPSNOnlineIDs (request: GetPlayFabIDsFromPSNOnlineIDsRequest) {
       return playfab.request<GetPlayFabIDsFromPSNOnlineIDsResult>("/Server/GetPlayFabIDsFromPSNOnlineIDs", {
+        body: request,
+        authType: "SecretKey",
+      });
+    },
+
+    /**
+     * Retrieves the associated PlayFab account identifiers for the given set of server custom player identifiers.
+     * 
+     * {@link https://docs.microsoft.com/rest/api/playfab/server/account-management/getplayfabidsfromservercustomids Microsoft Documentation}
+     * @example
+     * await serverApi.getPlayFabIDsFromServerCustomIDs({
+     *   "ServerCustomIds": [
+     *     "asdjas09u23jfa"
+     *   ]
+     * });
+     */
+    getPlayFabIDsFromServerCustomIDs (request: GetPlayFabIDsFromServerCustomIDsRequest) {
+      return playfab.request<GetPlayFabIDsFromServerCustomIDsResult>("/Server/GetPlayFabIDsFromServerCustomIDs", {
         body: request,
         authType: "SecretKey",
       });
