@@ -125,7 +125,7 @@ export function getPropertyType(property, datatype) {
 
 export function getAuthParams(apiCall) {
   if (apiCall.url === "/Authentication/GetEntityToken")
-    return "\"AuthKey\"";
+    return "authKey";
   if (["EntityToken", "SessionTicket", "SecretKey"].includes(apiCall.auth))
     return `"${apiCall.auth}"`;
 
@@ -134,16 +134,16 @@ export function getAuthParams(apiCall) {
 
 export function getRequestActions(tabbing, apiCall) {
   if (apiCall.url === "/Authentication/GetEntityToken")
-    return tabbing + "let authKey: string | undefined = undefined;\n"
-      + tabbing + "let authValue: string | undefined = undefined;\n"
-      + tabbing + "if (!authKey && playfab.sessionTicket) {\n"
-      + tabbing + "  let authInfo = playfab.getAuthInfo(request, \"SessionTicket\");\n"
-      + tabbing + "  authKey = authInfo.header, authValue = authInfo.authValue;\n"
-      + tabbing + "}\n"
-      + tabbing + "if (!authKey && playfab.config.developerSecretKey) {\n"
-      + tabbing + "  let authInfo = playfab.getAuthInfo(request, \"SecretKey\");\n"
-      + tabbing + "  authKey = authInfo.header, authValue = authInfo.authValue;\n"
-      + tabbing + "}\n";
+    return tabbing + 'let authKey: AuthType | undefined = undefined;\n'
+      + tabbing + 'if (!authKey && playfab.sessionTicket) {\n'
+      + tabbing + '  authKey = "SessionTicket";\n'
+      + tabbing + '} else if (!authKey && playfab.config.developerSecretKey) {\n'
+      + tabbing + '  authKey = "SecretKey";\n'
+      + tabbing + '} else if (!authKey && playfab.entityToken) {\n'
+      + tabbing + '  authKey = "EntityToken";\n'
+      + tabbing + '} else {\n'
+      + tabbing + '  throw new Error("No valid authentication method found for getEntityToken");\n'
+      + tabbing + '}\n';
   if (apiCall.result === "LoginResult" || apiCall.request === "RegisterPlayFabUserRequest")
     return tabbing + "request.TitleId = playfab.config.titleId ? playfab.config.titleId : request.TitleId;\n"
       + tabbing + "if (!request.TitleId) throw ErrorMessages.titleId;\n"

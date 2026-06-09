@@ -14,7 +14,7 @@ export type AuthContext = {
   EntityToken?: string;
 };
 
-export type AuthType = "AuthKey" | "EntityToken" | "SessionTicket" | "SecretKey";
+export type AuthType = "EntityToken" | "SessionTicket" | "SecretKey";
 
 export const ErrorMessages = {
   titleId: "Must have config.titleId set to call this method",

@@ -9,6 +9,7 @@ import type {
   GetEntityTokenResponse,
   ValidateEntityTokenResponse,
 } from "@/types/authentication";
+import type { AuthType } from "@/constants";
 import type { PlayfabClient } from "@/core";
 
 export default function getAuthenticationApi(playfab: PlayfabClient) {
@@ -63,19 +64,19 @@ export default function getAuthenticationApi(playfab: PlayfabClient) {
      * await authenticationApi.getEntityToken({});
      */
     getEntityToken (request: GetEntityTokenRequest) {
-      let authKey: string | undefined = undefined;
-      let authValue: string | undefined = undefined;
+      let authKey: AuthType | undefined = undefined;
       if (!authKey && playfab.sessionTicket) {
-        let authInfo = playfab.getAuthInfo(request, "SessionTicket");
-        authKey = authInfo.header, authValue = authInfo.authValue;
-      }
-      if (!authKey && playfab.config.developerSecretKey) {
-        let authInfo = playfab.getAuthInfo(request, "SecretKey");
-        authKey = authInfo.header, authValue = authInfo.authValue;
+        authKey = "SessionTicket";
+      } else if (!authKey && playfab.config.developerSecretKey) {
+        authKey = "SecretKey";
+      } else if (!authKey && playfab.entityToken) {
+        authKey = "EntityToken";
+      } else {
+        throw new Error("No valid authentication method found for getEntityToken");
       }
       return playfab.request<GetEntityTokenResponse>("/Authentication/GetEntityToken", {
           body: request,
-          authType: "AuthKey",
+          authType: authKey,
         })
         .then(result => {
           if (result?.EntityToken)

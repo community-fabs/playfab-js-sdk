@@ -13,6 +13,9 @@ import type {
 <% if (it.doc.calls.some(api => api.result === 'LoginResult' || api.request === 'RegisterPlayFabUserRequest')) { %>
 import { ErrorMessages } from "@/constants";
 <% } %>
+<% if (it.doc.calls.some(api => api.url == "/Authentication/GetEntityToken")) { %>
+import type { AuthType } from "@/constants";
+<% } %>
 import type { PlayfabClient } from "@/core";
 
 export default function <%= it.doc.functionName %>(playfab: PlayfabClient) {
