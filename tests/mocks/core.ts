@@ -11,6 +11,11 @@ export function createMockPlayfabClient(
 
   const getAuthInfo: jest.MockedFunction<PlayfabClient["getAuthInfo"]> =
     jest.fn();
+  getAuthInfo.mockReturnValue({
+      header: "X-EntityToken",
+      authValue: "mock_entity_token",
+      error: "",
+    });
 
   const updateAuthContext: jest.MockedFunction<PlayfabClient["updateAuthContext"]> =
     jest.fn();
