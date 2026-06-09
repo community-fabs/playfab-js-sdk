@@ -1,6 +1,6 @@
 {
   "name": "@community-fabs/playfab-sdk",
-  "version": "1.217.260605",
+  "version": "1.217.260605-1",
   "description": "Unofficial Playfab SDK for JS client and server applications",
   "license": "Apache-2.0",
   "type": "module",
