@@ -2243,6 +2243,11 @@ export interface GetFriendsListRequest extends IPlayFabRequestCommon {
    * @deprecated Please use ExternalPlatformFriends instead.
    */
   IncludeSteamFriends?: boolean;
+  /**
+   * If true, include friends from the same namespace even if they have not logged in to the current title. Defaults to
+   * false.
+   */
+  NamespaceWide?: boolean;
   /** PlayFab identifier of the player whose friend list to get. */
   PlayFabId: string;
   /**

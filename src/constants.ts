@@ -39,7 +39,7 @@ export const AuthInfoMap = {
 } as const;
 
 export default {
-  sdkVersion: "1.217.260605",
-  sdkFingerprint: "JavaScriptSDK-1.217.260605",
+  sdkVersion: "1.218.260619",
+  sdkFingerprint: "JavaScriptSDK-1.218.260619",
   buildIdentifier: "ghactions_community-playfab-js-sdk",
 };

@@ -1488,6 +1488,11 @@ export interface GetFriendsListRequest extends IPlayFabRequestCommon {
    */
   IncludeSteamFriends?: boolean;
   /**
+   * If true, include friends from the same namespace even if they have not logged in to the current title. Defaults to
+   * false.
+   */
+  NamespaceWide?: boolean;
+  /**
    * If non-null, this determines which properties of the resulting player profiles to return. For API calls from the client,
    * only the allowed client profile properties for the title may be requested. These allowed properties are configured in
    * the Game Manager &quot;Client Profile Options&quot; tab in the &quot;Settings&quot; section.
