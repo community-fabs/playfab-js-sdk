@@ -877,6 +877,25 @@ export interface CreateInsightsScheduledScalingTaskRequest extends IPlayFabReque
   Schedule?: string;
 }
 
+export interface CreateIPBanRequest extends IPlayFabRequestCommon {
+  /** The optional custom tags associated with the request (e.g. build number, external trace identifiers, etc.). */
+  CustomTags?: Record<string, string | null>;
+  /**
+   * The UTC date and time when the IP ban expires. Leave this blank for a permanent ban. Must be later than the current time
+   * and no more than 100 years in the future.
+   */
+  Expires?: string;
+  /** The IP address to be banned. */
+  IPAddress: string;
+  /** The reason for the IP ban. Maximum 140 characters. */
+  Reason?: string;
+}
+
+export interface CreateIPBanResult extends IPlayFabResultCommon {
+  /** Information on the ban that was created */
+  IPBanData?: IPBanInfo;
+}
+
 export interface CreateOpenIdConnectionRequest extends IPlayFabRequestCommon {
   /** The client ID given by the ID provider. */
   ClientId: string;
@@ -2180,6 +2199,8 @@ type GenericErrorCodes = "Success"
   | "AzureSubscriptionNotEligibleForLinking"
   | "EntityIsNotAMember"
   | "IPAddressNotFound"
+  | "PSNNextGenNotConfiguredForTitle"
+  | "InvalidNintendoIssuer"
   | "MatchmakingEntityInvalid"
   | "MatchmakingPlayerAttributesInvalid"
   | "MatchmakingQueueNotFound"
@@ -2498,6 +2519,8 @@ type GenericErrorCodes = "Success"
   | "GameSaveTitleConfigNoUpdatesRequested"
   | "GameSavePlayerNotEligibleForTransfer"
   | "GameSaveAlreadyAutoRolledBack"
+  | "GameSaveManifestNotEligibleForRestore"
+  | "GameSaveManifestArchived"
   | "StateShareForbidden"
   | "StateShareTitleNotInFlight"
   | "StateShareStateNotFound"
@@ -2551,6 +2574,14 @@ export interface GetAllActionGroupsRequest extends IPlayFabRequestCommon {
 export interface GetAllActionGroupsResult extends IPlayFabResultCommon {
   /** List of Action Groups. */
   ActionGroups: GetActionGroupResult[];
+}
+
+export interface GetAllIPBansRequest extends IPlayFabRequestCommon {
+}
+
+export interface GetAllIPBansResult extends IPlayFabResultCommon {
+  /** Information on all IP bans */
+  IPBanData?: IPBanInfo[];
 }
 
 export interface GetAllSegmentsRequest extends IPlayFabRequestCommon {
@@ -2673,6 +2704,16 @@ export interface GetEventSinksRequest extends IPlayFabRequestCommon {
 export interface GetEventSinksResult extends IPlayFabResultCommon {
   /** The set of sinks to which to route PlayStream and Telemetry event data. */
   Sinks: EventSink[];
+}
+
+export interface GetIPBanRequest extends IPlayFabRequestCommon {
+  /** The IP address of the ban to retrieve information on. */
+  IPAddress: string;
+}
+
+export interface GetIPBanResult extends IPlayFabResultCommon {
+  /** Information on the ban */
+  IPBanData?: IPBanInfo[];
 }
 
 /** @deprecated Do not use */
@@ -3222,6 +3263,21 @@ export interface IncrementPlayerStatisticVersionResult extends IPlayFabResultCom
 export interface InsightsScalingTaskParameter {
   /** Insights Performance Level to scale to. */
   Level: number;
+}
+
+export interface IPBanInfo {
+  /** The active state of this ban. */
+  Active: boolean;
+  /** PlayFab Developer ID of who issued the ban. Null if ban issued via Title Secret Key. */
+  BannedByDeveloperId?: string;
+  /** The time when this IP ban was applied. */
+  Created?: string;
+  /** The time when this ban expires. Permanent bans do not have expiration date. */
+  Expires?: string;
+  /** The IP address on which the ban was applied. */
+  IPAddress?: string;
+  /** The reason why this IP ban was applied. */
+  Reason?: string;
 }
 
 export interface ItemGrant {
@@ -3996,6 +4052,16 @@ export interface RevokeInventoryItemsResult extends IPlayFabResultCommon {
 }
 
 export interface RevokeInventoryResult extends IPlayFabResultCommon {
+}
+
+export interface RevokeIPBanRequest extends IPlayFabRequestCommon {
+  /** The IP address of the ban to be revoked. */
+  IPAddress: string;
+}
+
+export interface RevokeIPBanResult extends IPlayFabResultCommon {
+  /** Information on the ban that was revoked */
+  IPBanData?: IPBanInfo;
 }
 
 export interface RevokeItemError {
@@ -5048,6 +5114,26 @@ export interface UpdateCloudScriptResult extends IPlayFabResultCommon {
   Version: number;
 }
 
+export interface UpdateIPBanRequest extends IPlayFabRequestCommon {
+  /** The updated active state for the IP ban. Null for no change. */
+  Active?: boolean;
+  /** The optional custom tags associated with the request (e.g. build number, external trace identifiers, etc.). */
+  CustomTags?: Record<string, string | null>;
+  /** The updated expiration date for the IP ban. Null for no change. */
+  Expires?: string;
+  /** The IP address of the ban to be updated. */
+  IPAddress: string;
+  /** Whether to make this IP ban permanent. Set to true to make this IP ban permanent. This will not modify Active state. */
+  Permanent?: boolean;
+  /** The updated reason for the IP ban. Maximum 140 characters. Null for no change. */
+  Reason?: string;
+}
+
+export interface UpdateIPBanResult extends IPlayFabResultCommon {
+  /** Information on the ban that was created */
+  IPBanData?: IPBanInfo;
+}
+
 export interface UpdateOpenIdConnectionRequest extends IPlayFabRequestCommon {
   /** The client ID given by the ID provider. */
   ClientId?: string;
@@ -5487,6 +5573,8 @@ export interface UserPsnInfo {
   PsnAccountId?: string;
   /** PlayStation :tm: Network online ID */
   PsnOnlineId?: string;
+  /** PlayStation :tm: Network sandbox ID */
+  PsnSandboxId?: string;
 }
 
 export interface UserServerCustomIdInfo {

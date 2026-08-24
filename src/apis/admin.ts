@@ -14,6 +14,7 @@ import type {
   CreateCloudScriptAzureFunctionsTaskRequest,
   CreateCloudScriptTaskRequest,
   CreateInsightsScheduledScalingTaskRequest,
+  CreateIPBanRequest,
   CreateOpenIdConnectionRequest,
   CreatePlayerSharedSecretRequest,
   CreatePlayerStatisticDefinitionRequest,
@@ -45,6 +46,8 @@ import type {
   GetContentUploadUrlRequest,
   GetDataReportRequest,
   GetEventSinksRequest,
+  GetIPBanRequest,
+  GetAllIPBansRequest,
   GetMatchmakerGameInfoRequest,
   GetMatchmakerGameModesRequest,
   GetPlayedTitleListRequest,
@@ -94,6 +97,7 @@ import type {
   RevokeBansRequest,
   RevokeInventoryItemRequest,
   RevokeInventoryItemsRequest,
+  RevokeIPBanRequest,
   RunTaskRequest,
   SendAccountRecoveryEmailRequest,
   UpdateCatalogItemsRequest,
@@ -109,6 +113,7 @@ import type {
   SubtractUserVirtualCurrencyRequest,
   UpdateBansRequest,
   UpdateCloudScriptRequest,
+  UpdateIPBanRequest,
   UpdateOpenIdConnectionRequest,
   UpdatePlayerCustomPropertiesRequest,
   UpdatePlayerSharedSecretRequest,
@@ -130,6 +135,7 @@ import type {
   BanUsersResult,
   CheckLimitedEditionItemAvailabilityResult,
   CreateTaskResult,
+  CreateIPBanResult,
   CreatePlayerSharedSecretResult,
   CreatePlayerStatisticDefinitionResult,
   CreateSegmentResponse,
@@ -159,6 +165,8 @@ import type {
   GetContentUploadUrlResult,
   GetDataReportResult,
   GetEventSinksResult,
+  GetIPBanResult,
+  GetAllIPBansResult,
   GetMatchmakerGameInfoResult,
   GetMatchmakerGameModesResult,
   GetPlayedTitleListResult,
@@ -206,6 +214,7 @@ import type {
   RevokeBansResult,
   RevokeInventoryResult,
   RevokeInventoryItemsResult,
+  RevokeIPBanResult,
   RunTaskResult,
   SendAccountRecoveryEmailResult,
   UpdateCatalogItemsResult,
@@ -220,6 +229,7 @@ import type {
   SetupPushNotificationResult,
   UpdateBansResult,
   UpdateCloudScriptResult,
+  UpdateIPBanResult,
   UpdatePlayerCustomPropertiesResult,
   UpdatePlayerSharedSecretResult,
   UpdatePlayerStatisticDefinitionResult,
@@ -509,6 +519,24 @@ export default function getAdminApi(playfab: PlayfabClient) {
      */
     createInsightsScheduledScalingTask (request: CreateInsightsScheduledScalingTaskRequest) {
       return playfab.request<CreateTaskResult>("/Admin/CreateInsightsScheduledScalingTask", {
+        body: request,
+        authType: "SecretKey",
+      });
+    },
+
+    /**
+     * Bans an IP address or CIDR range for a title.
+     * 
+     * {@link https://docs.microsoft.com/rest/api/playfab/admin/account-management/createipban Microsoft Documentation}
+     * @example
+     * await adminApi.createIPBan({
+     *   "IPAddress": "192.168.1.1",
+     *   "Reason": "Suspected Bot Farm",
+     *   "Expires": "2024-06-08T00:00:00Z"
+     * });
+     */
+    createIPBan (request: CreateIPBanRequest) {
+      return playfab.request<CreateIPBanResult>("/Admin/CreateIPBan", {
         body: request,
         authType: "SecretKey",
       });
@@ -1097,6 +1125,36 @@ export default function getAdminApi(playfab: PlayfabClient) {
      */
     getEventSinks (request: GetEventSinksRequest) {
       return playfab.request<GetEventSinksResult>("/Admin/GetEventSinks", {
+        body: request,
+        authType: "SecretKey",
+      });
+    },
+
+    /**
+     * Gets all IP bans that apply to a specific IP address.
+     * 
+     * {@link https://docs.microsoft.com/rest/api/playfab/admin/account-management/getipbansforip Microsoft Documentation}
+     * @example
+     * await adminApi.getIPBansForIP({
+     *   "IPAddress": "192.168.1.1"
+     * });
+     */
+    getIPBansForIP (request: GetIPBanRequest) {
+      return playfab.request<GetIPBanResult>("/Admin/GetIPBansForIP", {
+        body: request,
+        authType: "SecretKey",
+      });
+    },
+
+    /**
+     * Gets all IP bans for a title.
+     * 
+     * {@link https://docs.microsoft.com/rest/api/playfab/admin/account-management/getipbansfortitle Microsoft Documentation}
+     * @example
+     * await adminApi.getIPBansForTitle({});
+     */
+    getIPBansForTitle (request: GetAllIPBansRequest) {
+      return playfab.request<GetAllIPBansResult>("/Admin/GetIPBansForTitle", {
         body: request,
         authType: "SecretKey",
       });
@@ -2071,6 +2129,22 @@ export default function getAdminApi(playfab: PlayfabClient) {
     },
 
     /**
+     * Revokes an active IP ban.
+     * 
+     * {@link https://docs.microsoft.com/rest/api/playfab/admin/account-management/revokeipban Microsoft Documentation}
+     * @example
+     * await adminApi.revokeIPBan({
+     *   "IPAddress": "192.168.1.1"
+     * });
+     */
+    revokeIPBan (request: RevokeIPBanRequest) {
+      return playfab.request<RevokeIPBanResult>("/Admin/RevokeIPBan", {
+        body: request,
+        authType: "SecretKey",
+      });
+    },
+
+    /**
      * Run a task immediately regardless of its schedule.
      * 
      * {@link https://docs.microsoft.com/rest/api/playfab/admin/scheduledtask/runtask Microsoft Documentation}
@@ -3008,6 +3082,26 @@ export default function getAdminApi(playfab: PlayfabClient) {
      */
     updateCloudScript (request: UpdateCloudScriptRequest) {
       return playfab.request<UpdateCloudScriptResult>("/Admin/UpdateCloudScript", {
+        body: request,
+        authType: "SecretKey",
+      });
+    },
+
+    /**
+     * Updates an existing IP ban.
+     * 
+     * {@link https://docs.microsoft.com/rest/api/playfab/admin/account-management/updateipban Microsoft Documentation}
+     * @example
+     * await adminApi.updateIPBan({
+     *   "IPAddress": "192.168.1.1",
+     *   "Reason": "Suspected Bot Farm",
+     *   "Expires": "2024-06-08T00:00:00Z",
+     *   "Permanent": false,
+     *   "Active": true
+     * });
+     */
+    updateIPBan (request: UpdateIPBanRequest) {
+      return playfab.request<UpdateIPBanResult>("/Admin/UpdateIPBan", {
         body: request,
         authType: "SecretKey",
       });

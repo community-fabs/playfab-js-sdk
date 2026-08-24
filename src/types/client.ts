@@ -1937,6 +1937,11 @@ export interface GetPlayFabIDsFromKongregateIDsResult extends IPlayFabResultComm
 
 export interface GetPlayFabIDsFromNintendoServiceAccountIdsRequest extends IPlayFabRequestCommon {
   /**
+   * Nintendo NSA issuer URL identifying the environment. When provided, only accounts registered in that environment are
+   * returned. If null or empty, falls back to the default environment.
+   */
+  Issuer?: string;
+  /**
    * Array of unique Nintendo Switch Account identifiers for which the title needs to get PlayFab identifiers. The array
    * cannot exceed 25 in length.
    */
@@ -1982,6 +1987,8 @@ export interface GetPlayFabIDsFromPSNAccountIDsRequest extends IPlayFabRequestCo
    * cannot exceed 25 in length.
    */
   PSNAccountIDs: string[];
+  /** Optional sandbox id. When provided, resolves players that logged in from that PlayStation :tm: Network sandbox. */
+  SandboxId?: string;
 }
 
 export interface GetPlayFabIDsFromPSNAccountIDsResult extends IPlayFabResultCommon {
@@ -1997,6 +2004,8 @@ export interface GetPlayFabIDsFromPSNOnlineIDsRequest extends IPlayFabRequestCom
    * cannot exceed 25 in length.
    */
   PSNOnlineIDs: string[];
+  /** Optional sandbox id. When provided, resolves players that logged in from that PlayStation :tm: Network sandbox. */
+  SandboxId?: string;
 }
 
 export interface GetPlayFabIDsFromPSNOnlineIDsResult extends IPlayFabResultCommon {
@@ -2638,6 +2647,11 @@ export interface LinkOpenIdConnectRequest extends IPlayFabRequestCommon {
 export interface LinkPSNAccountRequest extends IPlayFabRequestCommon {
   /** Authentication code provided by the PlayStation :tm: Network. */
   AuthCode: string;
+  /**
+   * Optional PlayStation :tm: Network auth version. Controls which PlayStation :tm: Network auth version is used. Accepted
+   * values are &quot;v2&quot; and &quot;v3&quot;.
+   */
+  AuthVersion?: string;
   /** The optional custom tags associated with the request (e.g. build number, external trace identifiers, etc.). */
   CustomTags?: Record<string, string | null>;
   /** If another user is already linked to the account, unlink the other user and re-link. */
@@ -3250,6 +3264,11 @@ export interface LoginWithPlayFabRequest extends IPlayFabRequestCommon {
 export interface LoginWithPSNRequest extends IPlayFabRequestCommon {
   /** Auth code provided by the PlayStation :tm: Network OAuth provider. */
   AuthCode?: string;
+  /**
+   * Optional PlayStation :tm: Network auth version. Controls which PlayStation :tm: Network auth version is used. Accepted
+   * values are &quot;v2&quot; and &quot;v3&quot;.
+   */
+  AuthVersion?: string;
   /** Automatically create a PlayFab account if one is not currently linked to this ID. */
   CreateAccount?: boolean;
   /** The optional custom tags associated with the request (e.g. build number, external trace identifiers, etc.). */
@@ -4921,6 +4940,8 @@ export interface UserPsnInfo {
   PsnAccountId?: string;
   /** PlayStation :tm: Network online ID */
   PsnOnlineId?: string;
+  /** PlayStation :tm: Network sandbox ID */
+  PsnSandboxId?: string;
 }
 
 export interface UserServerCustomIdInfo {

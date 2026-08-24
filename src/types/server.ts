@@ -1685,6 +1685,8 @@ type GenericErrorCodes = "Success"
   | "AzureSubscriptionNotEligibleForLinking"
   | "EntityIsNotAMember"
   | "IPAddressNotFound"
+  | "PSNNextGenNotConfiguredForTitle"
+  | "InvalidNintendoIssuer"
   | "MatchmakingEntityInvalid"
   | "MatchmakingPlayerAttributesInvalid"
   | "MatchmakingQueueNotFound"
@@ -2003,6 +2005,8 @@ type GenericErrorCodes = "Success"
   | "GameSaveTitleConfigNoUpdatesRequested"
   | "GameSavePlayerNotEligibleForTransfer"
   | "GameSaveAlreadyAutoRolledBack"
+  | "GameSaveManifestNotEligibleForRestore"
+  | "GameSaveManifestArchived"
   | "StateShareForbidden"
   | "StateShareTitleNotInFlight"
   | "StateShareStateNotFound"
@@ -2619,6 +2623,11 @@ export interface GetPlayFabIDsFromGenericIDsResult extends IPlayFabResultCommon 
 
 export interface GetPlayFabIDsFromNintendoServiceAccountIdsRequest extends IPlayFabRequestCommon {
   /**
+   * Nintendo NSA issuer URL identifying the environment. When provided, only accounts registered in that environment are
+   * returned. If null or empty, falls back to the default environment.
+   */
+  Issuer?: string;
+  /**
    * Array of unique Nintendo Switch Account identifiers for which the title needs to get PlayFab identifiers. The array
    * cannot exceed 25 in length.
    */
@@ -2664,6 +2673,8 @@ export interface GetPlayFabIDsFromPSNAccountIDsRequest extends IPlayFabRequestCo
    * cannot exceed 25 in length.
    */
   PSNAccountIDs: string[];
+  /** Optional sandbox id. When provided, resolves players that logged in from that PlayStation :tm: Network sandbox. */
+  SandboxId?: string;
 }
 
 export interface GetPlayFabIDsFromPSNAccountIDsResult extends IPlayFabResultCommon {
@@ -2679,6 +2690,8 @@ export interface GetPlayFabIDsFromPSNOnlineIDsRequest extends IPlayFabRequestCom
    * cannot exceed 25 in length.
    */
   PSNOnlineIDs: string[];
+  /** Optional sandbox id. When provided, resolves players that logged in from that PlayStation :tm: Network sandbox. */
+  SandboxId?: string;
 }
 
 export interface GetPlayFabIDsFromPSNOnlineIDsResult extends IPlayFabResultCommon {
@@ -3209,6 +3222,11 @@ export interface LinkNintendoSwitchDeviceIdResult extends IPlayFabResultCommon {
 export interface LinkPSNAccountRequest extends IPlayFabRequestCommon {
   /** Authentication code provided by the PlayStation :tm: Network. */
   AuthCode: string;
+  /**
+   * Optional PlayStation :tm: Network auth version. Controls which PlayStation :tm: Network auth version is used. Accepted
+   * values are &quot;v2&quot; and &quot;v3&quot;.
+   */
+  AuthVersion?: string;
   /** The optional custom tags associated with the request (e.g. build number, external trace identifiers, etc.). */
   CustomTags?: Record<string, string | null>;
   /** If another user is already linked to the account, unlink the other user and re-link. */
@@ -3235,6 +3253,8 @@ export interface LinkPSNIdRequest extends IPlayFabRequestCommon {
   PlayFabId: string;
   /** Id of the PlayStation :tm: Network user. Also known as the PSN Account Id. */
   PSNUserId: string;
+  /** Optional sandbox id. When provided, resolves and links the player on that PlayStation :tm: Network sandbox. */
+  SandboxId?: string;
 }
 
 export interface LinkPSNIdResponse extends IPlayFabResultCommon {
@@ -3480,6 +3500,11 @@ export interface LoginWithIOSDeviceIDRequest extends IPlayFabRequestCommon {
 export interface LoginWithPSNRequest extends IPlayFabRequestCommon {
   /** Auth code provided by the PlayStation :tm: Network OAuth provider. */
   AuthCode: string;
+  /**
+   * Optional PlayStation :tm: Network auth version. Controls which PlayStation :tm: Network auth version is used. Accepted
+   * values are &quot;v2&quot; and &quot;v3&quot;.
+   */
+  AuthVersion?: string;
   /** Automatically create a PlayFab account if one is not currently linked to this ID. */
   CreateAccount?: boolean;
   /** The optional custom tags associated with the request (e.g. build number, external trace identifiers, etc.). */
@@ -5134,6 +5159,8 @@ export interface UserPsnInfo {
   PsnAccountId?: string;
   /** PlayStation :tm: Network online ID */
   PsnOnlineId?: string;
+  /** PlayStation :tm: Network sandbox ID */
+  PsnSandboxId?: string;
 }
 
 export interface UserServerCustomIdInfo {
