@@ -1537,6 +1537,8 @@ export interface GetBuildResponse extends IPlayFabResultCommon {
   GameAssetReferences?: AssetReference[];
   /** The game certificates for the build. */
   GameCertificateReferences?: GameCertificateReference[];
+  /** The game secrets for the build. */
+  GameSecretReferences?: GameSecretReference[];
   /** The instrumentation configuration of the build. */
   InstrumentationConfiguration?: InstrumentationConfiguration;
   /**

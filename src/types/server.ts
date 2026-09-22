@@ -2666,14 +2666,22 @@ export interface GetPlayFabIDsFromOpenIdsResult extends IPlayFabResultCommon {
 }
 
 export interface GetPlayFabIDsFromPSNAccountIDsRequest extends IPlayFabRequestCommon {
-  /** Id of the PlayStation :tm: Network issuer environment. If null, defaults to production environment. */
+  /**
+   * Id of the PlayStation :tm: Network issuer environment. If null, defaults to the production environment. This must match
+   * the issuer the account signed in under, otherwise the lookup returns a null PlayFabId rather than an error.
+   */
   IssuerId?: number;
   /**
    * Array of unique PlayStation :tm: Network identifiers for which the title needs to get PlayFab identifiers. The array
    * cannot exceed 25 in length.
    */
   PSNAccountIDs: string[];
-  /** Optional sandbox id. When provided, resolves players that logged in from that PlayStation :tm: Network sandbox. */
+  /**
+   * The PlayStation :tm: Network sandbox the account is keyed under. Sandbox membership is per account, not per title:
+   * supply this only for accounts that sign in from a sandbox, and omit it for accounts that do not, including all retail
+   * accounts. Supplying a sandbox id that an account is not keyed under, or omitting one that it is, returns a null
+   * PlayFabId rather than an error.
+   */
   SandboxId?: string;
 }
 
@@ -2683,14 +2691,22 @@ export interface GetPlayFabIDsFromPSNAccountIDsResult extends IPlayFabResultComm
 }
 
 export interface GetPlayFabIDsFromPSNOnlineIDsRequest extends IPlayFabRequestCommon {
-  /** Id of the PlayStation :tm: Network issuer environment. If null, defaults to production environment. */
+  /**
+   * Id of the PlayStation :tm: Network issuer environment. If null, defaults to the production environment. This must match
+   * the issuer the account signed in under, otherwise the lookup returns a null PlayFabId rather than an error.
+   */
   IssuerId?: number;
   /**
    * Array of unique PlayStation :tm: Network identifiers for which the title needs to get PlayFab identifiers. The array
    * cannot exceed 25 in length.
    */
   PSNOnlineIDs: string[];
-  /** Optional sandbox id. When provided, resolves players that logged in from that PlayStation :tm: Network sandbox. */
+  /**
+   * The PlayStation :tm: Network sandbox the account is keyed under. Sandbox membership is per account, not per title:
+   * supply this only for accounts that sign in from a sandbox, and omit it for accounts that do not, including all retail
+   * accounts. Supplying a sandbox id that an account is not keyed under, or omitting one that it is, returns a null
+   * PlayFabId rather than an error.
+   */
   SandboxId?: string;
 }
 
@@ -3247,13 +3263,20 @@ export interface LinkPSNIdRequest extends IPlayFabRequestCommon {
   CustomTags?: Record<string, string | null>;
   /** If another user is already linked to the account, unlink the other user and re-link. */
   ForceLink?: boolean;
-  /** Id of the PlayStation :tm: Network issuer environment. If null, defaults to production environment. */
+  /**
+   * Id of the PlayStation :tm: Network issuer environment. If null, defaults to the production environment. This must match
+   * the issuer the account signs in under, otherwise the link will not be resolved by that sign in.
+   */
   IssuerId?: number;
   /** Unique PlayFab assigned ID of the user on whom the operation will be performed. */
   PlayFabId: string;
   /** Id of the PlayStation :tm: Network user. Also known as the PSN Account Id. */
   PSNUserId: string;
-  /** Optional sandbox id. When provided, resolves and links the player on that PlayStation :tm: Network sandbox. */
+  /**
+   * The PlayStation :tm: Network sandbox to key the link under. Sandbox membership is per account, not per title: supply
+   * this only when the account signs in from a sandbox, and omit it otherwise, including for all retail accounts. This must
+   * match the sandbox the account signs in from, otherwise the link will not be resolved by that sign in.
+   */
   SandboxId?: string;
 }
 
@@ -3451,6 +3474,12 @@ export interface LoginWithAndroidDeviceIDRequest extends IPlayFabRequestCommon {
   CustomTags?: Record<string, string | null>;
   /** Flags for which pieces of info to return for the user. */
   InfoRequestParameters?: GetPlayerCombinedInfoRequestParams;
+  /**
+   * The IP address of the player this login is being performed on behalf of. Only honored on server-tier APIs authenticated
+   * with a title secret key. When supplied, this address is used for ban enforcement and geo-location instead of the address
+   * of the calling server. Must be a single, public IPv4 or IPv6 address; CIDR ranges and private addresses are rejected.
+   */
+  OriginatingIP?: string;
   /** Specific Operating System version for the user&#39;s device. */
   OS?: string;
 }
@@ -3469,6 +3498,12 @@ export interface LoginWithBattleNetRequest extends IPlayFabRequestCommon {
    * @deprecated Do not use
    */
   LoginTitlePlayerAccountEntity?: boolean;
+  /**
+   * The IP address of the player this login is being performed on behalf of. Only honored on server-tier APIs authenticated
+   * with a title secret key. When supplied, this address is used for ban enforcement and geo-location instead of the address
+   * of the calling server. Must be a single, public IPv4 or IPv6 address; CIDR ranges and private addresses are rejected.
+   */
+  OriginatingIP?: string;
 }
 
 export interface LoginWithCustomIDRequest extends IPlayFabRequestCommon {
@@ -3480,6 +3515,12 @@ export interface LoginWithCustomIDRequest extends IPlayFabRequestCommon {
   CustomTags?: Record<string, string | null>;
   /** Flags for which pieces of info to return for the user. */
   InfoRequestParameters?: GetPlayerCombinedInfoRequestParams;
+  /**
+   * The IP address of the player this login is being performed on behalf of. Only honored on server-tier APIs authenticated
+   * with a title secret key. When supplied, this address is used for ban enforcement and geo-location instead of the address
+   * of the calling server. Must be a single, public IPv4 or IPv6 address; CIDR ranges and private addresses are rejected.
+   */
+  OriginatingIP?: string;
 }
 
 export interface LoginWithIOSDeviceIDRequest extends IPlayFabRequestCommon {
@@ -3493,6 +3534,12 @@ export interface LoginWithIOSDeviceIDRequest extends IPlayFabRequestCommon {
   DeviceModel?: string;
   /** Flags for which pieces of info to return for the user. */
   InfoRequestParameters?: GetPlayerCombinedInfoRequestParams;
+  /**
+   * The IP address of the player this login is being performed on behalf of. Only honored on server-tier APIs authenticated
+   * with a title secret key. When supplied, this address is used for ban enforcement and geo-location instead of the address
+   * of the calling server. Must be a single, public IPv4 or IPv6 address; CIDR ranges and private addresses are rejected.
+   */
+  OriginatingIP?: string;
   /** Specific Operating System version for the user&#39;s device. */
   OS?: string;
 }
@@ -3518,6 +3565,12 @@ export interface LoginWithPSNRequest extends IPlayFabRequestCommon {
    * @deprecated Do not use
    */
   LoginTitlePlayerAccountEntity?: boolean;
+  /**
+   * The IP address of the player this login is being performed on behalf of. Only honored on server-tier APIs authenticated
+   * with a title secret key. When supplied, this address is used for ban enforcement and geo-location instead of the address
+   * of the calling server. Must be a single, public IPv4 or IPv6 address; CIDR ranges and private addresses are rejected.
+   */
+  OriginatingIP?: string;
   /** Redirect URI supplied to PlayStation :tm: Network when requesting an auth code */
   RedirectUri: string;
 }
@@ -3534,6 +3587,12 @@ export interface LoginWithServerCustomIdRequest extends IPlayFabRequestCommon {
    * @deprecated Do not use
    */
   LoginTitlePlayerAccountEntity?: boolean;
+  /**
+   * The IP address of the player this login is being performed on behalf of. Only honored on server-tier APIs authenticated
+   * with a title secret key. When supplied, this address is used for ban enforcement and geo-location instead of the address
+   * of the calling server. Must be a single, public IPv4 or IPv6 address; CIDR ranges and private addresses are rejected.
+   */
+  OriginatingIP?: string;
   /** Player secret that is used to verify API request signatures. */
   PlayerSecret?: string;
   /** The backend server identifier for this player. */
@@ -3552,6 +3611,12 @@ export interface LoginWithSteamIdRequest extends IPlayFabRequestCommon {
    * @deprecated Do not use
    */
   LoginTitlePlayerAccountEntity?: boolean;
+  /**
+   * The IP address of the player this login is being performed on behalf of. Only honored on server-tier APIs authenticated
+   * with a title secret key. When supplied, this address is used for ban enforcement and geo-location instead of the address
+   * of the calling server. Must be a single, public IPv4 or IPv6 address; CIDR ranges and private addresses are rejected.
+   */
+  OriginatingIP?: string;
   /** Unique Steam identifier for a user. */
   SteamId: string;
 }
@@ -3565,6 +3630,12 @@ export interface LoginWithTwitchRequest extends IPlayFabRequestCommon {
   CustomTags?: Record<string, string | null>;
   /** Parameters for requesting additional player info. */
   InfoRequestParameters?: GetPlayerCombinedInfoRequestParams;
+  /**
+   * The IP address of the player this login is being performed on behalf of. Only honored on server-tier APIs authenticated
+   * with a title secret key. When supplied, this address is used for ban enforcement and geo-location instead of the address
+   * of the calling server. Must be a single, public IPv4 or IPv6 address; CIDR ranges and private addresses are rejected.
+   */
+  OriginatingIP?: string;
   /** Player secret for additional authentication. */
   PlayerSecret?: string;
   /** PlayFab unique identifier of the user. */
@@ -3583,6 +3654,12 @@ export interface LoginWithXboxIdRequest extends IPlayFabRequestCommon {
    * @deprecated Do not use
    */
   LoginTitlePlayerAccountEntity?: boolean;
+  /**
+   * The IP address of the player this login is being performed on behalf of. Only honored on server-tier APIs authenticated
+   * with a title secret key. When supplied, this address is used for ban enforcement and geo-location instead of the address
+   * of the calling server. Must be a single, public IPv4 or IPv6 address; CIDR ranges and private addresses are rejected.
+   */
+  OriginatingIP?: string;
   /** The id of Xbox Live sandbox. */
   Sandbox: string;
   /** Unique Xbox identifier for a user. */
@@ -3601,6 +3678,12 @@ export interface LoginWithXboxRequest extends IPlayFabRequestCommon {
    * @deprecated Do not use
    */
   LoginTitlePlayerAccountEntity?: boolean;
+  /**
+   * The IP address of the player this login is being performed on behalf of. Only honored on server-tier APIs authenticated
+   * with a title secret key. When supplied, this address is used for ban enforcement and geo-location instead of the address
+   * of the calling server. Must be a single, public IPv4 or IPv6 address; CIDR ranges and private addresses are rejected.
+   */
+  OriginatingIP?: string;
   /** Token provided by the Xbox Live SDK/XDK method GetTokenAndSignatureAsync(&quot;POST&quot;, &quot;https://playfabapi.com/&quot;, &quot;&quot;). */
   XboxToken: string;
 }
@@ -5155,6 +5238,11 @@ export interface UserPrivateAccountInfo {
 }
 
 export interface UserPsnInfo {
+  /**
+   * Id of the PlayStation :tm: Network issuer environment this account is keyed under. Supply this value as IssuerId when
+   * looking the account up.
+   */
+  IssuerId?: number;
   /** PlayStation :tm: Network account ID */
   PsnAccountId?: string;
   /** PlayStation :tm: Network online ID */
